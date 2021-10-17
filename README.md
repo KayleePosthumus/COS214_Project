@@ -4,11 +4,11 @@ COS214 team project.
 
 # Team members
 
-- Thashil Naidoo, student number:
-- Kaylee Posthumus, student number: u19061359
-- Estian Nel, student number:
-- Ruaan , student number:
-- Ryan Healy, student number:
+- Thashil Naidoo, u20491141
+- Kaylee Posthumus, u19061359
+- Estian Nel, u20427736
+- Ruaan , u20443260
+- Ryan Healy, u20662302
 
 # Report
 
