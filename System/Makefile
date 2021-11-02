@@ -1,7 +1,7 @@
 CXX=g++
 CFLAGS=-I. -Wall
-TARGET=main
-OBJS= main.o
+TARGET=Main
+OBJS= Main.o
 
 all: $(OBJS)
 	$(CXX) $(CFLAGS) $(OBJS) -o $(TARGET)
