@@ -5,11 +5,10 @@
 
 class FalconCaretaker : public Caretaker
 {
+private:
 public:
 	FalconCaretaker();
 	~FalconCaretaker();
-private:
-
 };
 
 #endif

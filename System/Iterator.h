@@ -5,11 +5,10 @@
 
 class Iterator
 {
+private:
 public:
 	Iterator();
 	~Iterator();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class Cargo : public Modules
 {
+private:
 public:
 	Cargo();
 	~Cargo();
-private:
-
 };
 
 #endif

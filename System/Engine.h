@@ -5,11 +5,10 @@
 
 class Engine : public Component
 {
+private:
 public:
 	Engine();
 	~Engine();
-private:
-
 };
 
 #endif

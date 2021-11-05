@@ -1,13 +1,12 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
-class Component 
+class Component
 {
+private:
 public:
 	Component();
 	~Component();
-private:
-
 };
 
 #endif

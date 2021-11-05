@@ -5,11 +5,10 @@
 
 class SpaceCraftFactory : public Factory
 {
+private:
 public:
 	SpaceCraftFactory();
 	~SpaceCraftFactory();
-private:
-
 };
 
 #endif

@@ -1,13 +1,12 @@
 #ifndef FACTORY_H
 #define FACTORY_H
 
-class Factory 
+class Factory
 {
+private:
 public:
 	Factory();
 	~Factory();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class FalconRocket : public SpaceCraft
 {
+private:
 public:
 	FalconRocket();
 	~FalconRocket();
-private:
-
 };
 
 #endif

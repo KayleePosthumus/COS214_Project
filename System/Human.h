@@ -5,11 +5,10 @@
 
 class Human : public Modules
 {
+private:
 public:
 	Human();
 	~Human();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 #include "StarlinkSatelite.h"
 class Laser
 {
+private:
 public:
 	Laser();
 	~Laser();
-private:
-
 };
 
 #endif

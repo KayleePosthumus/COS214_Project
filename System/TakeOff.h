@@ -5,11 +5,10 @@
 
 class TakeOff : public Command
 {
+private:
 public:
 	TakeOff();
 	~TakeOff();
-private:
-
 };
 
 #endif

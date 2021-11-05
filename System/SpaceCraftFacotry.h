@@ -1,13 +1,12 @@
 #ifndef SPACECRAFTFACOTRY_H
 #define SPACECRAFTFACOTRY_H
 
-class SpaceCraftFacotry 
+class SpaceCraftFacotry
 {
+private:
 public:
 	SpaceCraftFacotry();
 	~SpaceCraftFacotry();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class DragonMemento : public Memento
 {
+private:
 public:
 	DragonMemento();
 	~DragonMemento();
-private:
-
 };
 
 #endif

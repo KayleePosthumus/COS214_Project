@@ -5,11 +5,10 @@
 
 class Land : public Command
 {
+private:
 public:
 	Land();
 	~Land();
-private:
-
 };
 
 #endif

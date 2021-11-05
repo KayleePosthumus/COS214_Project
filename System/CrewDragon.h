@@ -5,11 +5,10 @@
 
 class CrewDragon : public Dragon
 {
+private:
 public:
 	CrewDragon();
 	~CrewDragon();
-private:
-
 };
 
 #endif

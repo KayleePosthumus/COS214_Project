@@ -1,13 +1,12 @@
 #ifndef STAGE_H
 #define STAGE_H
 
-class Stage 
+class Stage
 {
+private:
 public:
 	Stage();
 	~Stage();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class DragonCaretaker : public Caretaker
 {
+private:
 public:
 	DragonCaretaker();
 	~DragonCaretaker();
-private:
-
 };
 
 #endif

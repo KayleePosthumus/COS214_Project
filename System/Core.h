@@ -5,11 +5,10 @@
 
 class Core : public Component
 {
+private:
 public:
 	Core();
 	~Core();
-private:
-
 };
 
 #endif

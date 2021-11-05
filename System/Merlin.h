@@ -5,11 +5,10 @@
 
 class Merlin : public Engine
 {
+private:
 public:
 	Merlin();
 	~Merlin();
-private:
-
 };
 
 #endif

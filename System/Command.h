@@ -1,13 +1,12 @@
 #ifndef COMMAND_H
 #define COMMAND_H
 
-class Command 
+class Command
 {
+private:
 public:
 	Command();
 	~Command();
-private:
-
 };
 
 #endif

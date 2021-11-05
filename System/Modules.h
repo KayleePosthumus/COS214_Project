@@ -5,11 +5,10 @@
 
 class Modules : public Dragon
 {
+private:
 public:
 	Modules();
 	~Modules();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class Falcon9Core : public Core
 {
+private:
 public:
 	Falcon9Core();
 	~Falcon9Core();
-private:
-
 };
 
 #endif

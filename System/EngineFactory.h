@@ -5,11 +5,10 @@
 
 class EngineFactory : public ComponentFactory
 {
+private:
 public:
 	EngineFactory();
 	~EngineFactory();
-private:
-
 };
 
 #endif

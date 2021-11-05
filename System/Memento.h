@@ -1,13 +1,12 @@
 #ifndef MEMENTO_H
 #define MEMENTO_H
 
-class Memento 
+class Memento
 {
+private:
 public:
 	Memento();
 	~Memento();
-private:
-
 };
 
 #endif

@@ -5,11 +5,10 @@
 
 class Stage2 : public Stage
 {
+private:
 public:
 	Stage2();
 	~Stage2();
-private:
-
 };
 
 #endif

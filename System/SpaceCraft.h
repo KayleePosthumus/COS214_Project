@@ -1,13 +1,12 @@
 #ifndef SPACECRAFT_H
 #define SPACECRAFT_H
 
-class SpaceCraft 
+class SpaceCraft
 {
+private:
 public:
 	SpaceCraft();
 	~SpaceCraft();
-private:
-
 };
 
 #endif

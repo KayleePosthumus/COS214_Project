@@ -5,11 +5,10 @@
 
 class FactoryHeavy : public FalconRocket
 {
+private:
 public:
 	FactoryHeavy();
 	~FactoryHeavy();
-private:
-
 };
 
 #endif

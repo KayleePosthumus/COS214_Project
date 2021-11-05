@@ -18,7 +18,7 @@ class ${1} ${parent}
 public:
 	${1}();
 	~${1}();
-private:
+ 
 
 };
 
