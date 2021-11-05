@@ -1,6 +1,14 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+#include <cstdlib>
+
+enum RocketCargoType
+{
+    satellites,
+    count
+}
+
 struct Falcon9Config
 {
     static const int Falcon9CoresCount = 1;
@@ -28,10 +36,18 @@ struct CrewDragonConfig
     static const bool CanCarryCrew = 0;
 };
 
-class RNG
+class RNG // RNG values are based on integer percentages.
 {
+private:
+    static const int EngineDamageLiftOffProbability = 25;
+
+    static bool DetermineProbability(float probability)
+    {
+        return (rand() % 100) + 1 < probability;
+    };
+
 public:
-    static const float EngineDamageLiftOffProbability = 0.25;
+    static bool EngineDamageLiftOff() { return DetermineProbability(this->EngineDamageLiftOffProbability); };
 };
 
 #endif
