@@ -7,18 +7,25 @@ Falcon9Builder::~Falcon9Builder()
 {
 }
 
-void Falcon9Builder::addCores()
+void Falcon9Builder::addCoresAndMerlinEngines()
 {
-    ComponentFactory *componentFactory = new CoreFactory();
-    Core **cores = new Core *[Falcon9Config::Falcon9CoresCount];
-    for (int i = 0; i < Falcon9Config::Falcon9CoresCount; i++)
+    ComponentFactory *coreFactory = new CoreFactory();
+    ComponentFactory *merlinEngineFactory = new MerlinEngineFactory();
+    Component **cores = new Component *[Falcon9Config::Falcon9CoresCount * Falcon9CoreConfig::numOfMerlinEnginesAttached];
+    Component *prev = 0;
+    for (int i = 0; i < Falcon9CoreConfig::numOfMerlinEnginesAttached; i++)
     {
-        cores[i] = componentFactory->produce();
+        for (int j = 0; j < Falcon9Config::Falcon9CoresCount; j++)
+        {
+            cores[j] = coreFactory->produce();
+            cores[j]->successor = prev;
+            prev = cores[i];
+        }
     }
 }
-void Falcon9Builder::addEngines()
+void Falcon9Builder::addVacuumMerlinEngines()
 {
 }
-void Falcon9Builder::addPayload(SpaceCraft *spaceCraft, RocketPayloadType PayloadType, int numberOfPayloadItems = 1)
+void Falcon9Builder::addPayload(RocketPayloadType PayloadType, int numberOfPayloadItems = 1)
 {
 }

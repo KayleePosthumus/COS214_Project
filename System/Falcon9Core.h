@@ -13,6 +13,8 @@ private:
 public:
 	Falcon9Core(string name);
 	~Falcon9Core();
+
+	void Destroy();
 };
 
 #endif

@@ -12,13 +12,13 @@ int main()
     cout << "------> Component Factory" << endl;
     cout << endl;
 
-    cout << "---> Core Factory" << endl;
-    ComponentFactory *coreFactory = new CoreFactory();
-    Component *core = coreFactory->produce();
-    cout << "Name: " << core->GetName() << endl;
-    cout << "Health: " << core->GetHealth() << endl;
-    core->TakeDamage(50);
-    cout << "Health after taking damage: " << core->GetHealth() << endl;
+    cout << "---> Falcon9 Core Factory" << endl;
+    ComponentFactory *falcon9CoreFactory = new CoreFactory();
+    Component *falcon9Core = falcon9CoreFactory->produce();
+    cout << "Name: " << falcon9Core->GetName() << endl;
+    cout << "Health: " << falcon9Core->GetHealth() << endl;
+    falcon9Core->TakeDamage(50);
+    cout << "Health after taking damage: " << falcon9Core->GetHealth() << endl;
     cout << endl;
 
     cout << "---> Merlin Engine Factory" << endl;
@@ -37,6 +37,11 @@ int main()
     cout << "Health: " << vacuumMerlinEngine->GetHealth() << endl;
     vacuumMerlinEngine->TakeDamage(50);
     cout << "Health after taking damage: " << vacuumMerlinEngine->GetHealth() << endl;
+    cout << endl;
+
+    cout << "------------> Builder Design Patterns" << endl;
+    cout << "------> Falcon9 Builder" << endl;
+    cout << endl;
 
     return 0;
 }

@@ -8,6 +8,7 @@
 #include "Engine.h"
 #include "Payload.h"
 #include "CoreFactory.h"
+#include "MerlinEngineFactory.h"
 
 class Falcon9Builder
 {
@@ -18,9 +19,11 @@ public:
     Falcon9Builder();
     virtual ~Falcon9Builder();
 
-    virtual void addCores();
-    virtual void addEngines();
-    virtual void addPayload(SpaceCraft *spaceCraft, RocketPayloadType PayloadType, int numberOfPayloadItems = 1);
+    virtual void addCoresAndMerlinEngines();
+    virtual void addVacuumMerlinEngines();
+    virtual void addPayload(RocketPayloadType PayloadType, int numberOfPayloadItems = 1);
+
+    Rocket *GetRocket();
 };
 
 #endif

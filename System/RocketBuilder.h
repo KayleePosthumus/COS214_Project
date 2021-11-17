@@ -2,7 +2,7 @@
 #define ROCKETBUILDER_H
 
 #include "Settings.h"
-#include "SpaceCraft.h"
+#include "Rocket.h"
 
 class RocketBuilder
 {
@@ -11,9 +11,11 @@ public:
     RocketBuilder();
     virtual ~RocketBuilder();
 
-    virtual void addCores() = 0;
-    virtual void addEngines() = 0;
-    virtual void addPayload(SpaceCraft *spaceCraft, RocketPayloadType PayloadType) = 0;
+    virtual void addCoresAndMerlinEngines() = 0;
+    virtual void addVacuumMerlinEngines() = 0;
+    virtual void AddPayload(RocketPayloadType PayloadType, int numberOfPayloadItems = 1) = 0;
+
+    virtual Rocket *GetRocket() = 0;
 };
 
 #endif

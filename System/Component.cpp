@@ -8,15 +8,27 @@ Component::Component(string name)
 {
     this->name = name;
 }
+Component::Component(string name, Component *successor)
+{
+    this->name = name;
+    this->successor = successor;
+}
+
 Component::~Component() {}
 
 void Component::TakeDamage(int damageAmount)
 {
+    if (this->health <= 1)
+    {
+        return;
+    }
+
     this->health -= damageAmount;
 
     if (this->health <= 1)
     {
         cout << this->name << " was destroyed." << endl;
+        this->Destroy();
     }
 }
 

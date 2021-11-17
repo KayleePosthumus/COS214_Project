@@ -57,12 +57,13 @@ struct MerlinEngineConfig
 
 struct VacuumMerlinEngineConfig
 {
-    static const int health = 100;
+    static const int health = 70;
 };
 
 struct Falcon9CoreConfig
 {
     static const int health = 50;
+    static const int numOfMerlinEnginesAttached = 9;
 };
 
 ///////////////////////////////////////////////////////
@@ -71,7 +72,11 @@ struct Falcon9CoreConfig
 class RNG // RNG values are based on integer percentages.
 {
 private:
+    static const int MaxComponentDamage = 50;
+    static const int MinComponentDamage = 10;
+
     static const int EngineDamageLiftOffProbability = 25;
+    static const int EngineDestroyedDamagingNeighboringComponentsProbability = 25;
 
     static bool DetermineProbability(float probability)
     {
@@ -79,7 +84,10 @@ private:
     };
 
 public:
+    static int RandomDamageToComponents() { return (rand() % MaxComponentDamage) + MinComponentDamage; };
+
     static bool EngineDamageLiftOff() { return DetermineProbability(EngineDamageLiftOffProbability); };
+    static bool EngineDestroyedDamagingNeighboringComponents() { return DetermineProbability(EngineDestroyedDamagingNeighboringComponentsProbability); };
 };
 
 #endif

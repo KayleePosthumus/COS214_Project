@@ -12,6 +12,7 @@ public:
 	virtual ~CoreFactory();
 
 	Component *produce();
+	void Destroy();
 };
 
 #endif

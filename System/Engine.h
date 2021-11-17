@@ -14,6 +14,8 @@ private:
 public:
 	Engine(string name);
 	~Engine();
+
+	void Destroy();
 };
 
 #endif
