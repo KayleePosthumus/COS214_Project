@@ -2,13 +2,16 @@
 #define COREFACTORY_H
 
 #include "ComponentFactory.h"
+#include "Falcon9Core.h"
 
 class CoreFactory : public ComponentFactory
 {
 private:
 public:
 	CoreFactory();
-	~CoreFactory();
+	virtual ~CoreFactory();
+
+	Component *produce();
 };
 
 #endif

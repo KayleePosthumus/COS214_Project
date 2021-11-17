@@ -3,11 +3,15 @@
 
 #include "Core.h"
 
+#include <string>
+
+using namespace std;
+
 class Falcon9Core : public Core
 {
 private:
 public:
-	Falcon9Core();
+	Falcon9Core(string name);
 	~Falcon9Core();
 };
 

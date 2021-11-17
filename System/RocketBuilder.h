@@ -13,8 +13,7 @@ public:
 
     virtual void addCores() = 0;
     virtual void addEngines() = 0;
-    virtual void addCargo(RocketCargoType cargoType) = 0;
-    virtual void addCargo(SpaceCraft *spaceCraft) = 0;
+    virtual void addPayload(SpaceCraft *spaceCraft, RocketPayloadType PayloadType) = 0;
 };
 
 #endif

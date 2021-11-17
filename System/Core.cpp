@@ -1,8 +1,6 @@
 #include "Core.h"
 
-Core::Core() {}
-Core::~Core() {}
-#include "Core.h"
+using namespace std;
 
-Core::Core() {}
+Core::Core(string name) : Component(name) {}
 Core::~Core() {}

@@ -2,12 +2,17 @@
 #define ENGINE_H
 
 #include "Component.h"
+#include "Settings.h"
+
+#include <string>
+
+using namespace std;
 
 class Engine : public Component
 {
 private:
 public:
-	Engine();
+	Engine(string name);
 	~Engine();
 };
 

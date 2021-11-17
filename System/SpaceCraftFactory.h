@@ -8,7 +8,7 @@ class SpaceCraftFactory : public Factory
 private:
 public:
 	SpaceCraftFactory();
-	~SpaceCraftFactory();
+	virtual ~SpaceCraftFactory();
 };
 
 #endif

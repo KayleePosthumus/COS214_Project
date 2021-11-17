@@ -1,9 +1,9 @@
 #ifndef FACTORYHEAVY_H
 #define FACTORYHEAVY_H
 
-#include "FalconRocket.h"
+#include "Rocket.h"
 
-class FactoryHeavy : public FalconRocket
+class FactoryHeavy : public Rocket
 {
 private:
 public:

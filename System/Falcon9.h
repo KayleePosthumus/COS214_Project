@@ -1,9 +1,9 @@
 #ifndef FALCON9_H
 #define FALCON9_H
 
-#include "FalconRocket.h"
+#include "Rocket.h"
 
-class Falcon9 : public FalconRocket
+class Falcon9 : public Rocket
 {
 private:
 public:

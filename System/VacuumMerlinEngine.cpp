@@ -1,4 +1,9 @@
 #include "VacuumMerlinEngine.h"
 
-VacuumMerlinEngine::VacuumMerlinEngine() {}
+using namespace std;
+
+VacuumMerlinEngine::VacuumMerlinEngine(string name) : Engine(name)
+{
+    this->SetHealth(VacuumMerlinEngineConfig::health);
+}
 VacuumMerlinEngine::~VacuumMerlinEngine() {}

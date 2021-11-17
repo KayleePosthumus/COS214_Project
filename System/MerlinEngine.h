@@ -3,11 +3,15 @@
 
 #include "Engine.h"
 
+#include <string>
+
+using namespace std;
+
 class MerlinEngine : public Engine
 {
 private:
 public:
-	MerlinEngine();
+	MerlinEngine(string name);
 	~MerlinEngine();
 };
 

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.luascn": "lua",
+        "ostream": "cpp",
+        "xstring": "cpp",
+        "iostream": "cpp"
+    }
+}

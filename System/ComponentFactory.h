@@ -2,13 +2,16 @@
 #define COMPONENTFACTORY_H
 
 #include "Factory.h"
+#include "Component.h"
 
 class ComponentFactory : public Factory
 {
 private:
 public:
 	ComponentFactory();
-	~ComponentFactory();
+	virtual ~ComponentFactory();
+
+	virtual Component *produce() = 0;
 };
 
 #endif

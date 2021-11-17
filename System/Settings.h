@@ -3,11 +3,13 @@
 
 #include <cstdlib>
 
-enum RocketCargoType
+enum RocketPayloadType
 {
     satellites,
+    dragon,
+    crewDragon,
     count
-}
+};
 
 struct Falcon9Config
 {
@@ -26,14 +28,29 @@ struct FalconHeavyConfig
 
 struct DragonConfig
 {
-    static const bool CanCarryCargo = 1;
+    static const bool CanCarryPayload = 1;
     static const bool CanCarryCrew = 0;
 };
 
 struct CrewDragonConfig
 {
-    static const bool CanCarryCargo = 1;
+    static const bool CanCarryPayload = 1;
     static const bool CanCarryCrew = 0;
+};
+
+struct MerlinEngineConfig
+{
+    static const int health = 100;
+};
+
+struct VacuumMerlinEngineConfig
+{
+    static const int health = 100;
+};
+
+struct Falcon9CoreConfig
+{
+    static const int health = 50;
 };
 
 class RNG // RNG values are based on integer percentages.
@@ -47,7 +64,7 @@ private:
     };
 
 public:
-    static bool EngineDamageLiftOff() { return DetermineProbability(this->EngineDamageLiftOffProbability); };
+    static bool EngineDamageLiftOff() { return DetermineProbability(EngineDamageLiftOffProbability); };
 };
 
 #endif

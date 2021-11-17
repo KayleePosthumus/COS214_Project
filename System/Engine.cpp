@@ -1,8 +1,6 @@
 #include "Engine.h"
 
-Engine::Engine() {}
-Engine::~Engine() {}
-#include "Engine.h"
+using namespace std;
 
-Engine::Engine() {}
+Engine::Engine(string name) : Component(name) {}
 Engine::~Engine() {}
