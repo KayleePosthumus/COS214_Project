@@ -1,5 +1,6 @@
 #include "CoreFactory.h"
 #include "MerlinEngineFactory.h"
+#include "VacuumMerlinEngineFactory.h"
 
 #include <iostream>
 
@@ -27,6 +28,15 @@ int main()
     cout << "Health: " << merlinEngine->GetHealth() << endl;
     merlinEngine->TakeDamage(50);
     cout << "Health after taking damage: " << merlinEngine->GetHealth() << endl;
+    cout << endl;
+
+    cout << "---> Vacuum Merlin Engine Factory" << endl;
+    ComponentFactory *vacuumMerlinEngineFactory = new VacuumMerlinEngineFactory();
+    Component *vacuumMerlinEngine = vacuumMerlinEngineFactory->produce();
+    cout << "Name: " << vacuumMerlinEngine->GetName() << endl;
+    cout << "Health: " << vacuumMerlinEngine->GetHealth() << endl;
+    vacuumMerlinEngine->TakeDamage(50);
+    cout << "Health after taking damage: " << vacuumMerlinEngine->GetHealth() << endl;
 
     return 0;
 }
