@@ -14,7 +14,8 @@ void Falcon9Core::Destroy()
     //destroy engines attached to this
     while (this->successor != 0 && i > 0)
     {
-        this->successor->TakeDamage(this->successor->GetHealth()); // destroy engines attached
+        if (this->successor)
+            this->successor->TakeDamage(this->successor->GetHealth()); // destroy engines attached Enginex9->Core->Enginesx9->Core
         i--;
     }
 }

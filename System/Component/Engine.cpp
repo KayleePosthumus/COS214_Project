@@ -9,6 +9,7 @@ void Engine::Destroy()
 {
     if (RNG::EngineDestroyedDamagingNeighboringComponents())
     {
-        successor->TakeDamage(RNG::RandomDamageToComponents());
+        if (successor)
+            successor->TakeDamage(RNG::RandomDamageToComponents());
     }
 }
