@@ -1,7 +1,7 @@
 #ifndef DRAGON_H
 #define DRAGON_H
 
-#include "SpaceCraft.h"
+#include "../SpaceCraft.h"
 
 class Dragon : public SpaceCraft
 {

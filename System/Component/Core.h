@@ -2,7 +2,7 @@
 #define CORE_H
 
 #include "Component.h"
-#include "Settings.h"
+#include "../Settings.h"
 
 using namespace std;
 

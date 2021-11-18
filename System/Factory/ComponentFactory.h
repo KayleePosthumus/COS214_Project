@@ -2,7 +2,7 @@
 #define COMPONENTFACTORY_H
 
 #include "Factory.h"
-#include "Component.h"
+#include "../Component/Component.h"
 
 class ComponentFactory : public Factory
 {

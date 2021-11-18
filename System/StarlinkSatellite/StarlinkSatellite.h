@@ -1,12 +1,12 @@
 #ifndef STARLINKSATELITE_H
 #define STARLINKSATELITE_H
 
-class StarlinkSatelite
+class StarlinkSatellite
 {
 private:
 public:
-	StarlinkSatelite();
-	~StarlinkSatelite();
+	StarlinkSatellite();
+	~StarlinkSatellite();
 };
 
 #endif

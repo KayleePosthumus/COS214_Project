@@ -1,8 +1,8 @@
 #ifndef Rocket_H
 #define Rocket_H
 
-#include "Component.h"
-#include "Payload.h"
+#include "../../Component/Component.h"
+#include "../Payload.h"
 
 class Rocket
 {

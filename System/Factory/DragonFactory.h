@@ -1,9 +1,9 @@
 #ifndef DRAGONFACTORY_H
 #define DRAGONFACTORY_H
 
-#include "SpaceCraftFacotry.h"
+#include "SpaceCraftFactory.h"
 
-class DragonFactory : public SpaceCraftFacotry
+class DragonFactory : public SpaceCraftFactory
 {
 private:
 public:

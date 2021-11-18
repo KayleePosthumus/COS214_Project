@@ -1,6 +1,6 @@
-#include "CoreFactory.h"
-#include "MerlinEngineFactory.h"
-#include "VacuumMerlinEngineFactory.h"
+#include "Factory/CoreFactory.h"
+#include "Factory/MerlinEngineFactory.h"
+#include "Factory/VacuumMerlinEngineFactory.h"
 
 #include <iostream>
 

@@ -2,7 +2,7 @@
 #define COREFACTORY_H
 
 #include "ComponentFactory.h"
-#include "Falcon9Core.h"
+#include "../Component/Falcon9Core.h"
 
 class CoreFactory : public ComponentFactory
 {

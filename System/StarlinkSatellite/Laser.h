@@ -1,8 +1,8 @@
 #ifndef LASER_H
 #define LASER_H
 
-#include "Falcon9.h"
-#include "StarlinkSatelite.h"
+#include "../Spacecraft/FalconRocket/Falcon9.h"
+#include "StarlinkSatellite.h"
 class Laser
 {
 private:

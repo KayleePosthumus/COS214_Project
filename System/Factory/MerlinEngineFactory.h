@@ -2,7 +2,7 @@
 #define MERLINENGINEFACTORY_H
 
 #include "ComponentFactory.h"
-#include "MerlinEngine.h"
+#include "../Component/MerlinEngine.h"
 
 class MerlinEngineFactory : public ComponentFactory
 {

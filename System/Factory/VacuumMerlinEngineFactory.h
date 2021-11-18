@@ -2,7 +2,7 @@
 #define VACUUMMERLINENGINEFACTORY_H
 
 #include "ComponentFactory.h"
-#include "VacuumMerlinEngine.h"
+#include "../Component/VacuumMerlinEngine.h"
 
 class VacuumMerlinEngineFactory : public ComponentFactory
 {

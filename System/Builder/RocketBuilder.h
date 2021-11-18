@@ -1,8 +1,8 @@
 #ifndef ROCKETBUILDER_H
 #define ROCKETBUILDER_H
 
-#include "Settings.h"
-#include "Rocket.h"
+#include "../Settings.h"
+#include "../SpaceCraft/FalconRocket/Rocket.h"
 
 class RocketBuilder
 {
