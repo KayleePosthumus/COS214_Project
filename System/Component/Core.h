@@ -11,6 +11,7 @@ class Core : public Component
 private:
 public:
 	Core(string name);
+	Core(string name, Component *successor);
 	virtual ~Core();
 };
 

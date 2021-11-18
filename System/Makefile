@@ -1,7 +1,7 @@
 CXX=g++
 CFLAGS=-I. -Wall
 TARGET=main
-OBJS=   Builder/Falcon9Builder.o Builder/RocketBuilder.o \
+OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuilder.o \
 		Component/Component.o \
 			Component/Core.o Component/Engine.o Component/Falcon9Core.o Component/MerlinEngine.o Component/VacuumMerlinEngine.o \
         Factory/Factory.o \

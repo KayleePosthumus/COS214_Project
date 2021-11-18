@@ -1,6 +1,8 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
+#include "../Settings.h"
+
 #include <string>
 
 using namespace std;
@@ -17,6 +19,7 @@ public:
 	virtual ~Component();
 
 	virtual void TakeDamage(int damageAmount);
+	virtual void TakeLiftOffDamage(int damageAmount);
 	virtual void Destroy() = 0;
 
 	int GetHealth();

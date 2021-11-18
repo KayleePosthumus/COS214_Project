@@ -1,10 +1,10 @@
-#ifndef FALCON9BUILDER_H
-#define FALCON9BUILDER_H
+#ifndef FALCONHeavyBUILDER_H
+#define FALCONHeavyBUILDER_H
 
 #include "../Settings.h"
 #include "../Builder/RocketBuilder.h"
 #include "../Spacecraft/SpaceCraft.h"
-#include "../Spacecraft/FalconRocket/Falcon9.h"
+#include "../Spacecraft/FalconRocket/FalconHeavy.h"
 #include "../Spacecraft/Dragon/Dragon.h"
 #include "../Spacecraft/Dragon/CrewDragon.h"
 #include "../Spacecraft/Payload.h"
@@ -15,14 +15,14 @@
 #include "../Factory/VacuumMerlinEngineFactory.h"
 #include "../StarlinkSatellite/StarlinkSatellite.h"
 
-class Falcon9Builder : public RocketBuilder
+class FalconHeavyBuilder : public RocketBuilder
 {
 private:
-    Falcon9 *falcon9 = 0;
+    FalconHeavy *falconHeavy = 0;
 
 public:
-    Falcon9Builder();
-    virtual ~Falcon9Builder();
+    FalconHeavyBuilder();
+    virtual ~FalconHeavyBuilder();
 
     virtual void ConstructRocket();
     virtual void AddCoresAndMerlinEngines();

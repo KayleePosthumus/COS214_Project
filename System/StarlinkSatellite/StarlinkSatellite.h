@@ -1,7 +1,9 @@
 #ifndef STARLINKSATELITE_H
 #define STARLINKSATELITE_H
 
-class StarlinkSatellite
+#include "../Spacecraft/Payload.h"
+
+class StarlinkSatellite : public Payload
 {
 private:
 public:

@@ -1,10 +1,11 @@
 #include "Falcon9.h"
-Falcon9::Falcon9() 
+
+using namespace std;
+
+Falcon9::Falcon9(string name) : Rocket(name)
 {
-    
 }
 
-Falcon9::~Falcon9() 
+Falcon9::~Falcon9()
 {
-    
 }

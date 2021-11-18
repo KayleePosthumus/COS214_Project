@@ -24,12 +24,19 @@ void Component::TakeDamage(int damageAmount)
     }
 
     this->health -= damageAmount;
+    cout << this->name << " took " << damageAmount << " units of damage." << endl;
 
     if (this->health <= 1)
     {
         cout << this->name << " was destroyed." << endl;
         this->Destroy();
     }
+}
+void Component::TakeLiftOffDamage(int damageAmount)
+{
+    this->TakeDamage(damageAmount);
+    if (this->successor)
+        this->successor->TakeLiftOffDamage(RNG::RandomDamageToComponents());
 }
 
 int Component::GetHealth()

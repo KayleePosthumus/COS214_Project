@@ -4,19 +4,29 @@
 #include "../../Component/Component.h"
 #include "../Payload.h"
 
+#include <string>
+#include <vector>
+
+using namespace std;
+
 class Rocket
 {
 private:
-    Component *components; //linked list
-    Payload *payload;      // linked list
+    string name;
+    int health;
+
+    Component *components; //linked list's tail
+    vector<Payload *> *payload;
 
 public:
-    Rocket();
+    Rocket(string name);
     virtual ~Rocket();
 
-    void setComponents(Component *components);
-    void addComponents(Component *components);
-    void setPayload(Payload *payload);
+    void SetComponents(Component *components);
+    void AddComponents(Component *components);
+    void SetPayload(vector<Payload *> *payload);
+
+    void TakeLiftOffDamage();
 };
 
 #endif

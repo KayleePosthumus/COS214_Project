@@ -2,6 +2,9 @@
 #include "Factory/MerlinEngineFactory.h"
 #include "Factory/VacuumMerlinEngineFactory.h"
 
+#include "Builder/Falcon9Builder.h"
+#include "Builder/FalconHeavyBuilder.h"
+
 #include <iostream>
 
 using namespace std;
@@ -41,6 +44,21 @@ int main()
 
     cout << "------------> Builder Design Patterns" << endl;
     cout << "------> Falcon9 Builder" << endl;
+    RocketBuilder *falcon9Builder = new Falcon9Builder();
+    falcon9Builder->ConstructRocket();
+    falcon9Builder->AddCoresAndMerlinEngines();
+    falcon9Builder->AddVacuumMerlinEngines();
+    Rocket *falcon9 = falcon9Builder->GetRocket();
+    falcon9->TakeLiftOffDamage();
+    cout << endl;
+
+    cout << "------> FalconHeavy Builder" << endl;
+    RocketBuilder *falconHeavyBuilder = new FalconHeavyBuilder();
+    falconHeavyBuilder->ConstructRocket();
+    falconHeavyBuilder->AddCoresAndMerlinEngines();
+    falconHeavyBuilder->AddVacuumMerlinEngines();
+    Rocket *falconHeavy = falconHeavyBuilder->GetRocket();
+    falconHeavy->TakeLiftOffDamage();
     cout << endl;
 
     return 0;

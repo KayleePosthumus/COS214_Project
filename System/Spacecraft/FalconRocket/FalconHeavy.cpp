@@ -1,10 +1,11 @@
 #include "FalconHeavy.h"
-FactoryHeavy::FactoryHeavy() 
+
+using namespace std;
+
+FalconHeavy::FalconHeavy(string name) : Rocket(name)
 {
-    
 }
 
-FactoryHeavy::~FactoryHeavy() 
+FalconHeavy::~FalconHeavy()
 {
-    
 }

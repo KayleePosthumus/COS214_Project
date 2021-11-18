@@ -13,6 +13,7 @@ class Engine : public Component
 private:
 public:
 	Engine(string name);
+	Engine(string name, Component *successor);
 	~Engine();
 
 	void Destroy();
