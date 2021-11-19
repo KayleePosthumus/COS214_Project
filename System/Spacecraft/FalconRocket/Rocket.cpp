@@ -61,3 +61,13 @@ void Rocket::notify()
         (*it)->update();
     }
 }
+
+Stage* Rocket::getStage() 
+{
+    return this->subjectStage;
+}
+
+void Rocket::setStage(Stage* stage) 
+{
+    this->subjectStage = stage;
+}

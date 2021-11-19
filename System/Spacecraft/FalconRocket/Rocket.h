@@ -23,6 +23,9 @@ private:
     //Payload* payload;
     vector<Observer*> observerList;
 
+protected:
+    Stage* subjectStage;
+
 public:
     Rocket(string name);
     virtual ~Rocket();
@@ -36,7 +39,10 @@ public:
 
     void attach(Observer* o);
     void detach(Observer* o);
-    void notify();    
+    void notify(); 
+
+    Stage* getStage();
+	void setStage(Stage* stage);   
 };
 
 #endif

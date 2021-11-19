@@ -10,14 +10,9 @@ using namespace std;
 class FalconHeavy : public Rocket
 {
 private:
-	Stage* subjectStage;
-
 public:
 	FalconHeavy(string name);
 	~FalconHeavy();
-
-	Stage* getStage();
-	void setStage(Stage* stage);
 };
 
 #endif
