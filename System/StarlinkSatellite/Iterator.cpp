@@ -1,4 +1,5 @@
 #include "Iterator.h"
+
 Iterator::Iterator()
 	: first(nullptr), current(nullptr)
 {}
@@ -7,7 +8,7 @@ Iterator::~Iterator()
 {}
 
 Iterator::Iterator(StarlinkSatellite *first)
-	: first(first)
+	: first(first), current(first)
 {}
 
 StarlinkSatellite *Iterator::firstItem() {
@@ -23,11 +24,12 @@ StarlinkSatellite *Iterator::nextItem()
 
 	return nullptr;
 }
+
 StarlinkSatellite *Iterator::currentItem() {
 	return current;
 }
 
 bool Iterator::isDone()
 {
-	return !(current && current->getNext());
+	return !(first && current->getNext());
 }
