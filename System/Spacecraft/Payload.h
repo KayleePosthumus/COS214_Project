@@ -2,8 +2,9 @@
 #define PAYLOAD_H
 
 #include "Dragon/Modules.h"
+#include "Spacecraft.h"
 
-class Payload : public Modules
+class Payload : public SpaceCraft
 {
 private:
 public:

@@ -9,6 +9,8 @@ private:
 public:
 	DragonSpacecraft();
 	~DragonSpacecraft();
+	bool AddCargo(Cargo*);
+	bool RemoveCargo(Cargo*);
 };
 
 #endif
