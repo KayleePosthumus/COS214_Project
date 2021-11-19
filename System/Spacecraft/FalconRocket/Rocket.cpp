@@ -24,15 +24,15 @@ void Rocket::AddComponents(Component *components)
     components->successor = this->components;
     this->components = tail;
 }
-/*void Rocket::SetPayload(vector<Payload *> *payload)
+void Rocket::SetPayload(vector<Payload *> *payload)
 {
     this->payload = payload;
-}*/
+}
 
-void Rocket::SetPayload(Payload *p)
+/*void Rocket::SetPayload(Payload *p)
 {
     this->payload = p;
-}
+}*/
 
 void Rocket::TakeLiftOffDamage()
 {

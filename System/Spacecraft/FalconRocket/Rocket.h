@@ -5,12 +5,14 @@
 #include "../Payload.h"
 #include "../Observer.h"
 #include "../../Stage/Stage.h"
+#include "../SpaceCraft.h"
+
 #include <string>
 #include <vector>
 class Observer;
 using namespace std;
 
-class Rocket
+class Rocket : public SpaceCraft
 {
 private:
     string name;
@@ -18,7 +20,7 @@ private:
 
     Component *components; //linked list's tail
     vector<Payload *> *payload;
-    
+    //Payload* payload;
     vector<Observer*> observerList;
 
 public:
@@ -28,6 +30,7 @@ public:
     void SetComponents(Component *components);
     void AddComponents(Component *components);
     void SetPayload(vector<Payload *> *payload);
+    //void SetPayload(Payload*);
 
     void TakeLiftOffDamage();
 
