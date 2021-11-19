@@ -1,3 +1,6 @@
 *.o
 main
 todo.md
+*.bak_*
+./.vscode
+*.lck
