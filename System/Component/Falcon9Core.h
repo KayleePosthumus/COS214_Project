@@ -12,6 +12,7 @@ class Falcon9Core : public Core
 private:
 public:
 	Falcon9Core(string name);
+	Falcon9Core(string name, Component *successor);
 	~Falcon9Core();
 
 	void Destroy();

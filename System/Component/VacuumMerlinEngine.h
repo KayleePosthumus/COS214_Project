@@ -12,6 +12,7 @@ class VacuumMerlinEngine : public Engine
 private:
 public:
 	VacuumMerlinEngine(string name);
+	VacuumMerlinEngine(string name, Component *successor);
 	~VacuumMerlinEngine();
 };
 

@@ -17,6 +17,7 @@ enum RocketPayloadType
 
 struct Falcon9Config
 {
+    static const int Health = 1000;
     static const int Falcon9CoresCount = 1;
     static const int MerlinEnginesCount = 9;
     static const int VacuumEnginesCount = 1;
@@ -25,6 +26,7 @@ struct Falcon9Config
 
 struct FalconHeavyConfig
 {
+    static const int Health = 500;
     static const int Falcon9CoresCount = 3;
     static const int MerlinEnginesCount = 27;
     static const int VacuumEnginesCount = 1;

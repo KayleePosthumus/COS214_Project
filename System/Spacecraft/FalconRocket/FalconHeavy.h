@@ -1,14 +1,18 @@
-#ifndef FACTORYHEAVY_H
-#define FACTORYHEAVY_H
+#ifndef FALCONHEAVY_H
+#define FALCONHEAVY_H
 
 #include "Rocket.h"
 
-class FactoryHeavy : public Rocket
+#include <string>
+
+using namespace std;
+
+class FalconHeavy : public Rocket
 {
 private:
 public:
-	FactoryHeavy();
-	~FactoryHeavy();
+	FalconHeavy(string name);
+	~FalconHeavy();
 };
 
 #endif

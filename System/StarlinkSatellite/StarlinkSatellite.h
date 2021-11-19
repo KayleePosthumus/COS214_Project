@@ -5,7 +5,9 @@
 #include <cstdio>
 #include "Iterator.h"
 
-class StarlinkSatellite
+#include "../Spacecraft/Payload.h"
+
+class StarlinkSatellite : public Payload
 {
 private:
 	std::string name;

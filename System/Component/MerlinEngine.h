@@ -12,6 +12,7 @@ class MerlinEngine : public Engine
 private:
 public:
 	MerlinEngine(string name);
+	MerlinEngine(string name, Component *successor);
 	~MerlinEngine();
 };
 
