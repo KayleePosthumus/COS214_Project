@@ -29,6 +29,11 @@ void Rocket::SetPayload(vector<Payload *> *payload)
     this->payload = payload;
 }
 
+/*void Rocket::SetPayload(Payload *p)
+{
+    this->payload = p;
+}*/
+
 void Rocket::TakeLiftOffDamage()
 {
     if (this->components)
@@ -55,4 +60,14 @@ void Rocket::notify()
     {
         (*it)->update();
     }
+}
+
+Stage* Rocket::getStage() 
+{
+    return this->subjectStage;
+}
+
+void Rocket::setStage(Stage* stage) 
+{
+    this->subjectStage = stage;
 }

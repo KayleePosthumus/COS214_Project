@@ -10,12 +10,4 @@ FalconHeavy::~FalconHeavy()
 {
 }
 
-Stage* FalconHeavy::getStage() 
-{
-    return this->subjectStage;
-}
 
-void FalconHeavy::setStage(Stage* stage) 
-{
-    this->subjectStage = stage;
-}
