@@ -3,10 +3,11 @@
 
 #include "../../Component/Component.h"
 #include "../Payload.h"
-
+#include "../Observer.h"
+#include "../../Stage/Stage.h"
 #include <string>
 #include <vector>
-
+class Observer;
 using namespace std;
 
 class Rocket
@@ -17,6 +18,8 @@ private:
 
     Component *components; //linked list's tail
     vector<Payload *> *payload;
+    
+    vector<Observer*> observerList;
 
 public:
     Rocket(string name);
@@ -27,6 +30,10 @@ public:
     void SetPayload(vector<Payload *> *payload);
 
     void TakeLiftOffDamage();
+
+    void attach(Observer* o);
+    void detach(Observer* o);
+    void notify();    
 };
 
 #endif

@@ -2,3 +2,8 @@
 
 Stage::Stage() {}
 Stage::~Stage() {}
+
+void Stage::handle() 
+{
+    
+}
