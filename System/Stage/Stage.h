@@ -7,6 +7,7 @@ private:
 public:
 	Stage();
 	~Stage();
+	virtual void handle();
 };
 
 #endif

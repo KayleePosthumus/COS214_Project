@@ -34,3 +34,25 @@ void Rocket::TakeLiftOffDamage()
     if (this->components)
         this->components->TakeLiftOffDamage(RNG::RandomDamageToComponents());
 }
+
+void Rocket::attach(Observer* o) 
+{
+    this->observerList.push_back(o);
+}
+
+void Rocket::detach(Observer* o) 
+{
+    for(vector<Observer*>::iterator it = observerList.begin(); it != observerList.end(); ++it)
+    {
+        if(*(it) == o)
+            observerList.erase(it);
+    }
+    
+}
+void Rocket::notify() 
+{
+    for(vector<Observer*>::iterator it = observerList.begin(); it != observerList.end(); ++it)
+    {
+        (*it)->update();
+    }
+}
