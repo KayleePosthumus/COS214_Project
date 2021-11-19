@@ -22,7 +22,7 @@ runFiles() {
   echo "Running"
   echo "------------------------------------"
 
-  ./main
+  make run
 }
 
 while test $# -gt 0; do

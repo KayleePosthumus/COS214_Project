@@ -24,10 +24,13 @@ OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuil
         main.o
 
 all: $(OBJS)
-	$(CXX) $(CFLAGS) $(OBJS) -o $(TARGET)
+	$(CXX) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 %.o: %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@
+
+run:
+	./main
 
 clean:
 	rm -f $(TARGET) $(OBJS)

@@ -2,5 +2,5 @@
 main
 todo.md
 *.bak_*
-./.vscode
+/.vscode
 *.lck
