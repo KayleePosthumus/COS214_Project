@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS=-I. -Wall
+CFLAGS=-I. -Wall -g
 TARGET=main
 OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuilder.o \
 		Component/Component.o \

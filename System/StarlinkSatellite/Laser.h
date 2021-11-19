@@ -13,6 +13,7 @@ public:
 	Laser(StarlinkSatellite*);
 	~Laser();
 	void notify();
+	void addSatellite(StarlinkSatellite*);
 };
 
 #endif

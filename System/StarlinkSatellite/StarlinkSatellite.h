@@ -4,24 +4,28 @@
 #include <string>
 #include <cstdio>
 #include "Iterator.h"
-
 #include "../Spacecraft/Payload.h"
+
+class Iterator;
+
+using namespace std;
 
 class StarlinkSatellite : public Payload
 {
 private:
-	std::string name;
-	StarlinkSatellite* next;
+	string name;
+	StarlinkSatellite* nextSatellite;
 public:
 	StarlinkSatellite();
-	StarlinkSatellite(std::string);
+	StarlinkSatellite(string);
 	~StarlinkSatellite();
 	StarlinkSatellite* clone(StarlinkSatellite*);
 	StarlinkSatellite* getNext();
+	StarlinkSatellite* setNext(StarlinkSatellite*);
 	void communicateSatellite();
 	void communicateGround();
 	Iterator* createIterator();
-	std::string getName();
+	string getName();
 };
 
 #endif

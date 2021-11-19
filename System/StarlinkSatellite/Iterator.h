@@ -2,6 +2,7 @@
 #define ITERATOR_H
 
 #include "StarlinkSatellite.h"
+class StarlinkSatellite;
 
 class Iterator
 {

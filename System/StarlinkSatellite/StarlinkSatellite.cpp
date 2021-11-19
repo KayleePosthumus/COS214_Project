@@ -1,32 +1,55 @@
 #include "StarlinkSatellite.h"
 
 StarlinkSatellite::StarlinkSatellite()
-{}
+{
+	name = "No name";
+	nextSatellite = nullptr;
+}
 
-StarlinkSatellite::StarlinkSatellite(std::string name)
-	: name(name)
-{}
+StarlinkSatellite::StarlinkSatellite(string name)
+{
+	this->name = name;
+	nextSatellite = nullptr;
+}
 
 StarlinkSatellite::~StarlinkSatellite() {}
 
-StarlinkSatellite* StarlinkSatellite::clone(StarlinkSatellite* original) {
-	StarlinkSatellite* copy = new StarlinkSatellite(original->name);
-	copy->next = original->next;
+StarlinkSatellite *StarlinkSatellite::clone(StarlinkSatellite *original)
+{
+	StarlinkSatellite *copy = new StarlinkSatellite(original->name);
+	copy->nextSatellite = original->nextSatellite;
 	return copy;
 }
 
-StarlinkSatellite* StarlinkSatellite:: getNext() {
-	return next;
+StarlinkSatellite *StarlinkSatellite::getNext()
+{
+	if (nextSatellite)
+		return nextSatellite;
+	else
+		return nullptr;
 }
 
-std::string StarlinkSatellite::getName() {
+StarlinkSatellite * StarlinkSatellite::setNext(StarlinkSatellite *satellite)
+{
+	nextSatellite = satellite;
+}
+
+string StarlinkSatellite::getName()
+{
 	return name;
 }
 
-void StarlinkSatellite::communicateSatellite() {
-	printf("%s Testing communication with satellites\n", name);
+void StarlinkSatellite::communicateSatellite()
+{
+	printf("%s pinging -> ", name.c_str());
 }
 
-void StarlinkSatellite::communicateGround() {
-	printf("%s Testing communication with ground\n", name);
+void StarlinkSatellite::communicateGround()
+{
+	printf("%s Testing communication with ground\n", name.c_str());
+}
+
+Iterator *StarlinkSatellite::createIterator()
+{
+	return new Iterator(this);
 }

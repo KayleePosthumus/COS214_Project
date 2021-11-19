@@ -5,6 +5,9 @@
 #include "Builder/Falcon9Builder.h"
 #include "Builder/FalconHeavyBuilder.h"
 
+#include "StarlinkSatellite/Laser.h"
+#include "StarlinkSatellite/StarlinkSatellite.h"
+
 #include <iostream>
 
 using namespace std;
@@ -60,6 +63,16 @@ int main()
     Rocket *falconHeavy = falconHeavyBuilder->GetRocket();
     falconHeavy->TakeLiftOffDamage();
     cout << endl;
+
+	Laser* laser = new Laser();
+
+	for (int i = 0; i < 60; i++) {
+		laser->addSatellite(new StarlinkSatellite("SAT-"+ to_string(i)));
+	}
+
+	laser->notify();
+
+	delete laser;
 
     return 0;
 }
