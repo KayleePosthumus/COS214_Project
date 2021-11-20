@@ -14,6 +14,8 @@ public:
 	VacuumMerlinEngine(string name);
 	VacuumMerlinEngine(string name, Component *successor);
 	~VacuumMerlinEngine();
+
+	Component* Clone();
 };
 
 #endif

@@ -71,3 +71,22 @@ void Rocket::setStage(Stage* stage)
 {
     this->subjectStage = stage;
 }
+
+void Rocket::restoreMemento(RocketMemento* mem)
+{
+    RocketState* s = mem->getState();
+
+    // might be needed, commented out in case
+    //delete this->components;
+    //delete this->subjectStage;
+
+    this->name = s->GetName();
+    this->health = s->GetHealth();
+    this->components = s->GetComponents()->Clone();
+    this->subjectStage = s->GetStage()->Clone();
+}
+
+RocketMemento* Rocket::createMemento()
+{
+    return new RocketMemento(this->name, this->health, this->components, this->subjectStage);
+}

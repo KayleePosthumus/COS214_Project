@@ -16,6 +16,8 @@ public:
 	~Falcon9Core();
 
 	void Destroy();
+
+	Component* Clone();
 };
 
 #endif

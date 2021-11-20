@@ -11,6 +11,7 @@ class Stage1 : public Stage
 		Stage1();
 		~Stage1();
 		void handle();
+		Stage* Clone();
 };
 
 #endif

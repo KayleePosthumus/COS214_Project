@@ -11,3 +11,21 @@ VacuumMerlinEngine::VacuumMerlinEngine(string name, Component *successor) : Engi
     this->SetHealth(VacuumMerlinEngineConfig::health);
 }
 VacuumMerlinEngine::~VacuumMerlinEngine() {}
+
+Component* VacuumMerlinEngine::Clone()
+{
+    VacuumMerlinEngine* c; // new Component
+
+    if (this->successor == nullptr)
+    {
+        c = new VacuumMerlinEngine(this->GetName());
+    }
+    else
+    {
+        Component* s = this->successor->Clone();
+        c = new VacuumMerlinEngine(this->GetName(), s);
+    }
+    
+    c->SetHealth(this->GetHealth());
+    return c;
+}
