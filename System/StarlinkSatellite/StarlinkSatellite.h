@@ -21,7 +21,7 @@ public:
 	~StarlinkSatellite();
 	StarlinkSatellite* clone(StarlinkSatellite*);
 	StarlinkSatellite* getNext();
-	StarlinkSatellite* setNext(StarlinkSatellite*);
+	void setNext(StarlinkSatellite*);
 	void communicateSatellite();
 	void communicateGround();
 	Iterator* createIterator();

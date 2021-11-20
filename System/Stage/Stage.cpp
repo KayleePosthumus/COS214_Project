@@ -7,3 +7,8 @@ void Stage::handle()
 {
     
 }
+
+Stage* Stage::Clone()
+{
+    return new Stage();
+}

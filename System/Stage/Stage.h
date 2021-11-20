@@ -8,6 +8,7 @@ public:
 	Stage();
 	~Stage();
 	virtual void handle();
+	virtual Stage* Clone();
 };
 
 #endif

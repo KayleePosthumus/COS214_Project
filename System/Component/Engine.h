@@ -17,6 +17,8 @@ public:
 	~Engine();
 
 	void Destroy();
+
+	virtual Component* Clone();
 };
 
 #endif

@@ -15,3 +15,21 @@ void Engine::Destroy()
             successor->TakeDamage(RNG::RandomDamageToComponents()); // Randomly Damage neighboring engines
     }
 }
+
+Component* Engine::Clone()
+{
+    Engine* c; // new Component
+
+    if (this->successor == nullptr)
+    {
+        c = new Engine(this->GetName());
+    }
+    else
+    {
+        Component* s = this->successor->Clone();
+        c = new Engine(this->GetName(), s);
+    }
+    
+    c->SetHealth(this->GetHealth());
+    return c;
+}

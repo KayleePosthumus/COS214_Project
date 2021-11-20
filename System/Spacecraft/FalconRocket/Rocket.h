@@ -6,6 +6,8 @@
 #include "../Observer.h"
 #include "../../Stage/Stage.h"
 #include "../SpaceCraft.h"
+#include "../../Memento/RocketMemento.h"
+#include "../../Memento/RocketState.h"
 
 #include <string>
 #include <vector>
@@ -43,6 +45,9 @@ public:
 
     Stage* getStage();
 	void setStage(Stage* stage);   
+    
+    void restoreMemento(RocketMemento*);
+    RocketMemento* createMemento();
 };
 
 #endif

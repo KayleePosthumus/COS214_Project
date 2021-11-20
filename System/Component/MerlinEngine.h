@@ -14,6 +14,8 @@ public:
 	MerlinEngine(string name);
 	MerlinEngine(string name, Component *successor);
 	~MerlinEngine();
+
+	Component* Clone();
 };
 
 #endif
