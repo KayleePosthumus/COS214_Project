@@ -15,8 +15,10 @@ public:
 	~Iterator();
 	StarlinkSatellite* firstItem();
 	StarlinkSatellite* nextItem();
-	bool isDone();
 	StarlinkSatellite* currentItem();
+	bool isDone();
+	bool isLast();
+	void reset();
 };
 
 #endif
