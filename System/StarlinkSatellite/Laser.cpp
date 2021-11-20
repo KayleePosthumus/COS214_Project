@@ -20,8 +20,8 @@ Laser::~Laser()
 	}
 }
 
-Laser::Laser(StarlinkSatellite *satellitelist)
-	: satelliteList(satelliteList)
+Laser::Laser(StarlinkSatellite *newSatelliteList)
+	: satelliteList(newSatelliteList)
 {
 }
 
@@ -31,11 +31,13 @@ void Laser::notify()
 		return;
 
 	Iterator *it = satelliteList->createIterator();
-	while (!it->isDone())
+	do
 	{
 		it->currentItem()->communicateSatellite();
 		it->nextItem();
-	}
+	} while (!it->isDone());
+
+	it->currentItem()->communicateSatellite();
 
 	printf("\n");
 }

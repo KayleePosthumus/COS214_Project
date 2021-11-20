@@ -29,7 +29,7 @@ StarlinkSatellite *StarlinkSatellite::getNext()
 		return nullptr;
 }
 
-StarlinkSatellite * StarlinkSatellite::setNext(StarlinkSatellite *satellite)
+void StarlinkSatellite::setNext(StarlinkSatellite *satellite)
 {
 	nextSatellite = satellite;
 }
