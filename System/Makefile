@@ -13,8 +13,10 @@ OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuil
 			Memento/Caretaker.o Memento/DragonCaretaker.o Memento/DragonMemento.o Memento/FalconCaretaker.o Memento/FalconMemento.o \
 		SpaceCraft/SpaceCraft.o \
 			SpaceCraft/Observer.o SpaceCraft/Payload.o \
+			SpaceCraft/Dragon/Human.o \
+			SpaceCraft/Dragon/Cargo.o \
 			SpaceCraft/Dragon/Dragon.o \
-				SpaceCraft/Dragon/CrewDragon.o SpaceCraft/Dragon/DragonSpacecraft.o SpaceCraft/Dragon/Human.o SpaceCraft/Dragon/Modules.o \
+				SpaceCraft/Dragon/CrewDragon.o SpaceCraft/Dragon/DragonSpacecraft.o SpaceCraft/Dragon/Modules.o \
 			SpaceCraft/FalconRocket/Falcon9.o \
 				SpaceCraft/FalconRocket/FalconHeavy.o SpaceCraft/FalconRocket/Rocket.o \
 		Stage/Stage.o \
