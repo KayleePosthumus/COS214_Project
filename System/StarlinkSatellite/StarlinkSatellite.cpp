@@ -23,10 +23,7 @@ StarlinkSatellite *StarlinkSatellite::clone(StarlinkSatellite *original)
 
 StarlinkSatellite *StarlinkSatellite::getNext()
 {
-	if (nextSatellite)
-		return nextSatellite;
-	else
-		return nullptr;
+	return nextSatellite;
 }
 
 void StarlinkSatellite::setNext(StarlinkSatellite *satellite)
@@ -41,12 +38,12 @@ string StarlinkSatellite::getName()
 
 void StarlinkSatellite::communicateSatellite()
 {
-	printf("%s pinging -> ", name.c_str());
+	printf("%s", name.c_str());
 }
 
 void StarlinkSatellite::communicateGround()
 {
-	printf("%s Testing communication with ground\n", name.c_str());
+	printf("%s Sending signals to the ground\n", name.c_str());
 }
 
 Iterator *StarlinkSatellite::createIterator()

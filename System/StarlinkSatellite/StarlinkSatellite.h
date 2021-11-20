@@ -4,13 +4,13 @@
 #include <string>
 #include <cstdio>
 #include "Iterator.h"
-#include "../Spacecraft/Payload.h"
+// #include "../Spacecraft/Payload.h"
 
 class Iterator;
 
 using namespace std;
 
-class StarlinkSatellite : public Payload
+class StarlinkSatellite //: public Payload
 {
 private:
 	string name;
@@ -21,7 +21,7 @@ public:
 	~StarlinkSatellite();
 	StarlinkSatellite* clone(StarlinkSatellite*);
 	StarlinkSatellite* getNext();
-	StarlinkSatellite* setNext(StarlinkSatellite*);
+	void setNext(StarlinkSatellite*);
 	void communicateSatellite();
 	void communicateGround();
 	Iterator* createIterator();
