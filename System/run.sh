@@ -17,8 +17,6 @@ makeFiles() {
 }
 
 runFiles() {
-  makeFiles
-
   echo "Running"
   echo "------------------------------------"
 
@@ -28,26 +26,27 @@ runFiles() {
 while test $# -gt 0; do
   case "$1" in
     -h|--help)
-      echo "-c to clean"
-      echo "-m to make"
-      echo "-r to run"
-      echo "-a to clean, make, and run"
+      echo "-c or --clean to clean"
+      echo "-m or --make to make"
+      echo "-r or --run to run"
+      echo "-a or --all to clean, make, and run (Exits script. Any flags after will be ignored)"
       exit 0;
       ;;
-    -c)
+    -c|--clean)
       cleanFiles
       shift
       ;;
-    -m)
+    -m|--make)
       makeFiles
       shift
       ;;
-    -r)
+    -r|--run)
       runFiles
       shift
       ;;
-    -a)
+    -a|--all)
       cleanFiles
+      makeFiles
       runFiles
       exit
       ;;
