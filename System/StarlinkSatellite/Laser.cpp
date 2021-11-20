@@ -31,14 +31,14 @@ void Laser::notify()
 		return;
 
 	Iterator *it = satelliteList->createIterator();
-	do
+	while (!it->isLast())
 	{
 		it->currentItem()->communicateSatellite();
+		printf(" pinging --> ");
 		it->nextItem();
-	} while (!it->isDone());
+	}
 
 	it->currentItem()->communicateSatellite();
-
 	printf("\n");
 }
 
@@ -52,7 +52,7 @@ void Laser::addSatellite(StarlinkSatellite *satellite)
 	Iterator* it = satelliteList->createIterator();
 	StarlinkSatellite* lastSat = satelliteList;
 
-	while (!it->isDone()) {
+	while (!it->isLast()) {
 		lastSat = it->nextItem();
 	}
 
