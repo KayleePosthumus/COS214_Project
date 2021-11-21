@@ -11,6 +11,7 @@ private:
 	Stage* observerState;
 public:
 	Observer();
+	Observer(Rocket* s, Stage* os);
 	~Observer();
 	void update();
 };
