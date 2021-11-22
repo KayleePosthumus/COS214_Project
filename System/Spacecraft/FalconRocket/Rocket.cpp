@@ -42,7 +42,7 @@ void Rocket::TakeLiftOffDamage()
         this->components->TakeLiftOffDamage(RNG::RandomDamageToComponents());
 }
 
-void Rocket::TransitionIntoStageTwo(Component *prev)
+void Rocket::TransitionIntoStageTwo()
 {
     cout << "Transitioning into stage 2" << endl;
     if (this->components && this->components->successor)

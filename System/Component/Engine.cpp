@@ -16,9 +16,13 @@ void Engine::Destroy()
     }
 }
 
-Component* Engine::Clone()
+void Engine::TransitionIntoStageTwo(Component *prev)
 {
-    Engine* c; // new Component
+}
+
+Component *Engine::Clone()
+{
+    Engine *c; // new Component
 
     if (this->successor == nullptr)
     {
@@ -26,10 +30,10 @@ Component* Engine::Clone()
     }
     else
     {
-        Component* s = this->successor->Clone();
+        Component *s = this->successor->Clone();
         c = new Engine(this->GetName(), s);
     }
-    
+
     c->SetHealth(this->GetHealth());
     return c;
 }

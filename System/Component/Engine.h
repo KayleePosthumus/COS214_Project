@@ -18,7 +18,8 @@ public:
 
 	void Destroy();
 
-	virtual Component* Clone();
+	virtual void TransitionIntoStageTwo(Component *prev);
+	virtual Component *Clone();
 };
 
 #endif

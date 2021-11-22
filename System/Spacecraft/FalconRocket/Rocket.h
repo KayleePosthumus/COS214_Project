@@ -39,7 +39,7 @@ public:
 
     void TakeLiftOffDamage();
 
-    void TransitionIntoStageTwo(Component *prev);
+    void TransitionIntoStageTwo();
 
     void attach(Observer *o);
     void detach(Observer *o);
