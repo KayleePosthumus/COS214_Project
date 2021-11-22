@@ -8,7 +8,7 @@ OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuil
 			Factory/ComponentFactory.o Factory/CoreFactory.o Factory/DragonFactory.o Factory/FalconRocketFactory.o \
 			Factory/MerlinEngineFactory.o Factory/SpaceCraftFactory.o Factory/VacuumMerlinEngineFactory.o \
 		LaunchStation/LaunchStation.o \
-			LaunchStation/Command.o LaunchStation/Iterator2.o LaunchStation/Land.o LaunchStation/TakeOff.o \
+			LaunchStation/Command.o LaunchStation/Land.o LaunchStation/TakeOff.o \
 		Memento/RocketState.o \
 			Memento/RocketMemento.o Memento/RocketCaretaker.o \
 		SpaceCraft/SpaceCraft.o \

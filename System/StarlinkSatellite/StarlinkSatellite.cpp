@@ -1,15 +1,13 @@
 #include "StarlinkSatellite.h"
 
 StarlinkSatellite::StarlinkSatellite()
+	: name("No name"), nextSatellite(nullptr)
 {
-	name = "No name";
-	nextSatellite = nullptr;
 }
 
 StarlinkSatellite::StarlinkSatellite(string name)
+	: name(name), nextSatellite(nullptr)
 {
-	this->name = name;
-	nextSatellite = nullptr;
 }
 
 StarlinkSatellite::~StarlinkSatellite() {}
