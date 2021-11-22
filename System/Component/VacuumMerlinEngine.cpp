@@ -11,3 +11,11 @@ VacuumMerlinEngine::VacuumMerlinEngine(string name, Component *successor) : Engi
     this->SetHealth(VacuumMerlinEngineConfig::health);
 }
 VacuumMerlinEngine::~VacuumMerlinEngine() {}
+
+void VacuumMerlinEngine::TransitionIntoStageTwo(Component *prev)
+{
+    if (this->successor)
+    {
+        this->successor->TransitionIntoStageTwo(this);
+    }
+}

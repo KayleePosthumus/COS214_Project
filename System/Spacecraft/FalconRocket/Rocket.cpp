@@ -1,5 +1,7 @@
 #include "Rocket.h"
 
+#include <iostream>
+
 using namespace std;
 
 Rocket::Rocket(string name)
@@ -33,4 +35,11 @@ void Rocket::TakeLiftOffDamage()
 {
     if (this->components)
         this->components->TakeLiftOffDamage(RNG::RandomDamageToComponents());
+}
+
+void Rocket::TransitionIntoStageTwo()
+{
+    cout << "Transitioning into stage 2" << endl;
+    if (this->components && this->components->successor)
+        this->components->successor->TransitionIntoStageTwo(this->components);
 }

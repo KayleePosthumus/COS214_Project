@@ -2,11 +2,11 @@
 
 using namespace std;
 
-Falcon9Core::Falcon9Core(string name) : Core(name)
+Falcon9Core::Falcon9Core(string name) : Component(name)
 {
     this->SetHealth(Falcon9CoreConfig::health);
 }
-Falcon9Core::Falcon9Core(string name, Component *successor) : Core(name, successor)
+Falcon9Core::Falcon9Core(string name, Component *successor) : Component(name, successor)
 {
     this->SetHealth(Falcon9CoreConfig::health);
 }
@@ -24,5 +24,15 @@ void Falcon9Core::Destroy()
             component->TakeDamage(component->GetHealth()); // destroy engines attached Enginex9->Core->Enginesx9->Core
         component = component->successor;
         i--;
+    }
+}
+
+void Falcon9Core::TransitionIntoStageTwo(Component *prev)
+{
+    prev->successor = this->successor;
+
+    if (this->successor)
+    {
+        this->successor->TransitionIntoStageTwo(prev);
     }
 }

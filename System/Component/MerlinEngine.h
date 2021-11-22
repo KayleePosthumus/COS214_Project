@@ -14,6 +14,8 @@ public:
 	MerlinEngine(string name);
 	MerlinEngine(string name, Component *successor);
 	~MerlinEngine();
+
+	void TransitionIntoStageTwo(Component *prev);
 };
 
 #endif

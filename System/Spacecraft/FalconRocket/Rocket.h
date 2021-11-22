@@ -27,6 +27,8 @@ public:
     void SetPayload(vector<Payload *> *payload);
 
     void TakeLiftOffDamage();
+
+    void TransitionIntoStageTwo();
 };
 
 #endif

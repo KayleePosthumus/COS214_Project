@@ -22,6 +22,8 @@ public:
 	virtual void TakeLiftOffDamage(int damageAmount);
 	virtual void Destroy() = 0;
 
+	virtual void TransitionIntoStageTwo(Component *prev) = 0;
+
 	int GetHealth();
 	void SetHealth(int health);
 

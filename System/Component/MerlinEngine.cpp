@@ -11,3 +11,13 @@ MerlinEngine::MerlinEngine(string name, Component *successor) : Engine(name, suc
     this->SetHealth(MerlinEngineConfig::health);
 }
 MerlinEngine::~MerlinEngine() {}
+
+void MerlinEngine::TransitionIntoStageTwo(Component *prev)
+{
+    prev->successor = this->successor;
+
+    if (this->successor)
+    {
+        this->successor->TransitionIntoStageTwo(prev);
+    }
+}

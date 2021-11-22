@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Falcon9Core : public Core
+class Falcon9Core : public Component
 {
 private:
 public:
@@ -16,6 +16,7 @@ public:
 	~Falcon9Core();
 
 	void Destroy();
+	void TransitionIntoStageTwo(Component *prev);
 };
 
 #endif
