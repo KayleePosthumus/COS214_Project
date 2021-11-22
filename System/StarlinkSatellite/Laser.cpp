@@ -34,7 +34,7 @@ void Laser::notify()
 	while (!it->isLast())
 	{
 		it->currentItem()->communicateSatellite();
-		printf(" pinging --> ");
+		printf(" --> ");
 		it->nextItem();
 	}
 
