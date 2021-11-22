@@ -1,14 +1,17 @@
 #include "LaunchStation.h"
 
+LaunchStation* LaunchStation::launchStation = nullptr;
+
 LaunchStation::LaunchStation() {}
 
 LaunchStation::~LaunchStation() {
-	delete LaunchStation::launchStation;
+	if (launchStation)
+		delete launchStation;
 }
 
 LaunchStation* LaunchStation::instance()
 {
-	if (!LaunchStation::launchStation)
+	if (!launchStation)
 		launchStation = new LaunchStation();
 
 	return launchStation;
@@ -16,5 +19,5 @@ LaunchStation* LaunchStation::instance()
 
 void LaunchStation::setSatelliteList(StarlinkSatellite* satelliteList)
 {
-	LaunchStation::launchStation->satelliteList = satelliteList;
+	launchStation->satelliteList = satelliteList;
 }
