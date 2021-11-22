@@ -23,8 +23,16 @@ Rocket::~Rocket()
         delete current;
     }
 
+	while (!_observerList.empty())
+	{
+		if (_observerList.back())
+			delete _observerList.back();
+
+		_observerList.pop_back();
+	}
+
     delete _vacuumMerlin;
-    
+
     if(_subjectStage)
         delete _subjectStage;
 }
@@ -99,7 +107,7 @@ string Rocket::GetCores()
 
         current = current->successor;
     }
-    
+
     return out;
 }
 
@@ -147,12 +155,12 @@ void Rocket::PrintDetails()
 	cout << "Payload: " << GetPayloadName() << endl;
 }
 
-void Rocket::attach(Observer* o) 
+void Rocket::attach(Observer* o)
 {
     _observerList.push_back(o);
 }
 
-void Rocket::detach(Observer* o) 
+void Rocket::detach(Observer* o)
 {
     /*for(vector<Observer*>::iterator it = _observerList.begin(); it != _observerList.end(); ++it)
     {
@@ -163,7 +171,7 @@ void Rocket::detach(Observer* o)
     _observerList.pop_back();
 }
 
-void Rocket::notify() 
+void Rocket::notify()
 {
     for(vector<Observer*>::iterator it = _observerList.begin(); it != _observerList.end(); ++it)
     {
@@ -176,12 +184,12 @@ void Rocket::PrintStage()
     _subjectStage->handle();
 }
 
-Stage* Rocket::getStage() 
+Stage* Rocket::getStage()
 {
     return _subjectStage;
 }
 
-void Rocket::SetStage(Stage* stage) 
+void Rocket::SetStage(Stage* stage)
 {
     if(_subjectStage)
         delete _subjectStage;

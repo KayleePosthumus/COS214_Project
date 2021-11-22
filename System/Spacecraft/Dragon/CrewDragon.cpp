@@ -1,14 +1,18 @@
 #include "CrewDragon.h"
 
-CrewDragon::CrewDragon(string name) : Dragon(name) 
+CrewDragon::CrewDragon(string name) : Dragon(name)
 {
     _maxCargoCapacity = 2507;
 }
 
-CrewDragon::~CrewDragon() 
+CrewDragon::~CrewDragon()
 {
-    while(!_crewMembers.empty())
+    while(!_crewMembers.empty()) {
+		if (_crewMembers.back())
+			delete _crewMembers.back();
+
         _crewMembers.pop_back();
+	}
 }
 
 bool CrewDragon::AddCargo(Cargo* c)
@@ -34,7 +38,7 @@ bool CrewDragon::RemoveCargo(Cargo* c)
         return true;
     }
     return false;
-}	
+}
 
 bool CrewDragon::AddCrew(Human* h)
 {

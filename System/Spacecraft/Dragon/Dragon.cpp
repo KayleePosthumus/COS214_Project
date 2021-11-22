@@ -4,10 +4,16 @@ Dragon::Dragon(string name) : Payload(name)
 {
 }
 
-Dragon::~Dragon() 
+Dragon::~Dragon()
 {
-    while(!_cargoModules.empty())
-        _cargoModules.pop_back();
+    while(!_cargoModules.empty()) {
+		if (_cargoModules.back())
+		{
+			delete _cargoModules.back();
+		}
+
+		_cargoModules.pop_back();
+	}
 }
 
 string Dragon::GetCargo()

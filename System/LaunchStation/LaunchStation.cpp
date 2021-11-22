@@ -8,6 +8,15 @@ LaunchStation::LaunchStation()
 
 LaunchStation::~LaunchStation()
 {
+	while (!_simulations.empty()) {
+		if (_simulations.back())
+		{
+			delete _simulations.back();
+		}
+
+		_simulations.pop_back();
+	}
+
 	delete _launchStation;
 }
 
@@ -293,7 +302,7 @@ void LaunchStation::RunSimulations()
 		if(simType == 1)
 		{
 			cout << "TEST SIMULATION" << endl;
-			
+
 			AddSimulation();
 			TestSimulation();
 			_simulations[0]->PrintDetails();
@@ -313,7 +322,7 @@ void LaunchStation::RunSimulations()
 				cout << "\nWould you like to run the simualtion again:\n1.Yes\n2.No" << endl;
 				cin >> again;
 			}
-		
+
 			_simulations[0]->PrintDetails();
 
 			if(caretaker)
