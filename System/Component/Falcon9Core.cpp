@@ -36,3 +36,21 @@ void Falcon9Core::TransitionIntoStageTwo(Component *prev)
         this->successor->TransitionIntoStageTwo(prev);
     }
 }
+
+Component *Falcon9Core::Clone()
+{
+    Falcon9Core *c; // new Component
+
+    if (this->successor == nullptr)
+    {
+        c = new Falcon9Core(this->GetName());
+    }
+    else
+    {
+        Component *s = this->successor->Clone();
+        c = new Falcon9Core(this->GetName(), s);
+    }
+
+    c->SetHealth(this->GetHealth());
+    return c;
+}

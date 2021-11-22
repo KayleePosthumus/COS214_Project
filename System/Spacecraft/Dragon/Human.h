@@ -1,14 +1,17 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
-#include "Modules.h"
+#include <string>
 
-class Human : public Modules
+class Human
 {
 private:
+	std::string _name;
 public:
-	Human();
+	Human(std::string);
 	~Human();
+	void SetName(std::string);
+	std::string GetName();
 };
 
 #endif

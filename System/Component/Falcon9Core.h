@@ -17,6 +17,8 @@ public:
 
 	void Destroy();
 	void TransitionIntoStageTwo(Component *prev);
+
+	Component *Clone();
 };
 
 #endif

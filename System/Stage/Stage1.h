@@ -5,10 +5,13 @@
 
 class Stage1 : public Stage
 {
-private:
-public:
-	Stage1();
-	~Stage1();
+	private:
+		
+	public:
+		Stage1();
+		~Stage1();
+		void handle();
+		Stage* Clone();
 };
 
 #endif

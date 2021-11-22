@@ -9,6 +9,8 @@ private:
 public:
 	Stage2();
 	~Stage2();
+	void handle();
+	Stage* Clone();
 };
 
 #endif

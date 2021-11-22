@@ -1,3 +1,10 @@
 *.o
 main
 todo.md
+*.bak_*
+/.vscode
+*.lck
+System/.vscode/dryrun.log
+System/.vscode/configurationCache.log
+System/.vscode/settings.json
+System/.vscode/targets.log

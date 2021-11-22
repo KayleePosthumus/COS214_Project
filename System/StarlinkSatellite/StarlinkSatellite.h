@@ -1,14 +1,31 @@
-#ifndef STARLINKSATELITE_H
-#define STARLINKSATELITE_H
+#ifndef STARLINKSATELLITE_H
+#define STARLINKSATELLITE_H
 
-#include "../Spacecraft/Payload.h"
+#include <string>
+#include <cstdio>
+#include "Iterator.h"
+// #include "../Spacecraft/Payload.h"
 
-class StarlinkSatellite : public Payload
+class Iterator;
+
+using namespace std;
+
+class StarlinkSatellite //: public Payload
 {
 private:
+	string name;
+	StarlinkSatellite* nextSatellite;
 public:
 	StarlinkSatellite();
+	StarlinkSatellite(string);
 	~StarlinkSatellite();
+	StarlinkSatellite* clone(StarlinkSatellite*);
+	StarlinkSatellite* getNext();
+	void setNext(StarlinkSatellite*);
+	void communicateSatellite();
+	void communicateGround();
+	Iterator* createIterator();
+	string getName();
 };
 
 #endif

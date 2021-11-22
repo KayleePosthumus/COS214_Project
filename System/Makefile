@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS=-I. -Wall
+CFLAGS=-I. -Wall -g
 TARGET=main
 OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuilder.o \
 		Component/Component.o \
@@ -9,12 +9,14 @@ OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuil
 			Factory/MerlinEngineFactory.o Factory/SpaceCraftFactory.o Factory/VacuumMerlinEngineFactory.o \
 		LaunchStation/LaunchStation.o \
 			LaunchStation/Command.o LaunchStation/Iterator2.o LaunchStation/Land.o LaunchStation/TakeOff.o \
-		Memento/Memento.o \
-			Memento/Caretaker.o Memento/DragonCaretaker.o Memento/DragonMemento.o Memento/FalconCaretaker.o Memento/FalconMemento.o \
+		Memento/RocketState.o \
+			Memento/RocketMemento.o Memento/RocketCaretaker.o \
 		SpaceCraft/SpaceCraft.o \
 			SpaceCraft/Observer.o SpaceCraft/Payload.o \
+			SpaceCraft/Dragon/Human.o \
+			SpaceCraft/Dragon/Cargo.o \
 			SpaceCraft/Dragon/Dragon.o \
-				SpaceCraft/Dragon/CrewDragon.o SpaceCraft/Dragon/DragonSpacecraft.o SpaceCraft/Dragon/Human.o SpaceCraft/Dragon/Modules.o \
+				SpaceCraft/Dragon/CrewDragon.o SpaceCraft/Dragon/DragonSpacecraft.o SpaceCraft/Dragon/Modules.o \
 			SpaceCraft/FalconRocket/Falcon9.o \
 				SpaceCraft/FalconRocket/FalconHeavy.o SpaceCraft/FalconRocket/Rocket.o \
 		Stage/Stage.o \
@@ -24,10 +26,13 @@ OBJS=   Builder/Falcon9Builder.o Builder/FalconHeavyBuilder.o Builder/RocketBuil
         main.o
 
 all: $(OBJS)
-	$(CXX) $(CFLAGS) $(OBJS) -o $(TARGET)
+	$(CXX) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 %.o: %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@
+
+run:
+	./main
 
 clean:
 	rm -f $(TARGET) $(OBJS)

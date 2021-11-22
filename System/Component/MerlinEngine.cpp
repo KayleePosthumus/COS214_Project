@@ -21,3 +21,20 @@ void MerlinEngine::TransitionIntoStageTwo(Component *prev)
         this->successor->TransitionIntoStageTwo(prev);
     }
 }
+Component *MerlinEngine::Clone()
+{
+    MerlinEngine *c; // new Component
+
+    if (this->successor == nullptr)
+    {
+        c = new MerlinEngine(this->GetName());
+    }
+    else
+    {
+        Component *s = this->successor->Clone();
+        c = new MerlinEngine(this->GetName(), s);
+    }
+
+    c->SetHealth(this->GetHealth());
+    return c;
+}

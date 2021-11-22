@@ -30,7 +30,9 @@ public:
 	string GetName();
 	void SetName(string name);
 
-	Component *successor; // for both the linked list and Chain of Command
+	virtual Component* Clone() = 0;
+
+	Component *successor = nullptr; // for both the linked list and Chain of Command
 };
 
 #endif

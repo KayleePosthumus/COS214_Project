@@ -13,6 +13,8 @@ public:
 	Core(string name);
 	Core(string name, Component *successor);
 	virtual ~Core();
+
+	virtual Component* Clone() = 0;
 };
 
 #endif
