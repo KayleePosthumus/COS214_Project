@@ -53,7 +53,7 @@ int main()
     falcon9Builder->AddVacuumMerlinEngines();
     Rocket *falcon9 = falcon9Builder->GetRocket();
     falcon9->TakeLiftOffDamage();
-    falcon9->TransitionIntoStageTwo(nullptr);
+    falcon9->TransitionIntoStageTwo();
     falcon9->TakeLiftOffDamage();
     cout << endl;
 
@@ -64,7 +64,7 @@ int main()
     falconHeavyBuilder->AddVacuumMerlinEngines();
     Rocket *falconHeavy = falconHeavyBuilder->GetRocket();
     falconHeavy->TakeLiftOffDamage();
-    falconHeavy->TransitionIntoStageTwo(nullptr);
+    falconHeavy->TransitionIntoStageTwo();
     falconHeavy->TakeLiftOffDamage();
     cout << endl;
 
