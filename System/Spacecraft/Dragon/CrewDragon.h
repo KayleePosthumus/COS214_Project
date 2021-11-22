@@ -7,16 +7,18 @@
 class CrewDragon : public Dragon
 {
 private:
-	vector<Human*> *_crewMembers;
-	int _maxCrew = 7;
+	vector<Human*> _crewMembers;
+	size_t _maxCrew = 7;
 
 public:
-	CrewDragon();
+	CrewDragon(string name);
 	~CrewDragon();
 	bool AddCargo(Cargo*);
 	bool RemoveCargo(Cargo*);
 	bool AddCrew(Human*);
 	bool RemoveCrew(Human*);
+	Payload* Clone();
+	string GetPassengers();
 };
 
 #endif

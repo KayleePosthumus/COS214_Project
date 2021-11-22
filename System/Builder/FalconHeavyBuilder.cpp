@@ -5,45 +5,79 @@ using namespace std;
 FalconHeavyBuilder::FalconHeavyBuilder()
 {
 }
+
 FalconHeavyBuilder::~FalconHeavyBuilder()
 {
 }
 
 void FalconHeavyBuilder::ConstructRocket()
 {
-    this->falconHeavy = new FalconHeavy("FalconHeavyRocket");
+    _falconHeavy = new FalconHeavy("Falcon Heavy Rocket");
 }
+
 void FalconHeavyBuilder::AddCoresAndMerlinEngines()
 {
-    ComponentFactory *coreFactory = new CoreFactory();
-    Component **engines = new Component *[Falcon9CoreConfig::numOfMerlinEnginesAttached];
+    Falcon9Core* falcon9Core = new Falcon9Core("Falcon 9 Core");
+    Component* merlinEngine = new MerlinEngine("Merlin Engine");
 
-    for (int i = 0; i < FalconHeavyConfig::Falcon9CoresCount; i++)
+    for(int i = 0; i < Falcon9Config::MerlinEnginesCount; ++i)
     {
-        for (int j = 0; j < Falcon9CoreConfig::numOfMerlinEnginesAttached; j++)
-        {
-            j == 0 ? engines[j] = new MerlinEngine("MerlinEngine") : engines[j] = new MerlinEngine("MerlinEngine", engines[j - 1]);
-        }
-
-        this->falconHeavy->AddComponents(engines[Falcon9CoreConfig::numOfMerlinEnginesAttached - 1]);
-        this->falconHeavy->AddComponents(coreFactory->produce());
+        falcon9Core->AddEngines(merlinEngine);
     }
+
+    _falconHeavy->AddCores(falcon9Core);
+    _falconHeavy->AddCores(falcon9Core->Clone());
+    _falconHeavy->AddCores(falcon9Core->Clone());
 }
+
 void FalconHeavyBuilder::AddVacuumMerlinEngines()
 {
-    ComponentFactory *vacuumMerlinEngineFactory = new VacuumMerlinEngineFactory();
-    for (int i = 0; i < FalconHeavyConfig::VacuumEnginesCount; i++)
-        this->falconHeavy->AddComponents(vacuumMerlinEngineFactory->produce());
+    _falconHeavy->AddVacuum(new VacuumMerlinEngine("Vacuum Merlin Engine"));
 }
+
 void FalconHeavyBuilder::AddPayload(RocketPayloadType PayloadType, int numberOfPayloadItems)
 {
-    // if (PayloadType == RocketPayloadType::dragon)
-    // {
-    //     vector<Payload *> *payload = new vector<Payload *>(1);
-    //     payload->push_back(new Dragon());
-    // }
+    if(PayloadType == RocketPayloadType::dragon)
+    {
+        DragonSpacecraft* dragon = new DragonSpacecraft("Dragon Spacecraft");
+        
+        int cargo = 1;
+        while(cargo == 1)
+        {
+            dragon->AddCargo(RocketBuilder::AddCargo());
+
+            cout << "\nWould you like to add more cargo:\n1.Yes\n2.No" << endl;
+            cin >> cargo;
+        }
+
+        _falconHeavy->SetPayload(dragon);
+    }
+    else if(PayloadType == RocketPayloadType::crewDragon)
+    {
+        CrewDragon* crewDragon = new CrewDragon("Crew Dragon");
+        int cargo = 1;
+        while(cargo == 1)
+        {
+            crewDragon->AddCargo(RocketBuilder::AddCargo());
+
+            cout << "\nWould you like to add more cargo:\n1.Yes\n2.No" << endl;
+            cin >> cargo;
+        }
+
+        int human = 1;
+        while(human == 1)
+        {
+            crewDragon->AddCrew(RocketBuilder::AddPeople());
+
+            cout << "\nWould you like to add more people:\n1.Yes\n2.No" << endl;
+            cin >> human;
+        }
+
+        _falconHeavy->SetPayload(crewDragon);
+    }
 }
+
 Rocket *FalconHeavyBuilder::GetRocket()
 {
-    return this->falconHeavy;
+    return _falconHeavy;
 }

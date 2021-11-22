@@ -10,9 +10,13 @@ using namespace std;
 class FalconHeavy : public Rocket
 {
 private:
+	bool _state = true;
 public:
 	FalconHeavy(string name);
 	~FalconHeavy();
+	float GetHealthPercentage();
+	void TakeLiftOffDamage();
+	bool GetState();
 };
 
 #endif

@@ -1,100 +1,220 @@
 #include "Rocket.h"
 
-#include <iostream>
-
 using namespace std;
 
 Rocket::Rocket(string name)
 {
-    this->name = name;
+    _name = name;
 }
+
 Rocket::~Rocket()
 {
-}
-
-void Rocket::SetComponents(Component *components)
-{
-    this->components = components;
-}
-void Rocket::AddComponents(Component *components)
-{
-    Component *tail = components;
-    while (components->successor)
+    while(_falcon9Cores)
     {
-        components = components->successor;
+        Component *current = _falcon9Cores;
+        _falcon9Cores = _falcon9Cores->successor;
+        delete current;
     }
-    components->successor = this->components;
-    this->components = tail;
-}
-void Rocket::SetPayload(vector<Payload *> *payload)
-{
-    this->payload = payload;
+
+    while(_payload)
+    {
+        Payload *current = _payload;
+        _payload = _payload->GetNext();
+        delete current;
+    }
+
+    delete _vacuumMerlin;
+    
+    if(_subjectStage)
+        delete _subjectStage;
 }
 
-/*void Rocket::SetPayload(Payload *p)
+void Rocket::AddCores(Component *cores)
 {
-    this->payload = p;
-}*/
+    if(!_falcon9Cores)
+        _falcon9Cores = cores;
+    else
+    {
+        Component* current = _falcon9Cores;
+        while(current->successor)
+        {
+            current = current->successor;
+        }
+
+        current->successor = cores;
+    }
+}
+
+void Rocket::AddVacuum(Component *vacuum)
+{
+    _vacuumMerlin = vacuum;
+}
+
+void Rocket::SetPayload(Payload *payload)
+{
+    _payload = payload;
+}
 
 void Rocket::TakeLiftOffDamage()
 {
-    if (this->components)
-        this->components->TakeLiftOffDamage(RNG::RandomDamageToComponents());
-}
-
-void Rocket::TransitionIntoStageTwo()
-{
-    cout << "Transitioning into stage 2" << endl;
-    if (this->components && this->components->successor)
-        this->components->successor->TransitionIntoStageTwo(this->components);
-    cout << "Dropping components on a droneship..." << endl;
-}
-void Rocket::attach(Observer *o)
-{
-    this->observerList.push_back(o);
-}
-
-void Rocket::detach(Observer *o)
-{
-    for (vector<Observer *>::iterator it = observerList.begin(); it != observerList.end(); ++it)
+    if (_falcon9Cores)
     {
-        if (*(it) == o)
-            observerList.erase(it);
+        int damage = RNG::RandomDamageToComponents();
+        _falcon9Cores->TakeLiftOffDamage(damage);
     }
 }
-void Rocket::notify()
+
+void Rocket::SetHealth(int h)
 {
-    for (vector<Observer *>::iterator it = observerList.begin(); it != observerList.end(); ++it)
+    _health = h;
+}
+
+string Rocket::GetName()
+{
+    return _name;
+}
+
+int Rocket::GetHealth()
+{
+    return _health;
+}
+
+string Rocket::GetCores()
+{
+    string out = "";
+
+    Component* current = _falcon9Cores;
+    while(current)
+    {
+        float percentage = ((float) current->GetHealth()) / (float) Falcon9CoreConfig::health * 100;
+
+        if(percentage < 0)
+        {
+            out += current->GetName() + " : 0%\n";
+        }
+        else
+        {
+            out += current->GetName() + " : " + to_string(percentage) + "%\n";
+        }
+
+        current = current->successor;
+    }
+    
+    return out;
+}
+
+Component* Rocket::GetCoreList()
+{
+    return _falcon9Cores;
+}
+
+int Rocket::GetMerlinHealth()
+{
+    return _vacuumMerlin->GetHealth();
+}
+
+string Rocket::GetPayloadName()
+{
+    string out = "";
+    Payload* current = _payload;
+    while(current)
+    {
+        if(current->GetNext())
+            out += current->GetName() + ", ";
+        else
+            out += current->GetName() + "\n";
+
+        current = current->GetNext();
+    }
+
+    return out;
+}
+
+Payload* Rocket::GetPayload()
+{
+    return _payload;
+}
+
+void Rocket::PrintDetails()
+{
+    float health = GetHealthPercentage();
+	float merlinHealth = ((float) GetMerlinHealth()) / ((float) VacuumMerlinEngineConfig::health) * 100;
+
+	cout << "\nName: " << GetName() << endl;
+	cout << "Health: " << fixed << setprecision(2) << health << "%" <<  endl;
+	cout << GetCores();
+	cout << "Vacuum Merlin Health: " << fixed << setprecision(2) << merlinHealth << "%" <<  endl;
+	cout << "Payload: " << GetPayloadName() << endl;
+}
+
+void Rocket::attach(Observer* o) 
+{
+    _observerList.push_back(o);
+}
+
+void Rocket::detach(Observer* o) 
+{
+    /*for(vector<Observer*>::iterator it = _observerList.begin(); it != _observerList.end(); ++it)
+    {
+        if(*(it) == o)
+            _observerList.erase(it);
+    }*/
+
+    _observerList.pop_back();
+}
+
+void Rocket::notify() 
+{
+    for(vector<Observer*>::iterator it = _observerList.begin(); it != _observerList.end(); ++it)
     {
         (*it)->update();
     }
 }
 
-Stage *Rocket::getStage()
+void Rocket::PrintStage()
 {
-    return this->subjectStage;
+    _subjectStage->handle();
 }
 
-void Rocket::setStage(Stage *stage)
+Stage* Rocket::getStage() 
 {
-    this->subjectStage = stage;
+    return _subjectStage;
 }
 
-void Rocket::restoreMemento(RocketMemento *mem)
+void Rocket::SetStage(Stage* stage) 
 {
-    RocketState *s = mem->getState();
-
-    // might be needed, commented out in case
-    //delete this->components;
-    //delete this->subjectStage;
-
-    this->name = s->GetName();
-    this->health = s->GetHealth();
-    this->components = s->GetComponents()->Clone();
-    this->subjectStage = s->GetStage()->Clone();
+    if(_subjectStage)
+        delete _subjectStage;
+    _subjectStage = stage;
 }
 
-RocketMemento *Rocket::createMemento()
+void Rocket::restoreMemento(RocketMemento* mem)
 {
-    return new RocketMemento(this->name, this->health, this->components, this->subjectStage);
+    RocketState* s = mem->getState();
+
+    _name = s->GetName();
+    _health = s->GetHealth();
+
+    Component* current = _falcon9Cores;
+    int i = 0;
+    while(current)
+    {
+        current->SetHealth(s->GetCoreHealth()[i]);
+        current = current->successor;
+    }
+
+    _vacuumMerlin->SetHealth(s->GetVacuumHealth());
+}
+
+RocketMemento* Rocket::createMemento()
+{
+    vector<int> coreHealth;
+    Component* current = _falcon9Cores;
+    while(current)
+    {
+        coreHealth.push_back(current->GetHealth());
+        current = current->successor;
+    }
+
+    return new RocketMemento(_name, _health, coreHealth, _vacuumMerlin->GetHealth());
 }

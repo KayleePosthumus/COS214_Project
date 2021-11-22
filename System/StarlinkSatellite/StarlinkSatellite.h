@@ -12,20 +12,16 @@ using namespace std;
 
 class StarlinkSatellite : public Payload
 {
-private:
-	string name;
-	StarlinkSatellite* nextSatellite;
 public:
 	StarlinkSatellite();
 	StarlinkSatellite(string);
 	~StarlinkSatellite();
-	StarlinkSatellite* clone(StarlinkSatellite*);
-	StarlinkSatellite* getNext();
-	void setNext(StarlinkSatellite*);
-	void communicateSatellite();
-	void communicateGround();
-	Iterator* createIterator();
-	string getName();
+	void CommunicateSatellite();
+	void CommunicateGround();
+	Iterator* CreateIterator();
+	Payload* Clone();
+	string GetCargo();
+	string GetPassengers();
 };
 
 #endif

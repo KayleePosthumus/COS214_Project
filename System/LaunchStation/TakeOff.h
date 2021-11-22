@@ -7,8 +7,10 @@ class TakeOff : public Command
 {
 private:
 public:
-	TakeOff();
+	TakeOff(Rocket* rocket);
 	~TakeOff();
+
+	void Execute();
 };
 
 #endif

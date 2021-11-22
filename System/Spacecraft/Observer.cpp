@@ -1,16 +1,10 @@
 #include "Observer.h"
 
-Observer::Observer()
+Observer::Observer(Rocket* subject)
 {
-    this->subject = nullptr;
-    this->observerState = nullptr;
+    _subject = subject;
 }
 
-Observer::Observer(Rocket* s, Stage* os) 
-{
-    this->subject = s;
-    this->observerState = os;
-}
 Observer::~Observer()
 {
 
@@ -18,6 +12,10 @@ Observer::~Observer()
 
 void Observer::update() 
 {
-    this->observerState = subject->getStage();
-    this->observerState->handle();
+    _observerState = _subject->GetState();
+}
+
+bool Observer::GetObserverState()
+{
+    return _observerState;
 }

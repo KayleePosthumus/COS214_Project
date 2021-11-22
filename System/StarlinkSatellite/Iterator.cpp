@@ -9,28 +9,28 @@ Iterator::~Iterator()
 {
 }
 
-Iterator::Iterator(StarlinkSatellite *first)
+Iterator::Iterator(Payload *first)
 	: first(first), current(first)
 {
 }
 
-StarlinkSatellite *Iterator::firstItem()
+Payload *Iterator::firstItem()
 {
 	return first;
 }
 
-StarlinkSatellite *Iterator::nextItem()
+Payload *Iterator::nextItem()
 {
 	if (!isDone())
 	{
-		current = current->getNext();
+		current = current->GetNext();
 		return current;
 	}
 
 	return nullptr;
 }
 
-StarlinkSatellite *Iterator::currentItem()
+Payload *Iterator::currentItem()
 {
 	return current;
 }
@@ -42,7 +42,7 @@ bool Iterator::isDone()
 
 bool Iterator::isLast()
 {
-	return !(current && current->getNext());
+	return !(current && current->GetNext());
 }
 
 void Iterator::reset()

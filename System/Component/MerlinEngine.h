@@ -15,8 +15,7 @@ public:
 	MerlinEngine(string name, Component *successor);
 	~MerlinEngine();
 
-	void TransitionIntoStageTwo(Component *prev);
-	Component *Clone();
+	Component* Clone();
 };
 
 #endif

@@ -7,10 +7,12 @@ class DragonSpacecraft : public Dragon
 {
 private:
 public:
-	DragonSpacecraft();
+	DragonSpacecraft(string name);
 	~DragonSpacecraft();
 	bool AddCargo(Cargo*);
 	bool RemoveCargo(Cargo*);
+	Payload* Clone();
+	string GetPassengers();
 };
 
 #endif

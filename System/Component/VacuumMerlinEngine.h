@@ -15,8 +15,7 @@ public:
 	VacuumMerlinEngine(string name, Component *successor);
 	~VacuumMerlinEngine();
 
-	void TransitionIntoStageTwo(Component *prev);
-	Component *Clone();
+	Component* Clone();
 };
 
 #endif

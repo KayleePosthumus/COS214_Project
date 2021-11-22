@@ -7,13 +7,13 @@
 class Laser
 {
 private:
-	StarlinkSatellite* satelliteList;
+	Payload* satelliteList;
 public:
 	Laser();
-	Laser(StarlinkSatellite*);
+	Laser(Payload*);
 	~Laser();
 	void notify();
-	void addSatellite(StarlinkSatellite*);
+	void addSatellite(Payload*);
 };
 
 #endif

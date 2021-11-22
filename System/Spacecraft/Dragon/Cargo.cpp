@@ -6,7 +6,9 @@ Cargo::Cargo(std::string d, double w)
     _weight = w;
 }
 
-Cargo::~Cargo() {}
+Cargo::~Cargo()
+{
+}
 
 void Cargo::SetDescription(std::string d)
 {

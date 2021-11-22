@@ -1,21 +1,24 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
 
-#include "StarlinkSatellite.h"
-class StarlinkSatellite;
+//#include "StarlinkSatellite.h"
+#include "../Spacecraft/Payload.h"
+
+//class StarlinkSatellite;
+//class Payload;
 
 class Iterator
 {
 private:
-	StarlinkSatellite* first;
-	StarlinkSatellite* current;
+	Payload* first;
+	Payload* current;
 public:
 	Iterator();
-	Iterator(StarlinkSatellite*);
+	Iterator(Payload*);
 	~Iterator();
-	StarlinkSatellite* firstItem();
-	StarlinkSatellite* nextItem();
-	StarlinkSatellite* currentItem();
+	Payload* firstItem();
+	Payload* nextItem();
+	Payload* currentItem();
 	bool isDone();
 	bool isLast();
 	void reset();

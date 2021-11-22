@@ -26,7 +26,7 @@ struct Falcon9Config
 
 struct FalconHeavyConfig
 {
-    static const int Health = 500;
+    static const int Health = 3000;
     static const int Falcon9CoresCount = 3;
     static const int MerlinEnginesCount = 27;
     static const int VacuumEnginesCount = 1;
@@ -64,7 +64,7 @@ struct VacuumMerlinEngineConfig
 
 struct Falcon9CoreConfig
 {
-    static const int health = 50;
+    static const int health = 100;
     static const int numOfMerlinEnginesAttached = 9;
 };
 

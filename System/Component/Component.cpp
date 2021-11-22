@@ -14,24 +14,38 @@ Component::Component(string name, Component *successor)
     this->successor = successor;
 }
 
-Component::~Component() {}
-
-void Component::TakeDamage(int damageAmount)
+Component::~Component()
 {
-    if (this->health <= 1)
+}
+
+bool Component::TakeDamage(int damageAmount)
+{
+    if(this->health <= 0)
     {
-        return;
+        return false;
     }
 
+    float percentage = ((float) health - (float) damageAmount) / (float) health * 100;
     this->health -= damageAmount;
-    cout << this->name << " took " << damageAmount << " units of damage." << endl;
+    cout << this->name << " sustained " << damageAmount << " units of damage." << endl;
 
-    if (this->health <= 1)
+    if(this->health <= 0)
     {
         cout << this->name << " was destroyed." << endl;
         this->Destroy();
+        return false;
+    }
+    else
+    {
+        if(percentage >= 0)
+            cout << name << " is at " << percentage << "% health" << endl;
+        else
+            cout << name << " is at 0% health" << endl;
+            
+        return true;
     }
 }
+
 void Component::TakeLiftOffDamage(int damageAmount)
 {
     this->TakeDamage(damageAmount);
@@ -43,6 +57,7 @@ int Component::GetHealth()
 {
     return this->health;
 }
+
 void Component::SetHealth(int health)
 {
     this->health = health;
@@ -52,6 +67,7 @@ string Component::GetName()
 {
     return this->name;
 }
+
 void Component::SetName(string name)
 {
     this->name = name;

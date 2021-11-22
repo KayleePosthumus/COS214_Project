@@ -7,20 +7,20 @@ Laser::Laser()
 
 Laser::~Laser()
 {
-	if (!satelliteList)
+	/*if (!satelliteList)
 		return;
 
-	Iterator *it = satelliteList->createIterator();
-	StarlinkSatellite* current = nullptr;
+	Iterator *it = satelliteList->CreateIterator();
+	Payload* current = nullptr;
 	while (!it->isDone())
 	{
 		current = it->currentItem();
 		it->nextItem();
 		delete current;
-	}
+	}*/
 }
 
-Laser::Laser(StarlinkSatellite *newSatelliteList)
+Laser::Laser(Payload *newSatelliteList)
 	: satelliteList(newSatelliteList)
 {
 }
@@ -30,31 +30,33 @@ void Laser::notify()
 	if (!satelliteList)
 		return;
 
-	Iterator *it = satelliteList->createIterator();
+	Iterator *it = satelliteList->CreateIterator();
 	while (!it->isLast())
 	{
-		it->currentItem()->communicateSatellite();
-		printf(" --> ");
+		((StarlinkSatellite*) it->currentItem())->CommunicateSatellite();
+		printf(" pinging --> ");
 		it->nextItem();
 	}
 
-	it->currentItem()->communicateSatellite();
+	((StarlinkSatellite*) it->currentItem())->CommunicateSatellite();
 	printf("\n");
+
+	delete it;
 }
 
-void Laser::addSatellite(StarlinkSatellite *satellite)
+void Laser::addSatellite(Payload *satellite)
 {
 	if (!satelliteList) {
 		satelliteList = satellite;
 		return;
 	}
 
-	Iterator* it = satelliteList->createIterator();
-	StarlinkSatellite* lastSat = satelliteList;
+	Iterator* it = satelliteList->CreateIterator();
+	Payload* lastSat = satelliteList;
 
 	while (!it->isLast()) {
 		lastSat = it->nextItem();
 	}
 
-	lastSat->setNext(satellite);
+	lastSat->SetNext(satellite);
 }

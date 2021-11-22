@@ -1,4 +1,10 @@
 #include "Command.h"
 
-Command::Command() {}
-Command::~Command() {}
+Command::Command(Rocket* rocket)
+{  
+    _rocket = rocket;
+}
+
+Command::~Command()
+{
+}

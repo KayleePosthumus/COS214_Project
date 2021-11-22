@@ -5,7 +5,10 @@ Human::Human(std::string n)
     _name = n;
 }
 
-Human::~Human() {}
+Human::~Human()
+{
+    
+}
 
 void Human::SetName(std::string n)
 {

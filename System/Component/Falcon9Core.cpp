@@ -1,59 +1,69 @@
 #include "Falcon9Core.h"
 
-#include <iostream>
-
 using namespace std;
 
 Falcon9Core::Falcon9Core(string name) : Component(name)
 {
-    this->SetHealth(Falcon9CoreConfig::health);
+    Component::SetHealth(Falcon9CoreConfig::health);
 }
+
 Falcon9Core::Falcon9Core(string name, Component *successor) : Component(name, successor)
 {
-    this->SetHealth(Falcon9CoreConfig::health);
+    Component::SetHealth(Falcon9CoreConfig::health);
 }
 
-Falcon9Core::~Falcon9Core() {}
-
-void Falcon9Core::Destroy()
+Falcon9Core::~Falcon9Core()
 {
-    int i = Falcon9CoreConfig::numOfMerlinEnginesAttached;
-    Component *component = this->successor;
-    //destroy engines attached to this
-    while (component != 0 && i > 0)
+    while(_engines)
     {
-        if (component)
-            component->TakeDamage(component->GetHealth()); // destroy engines attached Enginex9->Core->Enginesx9->Core
-        component = component->successor;
-        i--;
+        Component *current = _engines;
+        _engines = _engines->successor;
+        delete current;
     }
 }
 
-void Falcon9Core::TransitionIntoStageTwo(Component *prev)
+void Falcon9Core::AddEngines(Component* merlinEngine)
 {
-    prev->successor = this->successor;
-    cout << "Detaching " << this->GetName() << endl;
-
-    if (this->successor)
+    if(!_engines)
     {
-        this->successor->TransitionIntoStageTwo(prev);
-    }
-}
-
-Component *Falcon9Core::Clone()
-{
-    Falcon9Core *c; // new Component
-
-    if (this->successor == nullptr)
-    {
-        c = new Falcon9Core(this->GetName());
+        _engines = merlinEngine;
     }
     else
     {
-        Component *s = this->successor->Clone();
-        c = new Falcon9Core(this->GetName(), s);
-    }
+        Component *current = _engines;
+        while(current->successor)
+        {
+            current = current->successor;
+        }
 
-    c->SetHealth(this->GetHealth());
+        current->successor = merlinEngine->Clone();
+    }
+}
+
+void Falcon9Core::AddCore(Component* core)
+{
+    successor = core;
+}
+
+void Falcon9Core::Destroy()
+{
+    //Destory all engines attached to this core
+    Component *current = _engines;
+    while(current)
+    {
+        current->TakeDamage(current->GetHealth());;
+        current = current->successor;
+    }
+}
+
+Component* Falcon9Core::Clone()
+{
+    Falcon9Core* c = new Falcon9Core("Falcon 9 Core");
+    Component* merlinEngine = new MerlinEngine("Merlin Engine");
+
+    for(int i = 0; i < Falcon9Config::MerlinEnginesCount; ++i)
+    {
+        c->AddEngines(merlinEngine);
+    }
     return c;
 }

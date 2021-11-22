@@ -18,11 +18,9 @@ public:
 	Component(string name, Component *successor);
 	virtual ~Component();
 
-	virtual void TakeDamage(int damageAmount);
+	virtual bool TakeDamage(int damageAmount);
 	virtual void TakeLiftOffDamage(int damageAmount);
 	virtual void Destroy() = 0;
-
-	virtual void TransitionIntoStageTwo(Component *prev) = 0;
 
 	int GetHealth();
 	void SetHealth(int health);

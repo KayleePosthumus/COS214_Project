@@ -1,8 +1,8 @@
 #include "RocketMemento.h"
 
-RocketMemento::RocketMemento(string n, int h, Component* c, Stage* s) 
+RocketMemento::RocketMemento(string name, int rocketHealth, vector<int> coreHealth, int vacuumHealth) 
 {
-    _state = new RocketState(n, h, c, s);
+    _state = new RocketState(name, rocketHealth, coreHealth, vacuumHealth);
 }
 
 RocketMemento::~RocketMemento()
