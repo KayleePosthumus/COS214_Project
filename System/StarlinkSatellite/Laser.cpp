@@ -7,17 +7,6 @@ Laser::Laser()
 
 Laser::~Laser()
 {
-	/*if (!satelliteList)
-		return;
-
-	Iterator *it = satelliteList->CreateIterator();
-	Payload* current = nullptr;
-	while (!it->isDone())
-	{
-		current = it->currentItem();
-		it->nextItem();
-		delete current;
-	}*/
 }
 
 Laser::Laser(Payload *newSatelliteList)
