@@ -1,9 +1,9 @@
 #ifndef FALCON9CORE_H
 #define FALCON9CORE_H
 
-/** @brief A concrete component class.
+/** @brief A concrete Component class.
 
-    A class that acts as the components to be added to the rockets.
+    A class that acts as the Components to be added to the rockets.
     @author Ctrl Alt Defeat
     @date November 2021
     */
