@@ -1,5 +1,7 @@
 #include "Falcon9Core.h"
 
+#include <iostream>
+
 using namespace std;
 
 Falcon9Core::Falcon9Core(string name) : Component(name)
@@ -30,6 +32,7 @@ void Falcon9Core::Destroy()
 void Falcon9Core::TransitionIntoStageTwo(Component *prev)
 {
     prev->successor = this->successor;
+    cout << "Detaching " << this->GetName() << endl;
 
     if (this->successor)
     {

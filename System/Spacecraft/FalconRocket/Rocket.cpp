@@ -47,6 +47,7 @@ void Rocket::TransitionIntoStageTwo()
     cout << "Transitioning into stage 2" << endl;
     if (this->components && this->components->successor)
         this->components->successor->TransitionIntoStageTwo(this->components);
+    cout << "Dropping components on a droneship..." << endl;
 }
 void Rocket::attach(Observer *o)
 {

@@ -1,5 +1,7 @@
 #include "MerlinEngine.h"
 
+#include <iostream>
+
 using namespace std;
 
 MerlinEngine::MerlinEngine(string name) : Engine(name)
@@ -15,6 +17,8 @@ MerlinEngine::~MerlinEngine() {}
 void MerlinEngine::TransitionIntoStageTwo(Component *prev)
 {
     prev->successor = this->successor;
+
+    cout << "Detaching " << this->GetName() << endl;
 
     if (this->successor)
     {
