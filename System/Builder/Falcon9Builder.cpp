@@ -38,17 +38,17 @@ void Falcon9Builder::AddVacuumMerlinEngines()
 void Falcon9Builder::AddPayload(RocketPayloadType PayloadType, int numberOfPayloadItems)
 {
 
-    if (PayloadType == RocketPayloadType::satellites)
-    {
-        numberOfPayloadItems > Falcon9Config::SatelliteLimit ? numberOfPayloadItems = Falcon9Config::SatelliteLimit : numberOfPayloadItems = numberOfPayloadItems;
-        vector<Payload *> *payload = new vector<Payload *>(numberOfPayloadItems);
+    // if (PayloadType == RocketPayloadType::satellites)
+    // {
+    //     numberOfPayloadItems > Falcon9Config::SatelliteLimit ? numberOfPayloadItems = Falcon9Config::SatelliteLimit : numberOfPayloadItems = numberOfPayloadItems;
+    //     vector<Payload *> *payload = new vector<Payload *>(numberOfPayloadItems);
 
-        for (int i = 0; i < numberOfPayloadItems; i++)
-        {
-            payload->push_back(new StarlinkSatellite());
-        }
-        this->falcon9->SetPayload(payload);
-    }
+    //     for (int i = 0; i < numberOfPayloadItems; i++)
+    //     {
+    //         payload->push_back(new StarlinkSatellite());
+    //     }
+    //     this->falcon9->SetPayload(payload);
+    // }
 
     // if (PayloadType == RocketPayloadType::dragon)
     // {
