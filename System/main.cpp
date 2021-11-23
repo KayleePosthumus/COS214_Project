@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char **argv)
 {
     LaunchStation *s = s->instance();
     s->RunSimulations();

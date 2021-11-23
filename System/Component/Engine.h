@@ -1,9 +1,9 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-/** @brief An abstract engine component class.
+/** @brief An abstract Engine Component class.
 
-    A class that acts as the engine components to be added to the rockets.
+    A class that acts as the Engine Components to be added to the rockets.
     @author Ctrl Alt Defeat
     @date November 2021
     */
@@ -19,24 +19,24 @@ class Engine : public Component
 {
 private:
 public:
-        /** Initializes the name of the engine component.
+    /** Initializes the name of the engine component.
         */
-        Engine(string name);
-        /** Initializes the name of the engine component and the successor of the engine component.
+    Engine(string name);
+    /** Initializes the name of the engine component and the successor of the engine component.
         */
-        Engine(string name, Component *successor);
-        /** Default destructor.
+    Engine(string name, Component *successor);
+    /** Default destructor.
         */
-        ~Engine();
+    ~Engine();
 
-        /** Destroys the engine component but does not destruct it.
+    /** Destroys the engine component but does not destruct it.
         */
-        void Destroy();
+    void Destroy();
 
-        /** Abstract. Clones the current engine component as implemented by a Prototype design pattern.
+    /** Abstract. Clones the current engine component as implemented by a Prototype design pattern.
          * @return A copy of this engine component.
         */
-        virtual Component *Clone() = 0;
+    virtual Component *Clone() = 0;
 };
 
 #endif
