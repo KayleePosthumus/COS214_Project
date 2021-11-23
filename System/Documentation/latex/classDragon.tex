@@ -1,0 +1,198 @@
+\hypertarget{classDragon}{}\doxysection{Dragon Class Reference}
+\label{classDragon}\index{Dragon@{Dragon}}
+
+
+Inheritance diagram for Dragon\+:
+% FIG 0
+
+
+Collaboration diagram for Dragon\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDragon_a3849f877aa2c14343bf97e2c01912473}{Dragon}} (string name)
+\item 
+virtual \mbox{\hyperlink{classDragon_ae34521402d155aae936b65afbee22cf5}{$\sim$\+Dragon}} ()
+\item 
+virtual bool \mbox{\hyperlink{classDragon_ae0564abaa971f801586e57af82d5fbac}{Add\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)=0
+\item 
+virtual bool \mbox{\hyperlink{classDragon_aea5b52e9f6726298abc9f2942eadd379}{Remove\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)=0
+\item 
+virtual \mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}{Clone}} ()=0
+\item 
+string \mbox{\hyperlink{classDragon_a0c9ef99c8b10014e029b9fd8d76388d6}{Get\+Cargo}} ()
+\item 
+virtual string \mbox{\hyperlink{classDragon_a65a9a68b740bd53b6e9371129cc7734d}{Get\+Passengers}} ()=0
+\item 
+void \mbox{\hyperlink{classDragon_a240eb122c8b60b50ac5328c4af68e512}{Communicate\+Satellite}} ()
+\item 
+void \mbox{\hyperlink{classDragon_a65166b2401ec1362fdb9f78e2227b56c}{Communicate\+Ground}} ()
+\item 
+\mbox{\hyperlink{classIterator}{Iterator}} $\ast$ \mbox{\hyperlink{classDragon_a9e45511e7cd0204c49fcbcf64ce84c2f}{Create\+Iterator}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classDragon_a41516fb0fa3ee33853860d1f3bd0489b}{\+\_\+max\+Cargo\+Capacity}}
+\item 
+double \mbox{\hyperlink{classDragon_a81b766dc5d2ddad334847c879087ecbb}{\+\_\+current\+Cargo\+Capacity}} = 0
+\item 
+\mbox{\Hypertarget{classDragon_a730cce48ca2ed89e1131d48e8d65143c}\label{classDragon_a730cce48ca2ed89e1131d48e8d65143c}} 
+vector$<$ \mbox{\hyperlink{classCargo}{Cargo}} $\ast$ $>$ {\bfseries \+\_\+cargo\+Modules}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDragon_a3849f877aa2c14343bf97e2c01912473}\label{classDragon_a3849f877aa2c14343bf97e2c01912473}} 
+\index{Dragon@{Dragon}!Dragon@{Dragon}}
+\index{Dragon@{Dragon}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{Dragon()}{Dragon()}}
+{\footnotesize\ttfamily Dragon\+::\+Dragon (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Vector of cargo Initializes the name of the dragon. \mbox{\Hypertarget{classDragon_ae34521402d155aae936b65afbee22cf5}\label{classDragon_ae34521402d155aae936b65afbee22cf5}} 
+\index{Dragon@{Dragon}!````~Dragon@{$\sim$Dragon}}
+\index{````~Dragon@{$\sim$Dragon}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Dragon()}{~Dragon()}}
+{\footnotesize\ttfamily Dragon\+::$\sim$\+Dragon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDragon_ae0564abaa971f801586e57af82d5fbac}\label{classDragon_ae0564abaa971f801586e57af82d5fbac}} 
+\index{Dragon@{Dragon}!AddCargo@{AddCargo}}
+\index{AddCargo@{AddCargo}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{AddCargo()}{AddCargo()}}
+{\footnotesize\ttfamily virtual bool Dragon\+::\+Add\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Add cargo to the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of adding the cargo 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCrewDragon_a342ff1af451b31da24187af9dd1b4de8}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a864be80cea66bb26b0274386cd3a82ae}{Dragon\+Spacecraft}}.
+
+\mbox{\Hypertarget{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}\label{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}} 
+\index{Dragon@{Dragon}!Clone@{Clone}}
+\index{Clone@{Clone}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classPayload}{Payload}}$\ast$ Dragon\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Clones the current dragon. \begin{DoxyReturn}{Returns}
+A copy of this dragon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPayload_a4407625078f0a90a0dc5d8d047aaa2ad}{Payload}}.
+
+
+
+Implemented in \mbox{\hyperlink{classCrewDragon_aa4a1618c7d97db4fce6b233f91e00dc6}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a07e03a63c7b319a52e868234f80eb64e}{Dragon\+Spacecraft}}.
+
+\mbox{\Hypertarget{classDragon_a65166b2401ec1362fdb9f78e2227b56c}\label{classDragon_a65166b2401ec1362fdb9f78e2227b56c}} 
+\index{Dragon@{Dragon}!CommunicateGround@{CommunicateGround}}
+\index{CommunicateGround@{CommunicateGround}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{CommunicateGround()}{CommunicateGround()}}
+{\footnotesize\ttfamily void Dragon\+::\+Communicate\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allows satellites to communicate with the ground. 
+
+Implements \mbox{\hyperlink{classPayload_a289479aa58688b50c57f480b43eeb083}{Payload}}.
+
+\mbox{\Hypertarget{classDragon_a240eb122c8b60b50ac5328c4af68e512}\label{classDragon_a240eb122c8b60b50ac5328c4af68e512}} 
+\index{Dragon@{Dragon}!CommunicateSatellite@{CommunicateSatellite}}
+\index{CommunicateSatellite@{CommunicateSatellite}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{CommunicateSatellite()}{CommunicateSatellite()}}
+{\footnotesize\ttfamily void Dragon\+::\+Communicate\+Satellite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allows satellites to communicate to each as part of the Mediator pattern. 
+
+Implements \mbox{\hyperlink{classPayload_afb4b2db9afa99824444c97df77266bce}{Payload}}.
+
+\mbox{\Hypertarget{classDragon_a9e45511e7cd0204c49fcbcf64ce84c2f}\label{classDragon_a9e45511e7cd0204c49fcbcf64ce84c2f}} 
+\index{Dragon@{Dragon}!CreateIterator@{CreateIterator}}
+\index{CreateIterator@{CreateIterator}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{CreateIterator()}{CreateIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator}{Iterator}} $\ast$ Dragon\+::\+Create\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates an iterator for the linked list of payloads. \begin{DoxyReturn}{Returns}
+New iterator 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPayload_aa17a5995f8afa9a167f2576845f7a71a}{Payload}}.
+
+\mbox{\Hypertarget{classDragon_a0c9ef99c8b10014e029b9fd8d76388d6}\label{classDragon_a0c9ef99c8b10014e029b9fd8d76388d6}} 
+\index{Dragon@{Dragon}!GetCargo@{GetCargo}}
+\index{GetCargo@{GetCargo}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetCargo()}{GetCargo()}}
+{\footnotesize\ttfamily string Dragon\+::\+Get\+Cargo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessor for the cargo on board. \begin{DoxyReturn}{Returns}
+Formatted list of cargo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPayload_a68e80aaf708d6f622fe759c6913166fe}{Payload}}.
+
+\mbox{\Hypertarget{classDragon_a65a9a68b740bd53b6e9371129cc7734d}\label{classDragon_a65a9a68b740bd53b6e9371129cc7734d}} 
+\index{Dragon@{Dragon}!GetPassengers@{GetPassengers}}
+\index{GetPassengers@{GetPassengers}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetPassengers()}{GetPassengers()}}
+{\footnotesize\ttfamily virtual string Dragon\+::\+Get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Accessor for the crew on board. \begin{DoxyReturn}{Returns}
+Formatted list of crew 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPayload_ab50134f5e3aabc8aad2fabf46b9754ea}{Payload}}.
+
+
+
+Implemented in \mbox{\hyperlink{classCrewDragon_a40263a5319a940b2953a9bf4646a41b1}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a2a20bde8f92b0659621e94f0a06553f2}{Dragon\+Spacecraft}}.
+
+\mbox{\Hypertarget{classDragon_aea5b52e9f6726298abc9f2942eadd379}\label{classDragon_aea5b52e9f6726298abc9f2942eadd379}} 
+\index{Dragon@{Dragon}!RemoveCargo@{RemoveCargo}}
+\index{RemoveCargo@{RemoveCargo}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{RemoveCargo()}{RemoveCargo()}}
+{\footnotesize\ttfamily virtual bool Dragon\+::\+Remove\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Remove cargo from the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of removing the cargo 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCrewDragon_aee7d7d30ff8ca091e344d0c36138251d}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a4ec30a3b293597d69667df4815d16d6a}{Dragon\+Spacecraft}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDragon_a81b766dc5d2ddad334847c879087ecbb}\label{classDragon_a81b766dc5d2ddad334847c879087ecbb}} 
+\index{Dragon@{Dragon}!\_currentCargoCapacity@{\_currentCargoCapacity}}
+\index{\_currentCargoCapacity@{\_currentCargoCapacity}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{\_currentCargoCapacity}{\_currentCargoCapacity}}
+{\footnotesize\ttfamily double Dragon\+::\+\_\+current\+Cargo\+Capacity = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current amount of cargo \mbox{\Hypertarget{classDragon_a41516fb0fa3ee33853860d1f3bd0489b}\label{classDragon_a41516fb0fa3ee33853860d1f3bd0489b}} 
+\index{Dragon@{Dragon}!\_maxCargoCapacity@{\_maxCargoCapacity}}
+\index{\_maxCargoCapacity@{\_maxCargoCapacity}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{\_maxCargoCapacity}{\_maxCargoCapacity}}
+{\footnotesize\ttfamily double Dragon\+::\+\_\+max\+Cargo\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+Max amount of cargo 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/\+Dragon/Dragon.\+h\item 
+Space\+Craft/\+Dragon/Dragon.\+cpp\end{DoxyCompactItemize}

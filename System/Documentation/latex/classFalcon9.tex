@@ -1,0 +1,84 @@
+\hypertarget{classFalcon9}{}\doxysection{Falcon9 Class Reference}
+\label{classFalcon9}\index{Falcon9@{Falcon9}}
+
+
+Inheritance diagram for Falcon9\+:
+% FIG 0
+
+
+Collaboration diagram for Falcon9\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFalcon9_ab7000f2139ad0893e766711e6994d7d1}{Falcon9}} (string name)
+\item 
+\mbox{\hyperlink{classFalcon9_a30cb2392db432454494717660410124d}{$\sim$\+Falcon9}} ()
+\item 
+float \mbox{\hyperlink{classFalcon9_a1619fc327f1824cd03516f37d9f290f9}{Get\+Health\+Percentage}} ()
+\item 
+void \mbox{\hyperlink{classFalcon9_a989238ac7a3618c4c167dcd453d93898}{Take\+Lift\+Off\+Damage}} ()
+\item 
+bool \mbox{\hyperlink{classFalcon9_a78eac82293504274d108ef7492637088}{Get\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFalcon9_ab7000f2139ad0893e766711e6994d7d1}\label{classFalcon9_ab7000f2139ad0893e766711e6994d7d1}} 
+\index{Falcon9@{Falcon9}!Falcon9@{Falcon9}}
+\index{Falcon9@{Falcon9}!Falcon9@{Falcon9}}
+\doxysubsubsection{\texorpdfstring{Falcon9()}{Falcon9()}}
+{\footnotesize\ttfamily Falcon9\+::\+Falcon9 (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the rocket. \mbox{\Hypertarget{classFalcon9_a30cb2392db432454494717660410124d}\label{classFalcon9_a30cb2392db432454494717660410124d}} 
+\index{Falcon9@{Falcon9}!````~Falcon9@{$\sim$Falcon9}}
+\index{````~Falcon9@{$\sim$Falcon9}!Falcon9@{Falcon9}}
+\doxysubsubsection{\texorpdfstring{$\sim$Falcon9()}{~Falcon9()}}
+{\footnotesize\ttfamily Falcon9\+::$\sim$\+Falcon9 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFalcon9_a1619fc327f1824cd03516f37d9f290f9}\label{classFalcon9_a1619fc327f1824cd03516f37d9f290f9}} 
+\index{Falcon9@{Falcon9}!GetHealthPercentage@{GetHealthPercentage}}
+\index{GetHealthPercentage@{GetHealthPercentage}!Falcon9@{Falcon9}}
+\doxysubsubsection{\texorpdfstring{GetHealthPercentage()}{GetHealthPercentage()}}
+{\footnotesize\ttfamily float Falcon9\+::\+Get\+Health\+Percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessor for the rocket health percentage. Primitive operation for Template Method \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRocket}{Rocket}} health as a percentage 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRocket_a31c05aec46337843d2bec1fe4a0a64a7}{Rocket}}.
+
+\mbox{\Hypertarget{classFalcon9_a78eac82293504274d108ef7492637088}\label{classFalcon9_a78eac82293504274d108ef7492637088}} 
+\index{Falcon9@{Falcon9}!GetState@{GetState}}
+\index{GetState@{GetState}!Falcon9@{Falcon9}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily bool Falcon9\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessor for the state of the rocket launch. \begin{DoxyReturn}{Returns}
+The current state of the rocket launch 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRocket_ab124df4d9f97ad5eb4b60b33d78d226d}{Rocket}}.
+
+\mbox{\Hypertarget{classFalcon9_a989238ac7a3618c4c167dcd453d93898}\label{classFalcon9_a989238ac7a3618c4c167dcd453d93898}} 
+\index{Falcon9@{Falcon9}!TakeLiftOffDamage@{TakeLiftOffDamage}}
+\index{TakeLiftOffDamage@{TakeLiftOffDamage}!Falcon9@{Falcon9}}
+\doxysubsubsection{\texorpdfstring{TakeLiftOffDamage()}{TakeLiftOffDamage()}}
+{\footnotesize\ttfamily void Falcon9\+::\+Take\+Lift\+Off\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decreases the health of the component by taking lift off damage. 
+
+Reimplemented from \mbox{\hyperlink{classRocket_a65ac7696db23342ca34a5c3b3246e51b}{Rocket}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/\+Falcon\+Rocket/Falcon9.\+h\item 
+Space\+Craft/\+Falcon\+Rocket/Falcon9.\+cpp\end{DoxyCompactItemize}

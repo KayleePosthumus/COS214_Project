@@ -1,0 +1,132 @@
+\hypertarget{classDragonSpacecraft}{}\doxysection{Dragon\+Spacecraft Class Reference}
+\label{classDragonSpacecraft}\index{DragonSpacecraft@{DragonSpacecraft}}
+
+
+A concrete dragon class.  
+
+
+
+
+{\ttfamily \#include $<$Dragon\+Spacecraft.\+h$>$}
+
+
+
+Inheritance diagram for Dragon\+Spacecraft\+:
+% FIG 0
+
+
+Collaboration diagram for Dragon\+Spacecraft\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDragonSpacecraft_a31f3c416fa925b401a3a83f2f40e9019}{Dragon\+Spacecraft}} (string name)
+\item 
+\mbox{\hyperlink{classDragonSpacecraft_a967cb9745e59ea5c45f62afb10f4bb17}{$\sim$\+Dragon\+Spacecraft}} ()
+\item 
+bool \mbox{\hyperlink{classDragonSpacecraft_a864be80cea66bb26b0274386cd3a82ae}{Add\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)
+\item 
+bool \mbox{\hyperlink{classDragonSpacecraft_a4ec30a3b293597d69667df4815d16d6a}{Remove\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)
+\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classDragonSpacecraft_a07e03a63c7b319a52e868234f80eb64e}{Clone}} ()
+\item 
+string \mbox{\hyperlink{classDragonSpacecraft_a2a20bde8f92b0659621e94f0a06553f2}{Get\+Passengers}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete dragon class. 
+
+A class acts as one of the dragon spacecrafts. \begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDragonSpacecraft_a31f3c416fa925b401a3a83f2f40e9019}\label{classDragonSpacecraft_a31f3c416fa925b401a3a83f2f40e9019}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!DragonSpacecraft@{DragonSpacecraft}}
+\index{DragonSpacecraft@{DragonSpacecraft}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{DragonSpacecraft()}{DragonSpacecraft()}}
+{\footnotesize\ttfamily Dragon\+Spacecraft\+::\+Dragon\+Spacecraft (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the dragon. \mbox{\Hypertarget{classDragonSpacecraft_a967cb9745e59ea5c45f62afb10f4bb17}\label{classDragonSpacecraft_a967cb9745e59ea5c45f62afb10f4bb17}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!````~DragonSpacecraft@{$\sim$DragonSpacecraft}}
+\index{````~DragonSpacecraft@{$\sim$DragonSpacecraft}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{$\sim$DragonSpacecraft()}{~DragonSpacecraft()}}
+{\footnotesize\ttfamily Dragon\+Spacecraft\+::$\sim$\+Dragon\+Spacecraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDragonSpacecraft_a864be80cea66bb26b0274386cd3a82ae}\label{classDragonSpacecraft_a864be80cea66bb26b0274386cd3a82ae}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!AddCargo@{AddCargo}}
+\index{AddCargo@{AddCargo}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{AddCargo()}{AddCargo()}}
+{\footnotesize\ttfamily bool Dragon\+Spacecraft\+::\+Add\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Add cargo to the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of adding the cargo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_ae0564abaa971f801586e57af82d5fbac}{Dragon}}.
+
+\mbox{\Hypertarget{classDragonSpacecraft_a07e03a63c7b319a52e868234f80eb64e}\label{classDragonSpacecraft_a07e03a63c7b319a52e868234f80eb64e}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!Clone@{Clone}}
+\index{Clone@{Clone}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Dragon\+Spacecraft\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clones the current dragon. \begin{DoxyReturn}{Returns}
+A copy of this dragon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}{Dragon}}.
+
+\mbox{\Hypertarget{classDragonSpacecraft_a2a20bde8f92b0659621e94f0a06553f2}\label{classDragonSpacecraft_a2a20bde8f92b0659621e94f0a06553f2}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!GetPassengers@{GetPassengers}}
+\index{GetPassengers@{GetPassengers}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{GetPassengers()}{GetPassengers()}}
+{\footnotesize\ttfamily string Dragon\+Spacecraft\+::\+Get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Abstract. Accessor for the crew on board. \begin{DoxyReturn}{Returns}
+Formatted list of crew 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_a65a9a68b740bd53b6e9371129cc7734d}{Dragon}}.
+
+\mbox{\Hypertarget{classDragonSpacecraft_a4ec30a3b293597d69667df4815d16d6a}\label{classDragonSpacecraft_a4ec30a3b293597d69667df4815d16d6a}} 
+\index{DragonSpacecraft@{DragonSpacecraft}!RemoveCargo@{RemoveCargo}}
+\index{RemoveCargo@{RemoveCargo}!DragonSpacecraft@{DragonSpacecraft}}
+\doxysubsubsection{\texorpdfstring{RemoveCargo()}{RemoveCargo()}}
+{\footnotesize\ttfamily bool Dragon\+Spacecraft\+::\+Remove\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Remove cargo from the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of removing the cargo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_aea5b52e9f6726298abc9f2942eadd379}{Dragon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/\+Dragon/Dragon\+Spacecraft.\+h\item 
+Space\+Craft/\+Dragon/Dragon\+Spacecraft.\+cpp\end{DoxyCompactItemize}

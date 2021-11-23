@@ -1,0 +1,81 @@
+\hypertarget{classEngine}{}\doxysection{Engine Class Reference}
+\label{classEngine}\index{Engine@{Engine}}
+
+
+Inheritance diagram for Engine\+:
+% FIG 0
+
+
+Collaboration diagram for Engine\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_a464e06dfa4cb1b69c0f70f1ff36299c9}{Engine}} (string name)
+\item 
+\mbox{\hyperlink{classEngine_a69cbdd067170af4a34ca72243bdf4b68}{Engine}} (string name, \mbox{\hyperlink{classComponent}{Component}} $\ast$\mbox{\hyperlink{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}{successor}})
+\item 
+\mbox{\hyperlink{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}{$\sim$\+Engine}} ()
+\item 
+void \mbox{\hyperlink{classEngine_aaa92f059235842e9dfa81e89dc717d0a}{Destroy}} ()
+\item 
+virtual \mbox{\hyperlink{classComponent}{Component}} $\ast$ \mbox{\hyperlink{classEngine_adaed2338db63b5562c3c2510a3cb9c95}{Clone}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_a464e06dfa4cb1b69c0f70f1ff36299c9}\label{classEngine_a464e06dfa4cb1b69c0f70f1ff36299c9}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the engine component. \mbox{\Hypertarget{classEngine_a69cbdd067170af4a34ca72243bdf4b68}\label{classEngine_a69cbdd067170af4a34ca72243bdf4b68}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{successor }\end{DoxyParamCaption})}
+
+Initializes the name of the engine component and the successor of the engine component. \mbox{\Hypertarget{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}\label{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}} 
+\index{Engine@{Engine}!````~Engine@{$\sim$Engine}}
+\index{````~Engine@{$\sim$Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{$\sim$Engine()}{~Engine()}}
+{\footnotesize\ttfamily Engine\+::$\sim$\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_adaed2338db63b5562c3c2510a3cb9c95}\label{classEngine_adaed2338db63b5562c3c2510a3cb9c95}} 
+\index{Engine@{Engine}!Clone@{Clone}}
+\index{Clone@{Clone}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classComponent}{Component}}$\ast$ Engine\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Clones the current engine component as implemented by a Prototype design pattern. \begin{DoxyReturn}{Returns}
+A copy of this engine component. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponent_a27ca956173eff17001ad4690464c430a}{Component}}.
+
+
+
+Implemented in \mbox{\hyperlink{classMerlinEngine_a8cfdaf05be0f24a0f241feced40cdc50}{Merlin\+Engine}}, and \mbox{\hyperlink{classVacuumMerlinEngine_aadc7a67a084933be0d725fc7babf4671}{Vacuum\+Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classEngine_aaa92f059235842e9dfa81e89dc717d0a}\label{classEngine_aaa92f059235842e9dfa81e89dc717d0a}} 
+\index{Engine@{Engine}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Engine\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroys the engine component but does not destruct it. 
+
+Implements \mbox{\hyperlink{classComponent_a4e847c48a4cef153803233754694a3e2}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Component/Engine.\+h\item 
+Component/Engine.\+cpp\end{DoxyCompactItemize}

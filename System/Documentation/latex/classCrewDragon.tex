@@ -1,0 +1,164 @@
+\hypertarget{classCrewDragon}{}\doxysection{Crew\+Dragon Class Reference}
+\label{classCrewDragon}\index{CrewDragon@{CrewDragon}}
+
+
+A concrete dragon class.  
+
+
+
+
+{\ttfamily \#include $<$Crew\+Dragon.\+h$>$}
+
+
+
+Inheritance diagram for Crew\+Dragon\+:
+% FIG 0
+
+
+Collaboration diagram for Crew\+Dragon\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCrewDragon_a356c26aea94d465c7c06fc57353e9c3c}{Crew\+Dragon}} (string name)
+\item 
+\mbox{\hyperlink{classCrewDragon_afee6aa1ebc690b4873034f9a5969e0a5}{$\sim$\+Crew\+Dragon}} ()
+\item 
+bool \mbox{\hyperlink{classCrewDragon_a342ff1af451b31da24187af9dd1b4de8}{Add\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)
+\item 
+bool \mbox{\hyperlink{classCrewDragon_aee7d7d30ff8ca091e344d0c36138251d}{Remove\+Cargo}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$c)
+\item 
+bool \mbox{\hyperlink{classCrewDragon_acc3bb52684f6d4428ddae5e273e3463c}{Add\+Crew}} (\mbox{\hyperlink{classHuman}{Human}} $\ast$h)
+\item 
+bool \mbox{\hyperlink{classCrewDragon_aba08bf8ba55c0eb7dfea6d211d782040}{Remove\+Crew}} (\mbox{\hyperlink{classHuman}{Human}} $\ast$h)
+\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classCrewDragon_aa4a1618c7d97db4fce6b233f91e00dc6}{Clone}} ()
+\item 
+string \mbox{\hyperlink{classCrewDragon_a40263a5319a940b2953a9bf4646a41b1}{Get\+Passengers}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete dragon class. 
+
+A class acts as one of the dragon spacecrafts. \begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCrewDragon_a356c26aea94d465c7c06fc57353e9c3c}\label{classCrewDragon_a356c26aea94d465c7c06fc57353e9c3c}} 
+\index{CrewDragon@{CrewDragon}!CrewDragon@{CrewDragon}}
+\index{CrewDragon@{CrewDragon}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{CrewDragon()}{CrewDragon()}}
+{\footnotesize\ttfamily Crew\+Dragon\+::\+Crew\+Dragon (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the dragon. \mbox{\Hypertarget{classCrewDragon_afee6aa1ebc690b4873034f9a5969e0a5}\label{classCrewDragon_afee6aa1ebc690b4873034f9a5969e0a5}} 
+\index{CrewDragon@{CrewDragon}!````~CrewDragon@{$\sim$CrewDragon}}
+\index{````~CrewDragon@{$\sim$CrewDragon}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{$\sim$CrewDragon()}{~CrewDragon()}}
+{\footnotesize\ttfamily Crew\+Dragon\+::$\sim$\+Crew\+Dragon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCrewDragon_a342ff1af451b31da24187af9dd1b4de8}\label{classCrewDragon_a342ff1af451b31da24187af9dd1b4de8}} 
+\index{CrewDragon@{CrewDragon}!AddCargo@{AddCargo}}
+\index{AddCargo@{AddCargo}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{AddCargo()}{AddCargo()}}
+{\footnotesize\ttfamily bool Crew\+Dragon\+::\+Add\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Add cargo to the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of adding the cargo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_ae0564abaa971f801586e57af82d5fbac}{Dragon}}.
+
+\mbox{\Hypertarget{classCrewDragon_acc3bb52684f6d4428ddae5e273e3463c}\label{classCrewDragon_acc3bb52684f6d4428ddae5e273e3463c}} 
+\index{CrewDragon@{CrewDragon}!AddCrew@{AddCrew}}
+\index{AddCrew@{AddCrew}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{AddCrew()}{AddCrew()}}
+{\footnotesize\ttfamily bool Crew\+Dragon\+::\+Add\+Crew (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHuman}{Human}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+Add crew to the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Person to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of adding the person 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCrewDragon_aa4a1618c7d97db4fce6b233f91e00dc6}\label{classCrewDragon_aa4a1618c7d97db4fce6b233f91e00dc6}} 
+\index{CrewDragon@{CrewDragon}!Clone@{Clone}}
+\index{Clone@{Clone}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Crew\+Dragon\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clones the current dragon. \begin{DoxyReturn}{Returns}
+A copy of this dragon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}{Dragon}}.
+
+\mbox{\Hypertarget{classCrewDragon_a40263a5319a940b2953a9bf4646a41b1}\label{classCrewDragon_a40263a5319a940b2953a9bf4646a41b1}} 
+\index{CrewDragon@{CrewDragon}!GetPassengers@{GetPassengers}}
+\index{GetPassengers@{GetPassengers}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{GetPassengers()}{GetPassengers()}}
+{\footnotesize\ttfamily string Crew\+Dragon\+::\+Get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Abstract. Accessor for the crew on board. \begin{DoxyReturn}{Returns}
+Formatted list of crew 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_a65a9a68b740bd53b6e9371129cc7734d}{Dragon}}.
+
+\mbox{\Hypertarget{classCrewDragon_aee7d7d30ff8ca091e344d0c36138251d}\label{classCrewDragon_aee7d7d30ff8ca091e344d0c36138251d}} 
+\index{CrewDragon@{CrewDragon}!RemoveCargo@{RemoveCargo}}
+\index{RemoveCargo@{RemoveCargo}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{RemoveCargo()}{RemoveCargo()}}
+{\footnotesize\ttfamily bool Crew\+Dragon\+::\+Remove\+Cargo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Remove cargo from the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ \mbox{\hyperlink{classCargo}{Cargo}} to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of removing the cargo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDragon_aea5b52e9f6726298abc9f2942eadd379}{Dragon}}.
+
+\mbox{\Hypertarget{classCrewDragon_aba08bf8ba55c0eb7dfea6d211d782040}\label{classCrewDragon_aba08bf8ba55c0eb7dfea6d211d782040}} 
+\index{CrewDragon@{CrewDragon}!RemoveCrew@{RemoveCrew}}
+\index{RemoveCrew@{RemoveCrew}!CrewDragon@{CrewDragon}}
+\doxysubsubsection{\texorpdfstring{RemoveCrew()}{RemoveCrew()}}
+{\footnotesize\ttfamily bool Crew\+Dragon\+::\+Remove\+Crew (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHuman}{Human}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+Remove crew from the dragon. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ Person to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure of removing the person 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/\+Dragon/Crew\+Dragon.\+h\item 
+Space\+Craft/\+Dragon/Crew\+Dragon.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\hypertarget{classIterator}{}\doxysection{Iterator Class Reference}
+\label{classIterator}\index{Iterator@{Iterator}}
+
+
+The \mbox{\hyperlink{classIterator}{Iterator}} class. This class will allow the iteration of \mbox{\hyperlink{classPayload}{Payload}} objects in a linked list fashion. This class functions as the iterator participant.  
+
+
+
+
+{\ttfamily \#include $<$Iterator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIterator_a30f4489aebb0ea1a56da6925d03eecfb}{Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIterator}{Iterator}} object$\ast$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator_a54ca5921bd085a059b768a3339273f97}{Iterator}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classIterator}{Iterator}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator_aab6716f5bdecb49e9cdd754359408ab6}{$\sim$\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIterator}{Iterator}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classIterator_a8c7c83e2222049263d28ae6ed3a8c1b1}{first\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Returns the first \mbox{\hyperlink{classPayload}{Payload}} item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classIterator_a0524c8170b4ce647dfffee88530c2b36}{next\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Sets the current pointer to the next item in the list and returns it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classIterator_aa341feeca8c9fca95e3b2add21a98bc3}{current\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current item in the iteration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIterator_a18a418cd6fdc5008b0602558d6444279}{is\+Done}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the end of the list has been reached or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIterator_ac183e844f13ec13bc3d7f0adcd212aa5}{is\+Last}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the current item in the list is the last. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIterator_aeabaf495717f07146a888e50d99e6b4c}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the current pointer to the first item in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classIterator}{Iterator}} class. This class will allow the iteration of \mbox{\hyperlink{classPayload}{Payload}} objects in a linked list fashion. This class functions as the iterator participant. 
+
+\begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIterator_a30f4489aebb0ea1a56da6925d03eecfb}\label{classIterator_a30f4489aebb0ea1a56da6925d03eecfb}} 
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Iterator\+::\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIterator}{Iterator}} object$\ast$. 
+
+\mbox{\Hypertarget{classIterator_a54ca5921bd085a059b768a3339273f97}\label{classIterator_a54ca5921bd085a059b768a3339273f97}} 
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{first }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classIterator}{Iterator}} object. 
+
+\mbox{\Hypertarget{classIterator_aab6716f5bdecb49e9cdd754359408ab6}\label{classIterator_aab6716f5bdecb49e9cdd754359408ab6}} 
+\index{Iterator@{Iterator}!````~Iterator@{$\sim$Iterator}}
+\index{````~Iterator@{$\sim$Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Iterator()}{~Iterator()}}
+{\footnotesize\ttfamily Iterator\+::$\sim$\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIterator}{Iterator}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The \mbox{\hyperlink{classPayload}{Payload}} object that will be the head of the linked list. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator_aa341feeca8c9fca95e3b2add21a98bc3}\label{classIterator_aa341feeca8c9fca95e3b2add21a98bc3}} 
+\index{Iterator@{Iterator}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{currentItem()}{currentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Iterator\+::current\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current item in the iteration. 
+
+\begin{DoxyReturn}{Returns}
+Payload$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a8c7c83e2222049263d28ae6ed3a8c1b1}\label{classIterator_a8c7c83e2222049263d28ae6ed3a8c1b1}} 
+\index{Iterator@{Iterator}!firstItem@{firstItem}}
+\index{firstItem@{firstItem}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{firstItem()}{firstItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Iterator\+::first\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the first \mbox{\hyperlink{classPayload}{Payload}} item. 
+
+\begin{DoxyReturn}{Returns}
+Payload$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a18a418cd6fdc5008b0602558d6444279}\label{classIterator_a18a418cd6fdc5008b0602558d6444279}} 
+\index{Iterator@{Iterator}!isDone@{isDone}}
+\index{isDone@{isDone}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily bool Iterator\+::is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the end of the list has been reached or not. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_ac183e844f13ec13bc3d7f0adcd212aa5}\label{classIterator_ac183e844f13ec13bc3d7f0adcd212aa5}} 
+\index{Iterator@{Iterator}!isLast@{isLast}}
+\index{isLast@{isLast}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{isLast()}{isLast()}}
+{\footnotesize\ttfamily bool Iterator\+::is\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the current item in the list is the last. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a0524c8170b4ce647dfffee88530c2b36}\label{classIterator_a0524c8170b4ce647dfffee88530c2b36}} 
+\index{Iterator@{Iterator}!nextItem@{nextItem}}
+\index{nextItem@{nextItem}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{nextItem()}{nextItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Iterator\+::next\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the current pointer to the next item in the list and returns it. 
+
+\begin{DoxyReturn}{Returns}
+Payload$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_aeabaf495717f07146a888e50d99e6b4c}\label{classIterator_aeabaf495717f07146a888e50d99e6b4c}} 
+\index{Iterator@{Iterator}!reset@{reset}}
+\index{reset@{reset}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Iterator\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the current pointer to the first item in the list. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Starlink\+Satellite/Iterator.\+h\item 
+Starlink\+Satellite/Iterator.\+cpp\end{DoxyCompactItemize}

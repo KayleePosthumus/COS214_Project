@@ -1,0 +1,103 @@
+\hypertarget{classFalcon9Core}{}\doxysection{Falcon9\+Core Class Reference}
+\label{classFalcon9Core}\index{Falcon9Core@{Falcon9Core}}
+
+
+Inheritance diagram for Falcon9\+Core\+:
+% FIG 0
+
+
+Collaboration diagram for Falcon9\+Core\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFalcon9Core_a56c66353f6b3f0c86469f698e8f174de}{Falcon9\+Core}} (string name)
+\item 
+\mbox{\hyperlink{classFalcon9Core_a972eedea69501c45987de588ac993119}{Falcon9\+Core}} (string name, \mbox{\hyperlink{classComponent}{Component}} $\ast$\mbox{\hyperlink{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}{successor}})
+\item 
+\mbox{\hyperlink{classFalcon9Core_a77415ace21c5fdbf2a37318a8ebe7284}{$\sim$\+Falcon9\+Core}} ()
+\item 
+void \mbox{\hyperlink{classFalcon9Core_a403a7023f104b2b4e6e28dfb9400a581}{Add\+Engines}} (\mbox{\hyperlink{classComponent}{Component}} $\ast$merlin\+Engine)
+\item 
+void \mbox{\hyperlink{classFalcon9Core_a2d2fca66f3cdf8d4504c5aa5185ddf13}{Add\+Core}} (\mbox{\hyperlink{classComponent}{Component}} $\ast$core)
+\item 
+void \mbox{\hyperlink{classFalcon9Core_a99ee00106872fa0930ec0d6a8f215a15}{Destroy}} ()
+\item 
+\mbox{\hyperlink{classComponent}{Component}} $\ast$ \mbox{\hyperlink{classFalcon9Core_a17d727912f8089ccd83a5cd5ed2ecacb}{Clone}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFalcon9Core_a56c66353f6b3f0c86469f698e8f174de}\label{classFalcon9Core_a56c66353f6b3f0c86469f698e8f174de}} 
+\index{Falcon9Core@{Falcon9Core}!Falcon9Core@{Falcon9Core}}
+\index{Falcon9Core@{Falcon9Core}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{Falcon9Core()}{Falcon9Core()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Falcon9\+Core\+::\+Falcon9\+Core (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the component. \mbox{\Hypertarget{classFalcon9Core_a972eedea69501c45987de588ac993119}\label{classFalcon9Core_a972eedea69501c45987de588ac993119}} 
+\index{Falcon9Core@{Falcon9Core}!Falcon9Core@{Falcon9Core}}
+\index{Falcon9Core@{Falcon9Core}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{Falcon9Core()}{Falcon9Core()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Falcon9\+Core\+::\+Falcon9\+Core (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{successor }\end{DoxyParamCaption})}
+
+Initializes the name of the component and the successor of the component. \mbox{\Hypertarget{classFalcon9Core_a77415ace21c5fdbf2a37318a8ebe7284}\label{classFalcon9Core_a77415ace21c5fdbf2a37318a8ebe7284}} 
+\index{Falcon9Core@{Falcon9Core}!````~Falcon9Core@{$\sim$Falcon9Core}}
+\index{````~Falcon9Core@{$\sim$Falcon9Core}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{$\sim$Falcon9Core()}{~Falcon9Core()}}
+{\footnotesize\ttfamily Falcon9\+Core\+::$\sim$\+Falcon9\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFalcon9Core_a2d2fca66f3cdf8d4504c5aa5185ddf13}\label{classFalcon9Core_a2d2fca66f3cdf8d4504c5aa5185ddf13}} 
+\index{Falcon9Core@{Falcon9Core}!AddCore@{AddCore}}
+\index{AddCore@{AddCore}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{AddCore()}{AddCore()}}
+{\footnotesize\ttfamily void Falcon9\+Core\+::\+Add\+Core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{core }\end{DoxyParamCaption})}
+
+Adds a Core. 
+\begin{DoxyParams}{Parameters}
+{\em core} & -\/ The Core to add to the merlin engines. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFalcon9Core_a403a7023f104b2b4e6e28dfb9400a581}\label{classFalcon9Core_a403a7023f104b2b4e6e28dfb9400a581}} 
+\index{Falcon9Core@{Falcon9Core}!AddEngines@{AddEngines}}
+\index{AddEngines@{AddEngines}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{AddEngines()}{AddEngines()}}
+{\footnotesize\ttfamily void Falcon9\+Core\+::\+Add\+Engines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{merlin\+Engine }\end{DoxyParamCaption})}
+
+Adds Merlin Engines to the Core. 
+\begin{DoxyParams}{Parameters}
+{\em merlin\+Engine} & -\/ The Merlin Engines to be added to the Core. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFalcon9Core_a17d727912f8089ccd83a5cd5ed2ecacb}\label{classFalcon9Core_a17d727912f8089ccd83a5cd5ed2ecacb}} 
+\index{Falcon9Core@{Falcon9Core}!Clone@{Clone}}
+\index{Clone@{Clone}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classComponent}{Component}} $\ast$ Falcon9\+Core\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Abstract. Clones the current core component as implemented by a Prototype design pattern. \begin{DoxyReturn}{Returns}
+A copy of this core component. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponent_a27ca956173eff17001ad4690464c430a}{Component}}.
+
+\mbox{\Hypertarget{classFalcon9Core_a99ee00106872fa0930ec0d6a8f215a15}\label{classFalcon9Core_a99ee00106872fa0930ec0d6a8f215a15}} 
+\index{Falcon9Core@{Falcon9Core}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Falcon9Core@{Falcon9Core}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Falcon9\+Core\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroys the core component but does not destruct it. 
+
+Implements \mbox{\hyperlink{classComponent_a4e847c48a4cef153803233754694a3e2}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Component/Falcon9\+Core.\+h\item 
+Component/Falcon9\+Core.\+cpp\end{DoxyCompactItemize}

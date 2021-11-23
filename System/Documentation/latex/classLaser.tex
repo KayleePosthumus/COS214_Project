@@ -1,0 +1,104 @@
+\hypertarget{classLaser}{}\doxysection{Laser Class Reference}
+\label{classLaser}\index{Laser@{Laser}}
+
+
+The \mbox{\hyperlink{classLaser}{Laser}} class. This class will iterate over all the satellites registered to the satellite\+List and allow them to communicate with each other. This class functions as the Mediator participant.  
+
+
+
+
+{\ttfamily \#include $<$Laser.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLaser_a68465e89283dffcc29a37e94693c6f87}{Laser}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classLaser}{Laser}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLaser_ad412e42ca24c6aebbcf2699735c4a043}{Laser}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classLaser}{Laser}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLaser_aa9baee5ed9775426e0b1d563c4687711}{$\sim$\+Laser}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classLaser}{Laser}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLaser_abd89a4efe8447589e9a6aa84b92526e1}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notify all the \mbox{\hyperlink{classPayload}{Payload}} objects in satellite\+List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLaser_ae0c5ac6128ba157df6f47e94a31c0740}{add\+Satellite}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classPayload}{Payload}} object to the satellite\+List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classLaser}{Laser}} class. This class will iterate over all the satellites registered to the satellite\+List and allow them to communicate with each other. This class functions as the Mediator participant. 
+
+\begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLaser_a68465e89283dffcc29a37e94693c6f87}\label{classLaser_a68465e89283dffcc29a37e94693c6f87}} 
+\index{Laser@{Laser}!Laser@{Laser}}
+\index{Laser@{Laser}!Laser@{Laser}}
+\doxysubsubsection{\texorpdfstring{Laser()}{Laser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Laser\+::\+Laser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classLaser}{Laser}} object. 
+
+\mbox{\Hypertarget{classLaser_ad412e42ca24c6aebbcf2699735c4a043}\label{classLaser_ad412e42ca24c6aebbcf2699735c4a043}} 
+\index{Laser@{Laser}!Laser@{Laser}}
+\index{Laser@{Laser}!Laser@{Laser}}
+\doxysubsubsection{\texorpdfstring{Laser()}{Laser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Laser\+::\+Laser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{new\+Satellite\+List }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classLaser}{Laser}} object. 
+
+\mbox{\Hypertarget{classLaser_aa9baee5ed9775426e0b1d563c4687711}\label{classLaser_aa9baee5ed9775426e0b1d563c4687711}} 
+\index{Laser@{Laser}!````~Laser@{$\sim$Laser}}
+\index{````~Laser@{$\sim$Laser}!Laser@{Laser}}
+\doxysubsubsection{\texorpdfstring{$\sim$Laser()}{~Laser()}}
+{\footnotesize\ttfamily Laser\+::$\sim$\+Laser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classLaser}{Laser}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Satellite\+List} & The list of Starlink\+Satellites. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLaser_ae0c5ac6128ba157df6f47e94a31c0740}\label{classLaser_ae0c5ac6128ba157df6f47e94a31c0740}} 
+\index{Laser@{Laser}!addSatellite@{addSatellite}}
+\index{addSatellite@{addSatellite}!Laser@{Laser}}
+\doxysubsubsection{\texorpdfstring{addSatellite()}{addSatellite()}}
+{\footnotesize\ttfamily void Laser\+::add\+Satellite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{satellite }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{classPayload}{Payload}} object to the satellite\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em satellite} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaser_abd89a4efe8447589e9a6aa84b92526e1}\label{classLaser_abd89a4efe8447589e9a6aa84b92526e1}} 
+\index{Laser@{Laser}!notify@{notify}}
+\index{notify@{notify}!Laser@{Laser}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Laser\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Notify all the \mbox{\hyperlink{classPayload}{Payload}} objects in satellite\+List. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Starlink\+Satellite/Laser.\+h\item 
+Starlink\+Satellite/Laser.\+cpp\end{DoxyCompactItemize}

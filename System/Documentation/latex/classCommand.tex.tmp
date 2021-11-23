@@ -1,0 +1,67 @@
+\hypertarget{classCommand}{}\doxysection{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+
+
+Inheritance diagram for Command\+:
+% FIG 0
+
+
+Collaboration diagram for Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a01e50107d0a66269cebfd1c1f12d329c}{Command}} (\mbox{\hyperlink{classRocket}{Rocket}} $\ast$rocket)
+\item 
+virtual \mbox{\hyperlink{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}{$\sim$\+Command}} ()
+\item 
+virtual void \mbox{\hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Execute}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocket}{Rocket}} $\ast$ \mbox{\hyperlink{classCommand_a56d4acb3cc28538e6a2faddbd2a19de5}{\+\_\+rocket}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommand_a01e50107d0a66269cebfd1c1f12d329c}\label{classCommand_a01e50107d0a66269cebfd1c1f12d329c}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocket}{Rocket}} $\ast$}]{rocket }\end{DoxyParamCaption})}
+
+Initializes the command with the rocket. \mbox{\Hypertarget{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}\label{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}} 
+\index{Command@{Command}!````~Command@{$\sim$Command}}
+\index{````~Command@{$\sim$Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{$\sim$Command()}{~Command()}}
+{\footnotesize\ttfamily Command\+::$\sim$\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}\label{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}} 
+\index{Command@{Command}!Execute@{Execute}}
+\index{Execute@{Execute}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily virtual void Command\+::\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Make requests to the rocket. 
+
+Implemented in \mbox{\hyperlink{classTakeOff_ae3b6920779195281cd5d457dec282041}{Take\+Off}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCommand_a56d4acb3cc28538e6a2faddbd2a19de5}\label{classCommand_a56d4acb3cc28538e6a2faddbd2a19de5}} 
+\index{Command@{Command}!\_rocket@{\_rocket}}
+\index{\_rocket@{\_rocket}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{\_rocket}{\_rocket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocket}{Rocket}}$\ast$ Command\+::\+\_\+rocket\hspace{0.3cm}{\ttfamily [protected]}}
+
+The current rocket on which the commands will be executed 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Launch\+Station/Command.\+h\item 
+Launch\+Station/Command.\+cpp\end{DoxyCompactItemize}

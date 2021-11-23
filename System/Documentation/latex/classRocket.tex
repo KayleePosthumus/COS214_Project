@@ -1,0 +1,324 @@
+\hypertarget{classRocket}{}\doxysection{Rocket Class Reference}
+\label{classRocket}\index{Rocket@{Rocket}}
+
+
+Inheritance diagram for Rocket\+:
+% FIG 0
+
+
+Collaboration diagram for Rocket\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocket_a9416f4734f8939f101955dd1a8959575}{Rocket}} (string name)
+\item 
+virtual \mbox{\hyperlink{classRocket_ab0cbe044146250c3e592832bb4909ff9}{$\sim$\+Rocket}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a02c9aa0cd1a8767ffbde3c33410bf9e3}{Add\+Cores}} (\mbox{\hyperlink{classComponent}{Component}} $\ast$cores)
+\item 
+void \mbox{\hyperlink{classRocket_aed69eaf7dafd0530ae8e23e18b939ec8}{Add\+Vacuum}} (\mbox{\hyperlink{classComponent}{Component}} $\ast$vacuum)
+\item 
+void \mbox{\hyperlink{classRocket_a798843c6c674e87df1b79516d83ef963}{Set\+Payload}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$payload)
+\item 
+virtual void \mbox{\hyperlink{classRocket_a65ac7696db23342ca34a5c3b3246e51b}{Take\+Lift\+Off\+Damage}} ()
+\item 
+string \mbox{\hyperlink{classRocket_a9ba7c69a980baec199139b778808e167}{Get\+Name}} ()
+\item 
+int \mbox{\hyperlink{classRocket_a2cf80cb8db8932b371334ce1929ef0a9}{Get\+Health}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a7576ee5d5daac0a64f0db4bdfd6c0f37}{Set\+Health}} (int h)
+\item 
+string \mbox{\hyperlink{classRocket_a0c3fea5a4ba559b31adb5a1b5cf2bc3a}{Get\+Cores}} ()
+\item 
+\mbox{\hyperlink{classComponent}{Component}} $\ast$ \mbox{\hyperlink{classRocket_a9583e275e79f5518f51dec905e2f3613}{Get\+Core\+List}} ()
+\item 
+int \mbox{\hyperlink{classRocket_ae4fde10dbb56111ee6ed7e3b61eeb419}{Get\+Merlin\+Health}} ()
+\item 
+string \mbox{\hyperlink{classRocket_a5033506b144afa35e71085e34eb75bfe}{Get\+Payload\+Name}} ()
+\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classRocket_a08ac491ce06f7a00eb96d766bfe3bf84}{Get\+Payload}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a58c6553f757c1311319e5886b60e464b}{Print\+Details}} ()
+\item 
+virtual float \mbox{\hyperlink{classRocket_a31c05aec46337843d2bec1fe4a0a64a7}{Get\+Health\+Percentage}} ()=0
+\item 
+void \mbox{\hyperlink{classRocket_a02a3c2f76ca849f5b53aed79aaae072d}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$o)
+\item 
+void \mbox{\hyperlink{classRocket_aca206cf82ad91c8f694e11d881f5f46c}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$o)
+\item 
+void \mbox{\hyperlink{classRocket_a4ecffc17cfb3882ac625a1ee36158062}{notify}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a53ac69a2628471dc3a8c23b0fb2cdc2d}{Print\+Stage}} ()
+\item 
+virtual bool \mbox{\hyperlink{classRocket_ab124df4d9f97ad5eb4b60b33d78d226d}{Get\+State}} ()=0
+\item 
+\mbox{\hyperlink{classStage}{Stage}} $\ast$ \mbox{\hyperlink{classRocket_a0f2275ef1e26467187eab3c983623748}{get\+Stage}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a01e66084df3c04e55bd3e41344c8ad95}{Set\+Stage}} (\mbox{\hyperlink{classStage}{Stage}} $\ast$stage)
+\item 
+void \mbox{\hyperlink{classRocket_a78b94bae8771a31fe201c6e90596e106}{restore\+Memento}} (\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$mem)
+\item 
+\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$ \mbox{\hyperlink{classRocket_ab3e80f13df088ffd57c2262c1526b760}{create\+Memento}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStage}{Stage}} $\ast$ \mbox{\hyperlink{classRocket_af2694789acd46b38ca3cfb849d059493}{\+\_\+subject\+Stage}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRocket_a9416f4734f8939f101955dd1a8959575}\label{classRocket_a9416f4734f8939f101955dd1a8959575}} 
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}}
+{\footnotesize\ttfamily Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the rocket. \mbox{\Hypertarget{classRocket_ab0cbe044146250c3e592832bb4909ff9}\label{classRocket_ab0cbe044146250c3e592832bb4909ff9}} 
+\index{Rocket@{Rocket}!````~Rocket@{$\sim$Rocket}}
+\index{````~Rocket@{$\sim$Rocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rocket()}{~Rocket()}}
+{\footnotesize\ttfamily Rocket\+::$\sim$\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRocket_a02c9aa0cd1a8767ffbde3c33410bf9e3}\label{classRocket_a02c9aa0cd1a8767ffbde3c33410bf9e3}} 
+\index{Rocket@{Rocket}!AddCores@{AddCores}}
+\index{AddCores@{AddCores}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{AddCores()}{AddCores()}}
+{\footnotesize\ttfamily void Rocket\+::\+Add\+Cores (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{cores }\end{DoxyParamCaption})}
+
+Adds cores to the linked list. 
+\begin{DoxyParams}{Parameters}
+{\em cores} & -\/ Next core to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_aed69eaf7dafd0530ae8e23e18b939ec8}\label{classRocket_aed69eaf7dafd0530ae8e23e18b939ec8}} 
+\index{Rocket@{Rocket}!AddVacuum@{AddVacuum}}
+\index{AddVacuum@{AddVacuum}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{AddVacuum()}{AddVacuum()}}
+{\footnotesize\ttfamily void Rocket\+::\+Add\+Vacuum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{vacuum }\end{DoxyParamCaption})}
+
+Adds vacuum merlin to the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em vacuum} & -\/ Vacuum merlin to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a02a3c2f76ca849f5b53aed79aaae072d}\label{classRocket_a02a3c2f76ca849f5b53aed79aaae072d}} 
+\index{Rocket@{Rocket}!attach@{attach}}
+\index{attach@{attach}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Rocket\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+Adds an observer to the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em o} & -\/ \mbox{\hyperlink{classObserver}{Observer}} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_ab3e80f13df088ffd57c2262c1526b760}\label{classRocket_ab3e80f13df088ffd57c2262c1526b760}} 
+\index{Rocket@{Rocket}!createMemento@{createMemento}}
+\index{createMemento@{createMemento}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{createMemento()}{createMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$ Rocket\+::create\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates memento at the current state. \begin{DoxyReturn}{Returns}
+Memento that holds the current state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_aca206cf82ad91c8f694e11d881f5f46c}\label{classRocket_aca206cf82ad91c8f694e11d881f5f46c}} 
+\index{Rocket@{Rocket}!detach@{detach}}
+\index{detach@{detach}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Rocket\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+Removes an observer from the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em o} & -\/ \mbox{\hyperlink{classObserver}{Observer}} to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a9583e275e79f5518f51dec905e2f3613}\label{classRocket_a9583e275e79f5518f51dec905e2f3613}} 
+\index{Rocket@{Rocket}!GetCoreList@{GetCoreList}}
+\index{GetCoreList@{GetCoreList}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetCoreList()}{GetCoreList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classComponent}{Component}} $\ast$ Rocket\+::\+Get\+Core\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the rocket cores list. \begin{DoxyReturn}{Returns}
+Head of the cores list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a0c3fea5a4ba559b31adb5a1b5cf2bc3a}\label{classRocket_a0c3fea5a4ba559b31adb5a1b5cf2bc3a}} 
+\index{Rocket@{Rocket}!GetCores@{GetCores}}
+\index{GetCores@{GetCores}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetCores()}{GetCores()}}
+{\footnotesize\ttfamily string Rocket\+::\+Get\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the rocket cores. \begin{DoxyReturn}{Returns}
+Formatted list of cores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a2cf80cb8db8932b371334ce1929ef0a9}\label{classRocket_a2cf80cb8db8932b371334ce1929ef0a9}} 
+\index{Rocket@{Rocket}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily int Rocket\+::\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the rocket health. \begin{DoxyReturn}{Returns}
+Health of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a31c05aec46337843d2bec1fe4a0a64a7}\label{classRocket_a31c05aec46337843d2bec1fe4a0a64a7}} 
+\index{Rocket@{Rocket}!GetHealthPercentage@{GetHealthPercentage}}
+\index{GetHealthPercentage@{GetHealthPercentage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetHealthPercentage()}{GetHealthPercentage()}}
+{\footnotesize\ttfamily virtual float Rocket\+::\+Get\+Health\+Percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Accessor for the rocket health percentage. Primitive operation for Template Method \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRocket}{Rocket}} health as a percentage 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classFalcon9_a1619fc327f1824cd03516f37d9f290f9}{Falcon9}}, and \mbox{\hyperlink{classFalconHeavy_a25dc630888845a069ea9c8643c7aad85}{Falcon\+Heavy}}.
+
+\mbox{\Hypertarget{classRocket_ae4fde10dbb56111ee6ed7e3b61eeb419}\label{classRocket_ae4fde10dbb56111ee6ed7e3b61eeb419}} 
+\index{Rocket@{Rocket}!GetMerlinHealth@{GetMerlinHealth}}
+\index{GetMerlinHealth@{GetMerlinHealth}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetMerlinHealth()}{GetMerlinHealth()}}
+{\footnotesize\ttfamily int Rocket\+::\+Get\+Merlin\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the vacuum merlin health. \begin{DoxyReturn}{Returns}
+Health of the vacuum merlin 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a9ba7c69a980baec199139b778808e167}\label{classRocket_a9ba7c69a980baec199139b778808e167}} 
+\index{Rocket@{Rocket}!GetName@{GetName}}
+\index{GetName@{GetName}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Rocket\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the rocket name. \begin{DoxyReturn}{Returns}
+Name of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a08ac491ce06f7a00eb96d766bfe3bf84}\label{classRocket_a08ac491ce06f7a00eb96d766bfe3bf84}} 
+\index{Rocket@{Rocket}!GetPayload@{GetPayload}}
+\index{GetPayload@{GetPayload}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetPayload()}{GetPayload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Rocket\+::\+Get\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the payload. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classPayload}{Payload}} on the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a5033506b144afa35e71085e34eb75bfe}\label{classRocket_a5033506b144afa35e71085e34eb75bfe}} 
+\index{Rocket@{Rocket}!GetPayloadName@{GetPayloadName}}
+\index{GetPayloadName@{GetPayloadName}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetPayloadName()}{GetPayloadName()}}
+{\footnotesize\ttfamily string Rocket\+::\+Get\+Payload\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the payload name. \begin{DoxyReturn}{Returns}
+Name of the payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a0f2275ef1e26467187eab3c983623748}\label{classRocket_a0f2275ef1e26467187eab3c983623748}} 
+\index{Rocket@{Rocket}!getStage@{getStage}}
+\index{getStage@{getStage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getStage()}{getStage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStage}{Stage}} $\ast$ Rocket\+::get\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Abstract. Accessor for the rocket stage. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classStage}{Stage}} of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_ab124df4d9f97ad5eb4b60b33d78d226d}\label{classRocket_ab124df4d9f97ad5eb4b60b33d78d226d}} 
+\index{Rocket@{Rocket}!GetState@{GetState}}
+\index{GetState@{GetState}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily virtual bool Rocket\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Accessor for the rocket state. \begin{DoxyReturn}{Returns}
+State of the rocket 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classFalcon9_a78eac82293504274d108ef7492637088}{Falcon9}}, and \mbox{\hyperlink{classFalconHeavy_ab90d58f795ac88904fcd0363d01729f5}{Falcon\+Heavy}}.
+
+\mbox{\Hypertarget{classRocket_a4ecffc17cfb3882ac625a1ee36158062}\label{classRocket_a4ecffc17cfb3882ac625a1ee36158062}} 
+\index{Rocket@{Rocket}!notify@{notify}}
+\index{notify@{notify}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Rocket\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Notifies observers of change of state. \mbox{\Hypertarget{classRocket_a58c6553f757c1311319e5886b60e464b}\label{classRocket_a58c6553f757c1311319e5886b60e464b}} 
+\index{Rocket@{Rocket}!PrintDetails@{PrintDetails}}
+\index{PrintDetails@{PrintDetails}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{PrintDetails()}{PrintDetails()}}
+{\footnotesize\ttfamily void Rocket\+::\+Print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the details of the rocket including the name and health of components. Template method \mbox{\Hypertarget{classRocket_a53ac69a2628471dc3a8c23b0fb2cdc2d}\label{classRocket_a53ac69a2628471dc3a8c23b0fb2cdc2d}} 
+\index{Rocket@{Rocket}!PrintStage@{PrintStage}}
+\index{PrintStage@{PrintStage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{PrintStage()}{PrintStage()}}
+{\footnotesize\ttfamily void Rocket\+::\+Print\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints details of current state. \mbox{\Hypertarget{classRocket_a78b94bae8771a31fe201c6e90596e106}\label{classRocket_a78b94bae8771a31fe201c6e90596e106}} 
+\index{Rocket@{Rocket}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{restoreMemento()}{restoreMemento()}}
+{\footnotesize\ttfamily void Rocket\+::restore\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+Restore the rocket to it\textquotesingle{}s original health. 
+\begin{DoxyParams}{Parameters}
+{\em mem} & -\/ Memento used to restore the rocket state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a7576ee5d5daac0a64f0db4bdfd6c0f37}\label{classRocket_a7576ee5d5daac0a64f0db4bdfd6c0f37}} 
+\index{Rocket@{Rocket}!SetHealth@{SetHealth}}
+\index{SetHealth@{SetHealth}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{SetHealth()}{SetHealth()}}
+{\footnotesize\ttfamily void Rocket\+::\+Set\+Health (\begin{DoxyParamCaption}\item[{int}]{h }\end{DoxyParamCaption})}
+
+Sets the health of the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ New health \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a798843c6c674e87df1b79516d83ef963}\label{classRocket_a798843c6c674e87df1b79516d83ef963}} 
+\index{Rocket@{Rocket}!SetPayload@{SetPayload}}
+\index{SetPayload@{SetPayload}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{SetPayload()}{SetPayload()}}
+{\footnotesize\ttfamily void Rocket\+::\+Set\+Payload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{payload }\end{DoxyParamCaption})}
+
+Adds payload to the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em payload} & -\/ \mbox{\hyperlink{classPayload}{Payload}} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a01e66084df3c04e55bd3e41344c8ad95}\label{classRocket_a01e66084df3c04e55bd3e41344c8ad95}} 
+\index{Rocket@{Rocket}!SetStage@{SetStage}}
+\index{SetStage@{SetStage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{SetStage()}{SetStage()}}
+{\footnotesize\ttfamily void Rocket\+::\+Set\+Stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStage}{Stage}} $\ast$}]{stage }\end{DoxyParamCaption})}
+
+Changes the stage of the rocket. 
+\begin{DoxyParams}{Parameters}
+{\em stage} & -\/ New stage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a65ac7696db23342ca34a5c3b3246e51b}\label{classRocket_a65ac7696db23342ca34a5c3b3246e51b}} 
+\index{Rocket@{Rocket}!TakeLiftOffDamage@{TakeLiftOffDamage}}
+\index{TakeLiftOffDamage@{TakeLiftOffDamage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{TakeLiftOffDamage()}{TakeLiftOffDamage()}}
+{\footnotesize\ttfamily void Rocket\+::\+Take\+Lift\+Off\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Damages the cores and engines randomly during launch. 
+
+Reimplemented in \mbox{\hyperlink{classFalcon9_a989238ac7a3618c4c167dcd453d93898}{Falcon9}}, and \mbox{\hyperlink{classFalconHeavy_ac7d14a3bda4e4ee84621d660052f2acf}{Falcon\+Heavy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRocket_af2694789acd46b38ca3cfb849d059493}\label{classRocket_af2694789acd46b38ca3cfb849d059493}} 
+\index{Rocket@{Rocket}!\_subjectStage@{\_subjectStage}}
+\index{\_subjectStage@{\_subjectStage}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{\_subjectStage}{\_subjectStage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStage}{Stage}}$\ast$ Rocket\+::\+\_\+subject\+Stage = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+The current stage of the launch 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/\+Falcon\+Rocket/Rocket.\+h\item 
+Space\+Craft/\+Falcon\+Rocket/Rocket.\+cpp\end{DoxyCompactItemize}

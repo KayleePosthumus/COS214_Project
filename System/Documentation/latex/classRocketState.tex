@@ -1,0 +1,88 @@
+\hypertarget{classRocketState}{}\doxysection{Rocket\+State Class Reference}
+\label{classRocketState}\index{RocketState@{RocketState}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocketState_a0287aa2e067007feacb9b4d2cad2bab7}{Rocket\+State}} (string, int, vector$<$ int $>$, int)
+\item 
+\mbox{\hyperlink{classRocketState_a40c55337c1cb8623cdb584a46cb2cd05}{$\sim$\+Rocket\+State}} ()
+\item 
+int \mbox{\hyperlink{classRocketState_a48013a173bdfbd73f5fe3cd6e2b690c8}{Get\+Health}} ()
+\item 
+string \mbox{\hyperlink{classRocketState_a1cef365dd28257792bc6f9f86588fa7d}{Get\+Name}} ()
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classRocketState_af3d8a60e6bc9eb82d3fa74a23f97d2cc}{Get\+Core\+Health}} ()
+\item 
+int \mbox{\hyperlink{classRocketState_aeb652ca43f52c6c27250969650ee5075}{Get\+Vacuum\+Health}} ()
+\item 
+\mbox{\hyperlink{classStage}{Stage}} $\ast$ \mbox{\hyperlink{classRocketState_ad3918a1d94922284b0705b4a476e9080}{Get\+Stage}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRocketState_a0287aa2e067007feacb9b4d2cad2bab7}\label{classRocketState_a0287aa2e067007feacb9b4d2cad2bab7}} 
+\index{RocketState@{RocketState}!RocketState@{RocketState}}
+\index{RocketState@{RocketState}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{RocketState()}{RocketState()}}
+{\footnotesize\ttfamily Rocket\+State\+::\+Rocket\+State (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{rocket\+Health,  }\item[{vector$<$ int $>$}]{core\+Health,  }\item[{int}]{vacuum\+Health }\end{DoxyParamCaption})}
+
+Current launch stage Initializes the name, health, core health and vacuum health. \mbox{\Hypertarget{classRocketState_a40c55337c1cb8623cdb584a46cb2cd05}\label{classRocketState_a40c55337c1cb8623cdb584a46cb2cd05}} 
+\index{RocketState@{RocketState}!````~RocketState@{$\sim$RocketState}}
+\index{````~RocketState@{$\sim$RocketState}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{$\sim$RocketState()}{~RocketState()}}
+{\footnotesize\ttfamily Rocket\+State\+::$\sim$\+Rocket\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRocketState_af3d8a60e6bc9eb82d3fa74a23f97d2cc}\label{classRocketState_af3d8a60e6bc9eb82d3fa74a23f97d2cc}} 
+\index{RocketState@{RocketState}!GetCoreHealth@{GetCoreHealth}}
+\index{GetCoreHealth@{GetCoreHealth}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{GetCoreHealth()}{GetCoreHealth()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Rocket\+State\+::\+Get\+Core\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the core health. \begin{DoxyReturn}{Returns}
+Health of all the cores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocketState_a48013a173bdfbd73f5fe3cd6e2b690c8}\label{classRocketState_a48013a173bdfbd73f5fe3cd6e2b690c8}} 
+\index{RocketState@{RocketState}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily int Rocket\+State\+::\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the health. \begin{DoxyReturn}{Returns}
+Health of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocketState_a1cef365dd28257792bc6f9f86588fa7d}\label{classRocketState_a1cef365dd28257792bc6f9f86588fa7d}} 
+\index{RocketState@{RocketState}!GetName@{GetName}}
+\index{GetName@{GetName}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Rocket\+State\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the name. \begin{DoxyReturn}{Returns}
+Name of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocketState_ad3918a1d94922284b0705b4a476e9080}\label{classRocketState_ad3918a1d94922284b0705b4a476e9080}} 
+\index{RocketState@{RocketState}!GetStage@{GetStage}}
+\index{GetStage@{GetStage}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{GetStage()}{GetStage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStage}{Stage}} $\ast$ Rocket\+State\+::\+Get\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the stage. \begin{DoxyReturn}{Returns}
+Current launch stage of the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocketState_aeb652ca43f52c6c27250969650ee5075}\label{classRocketState_aeb652ca43f52c6c27250969650ee5075}} 
+\index{RocketState@{RocketState}!GetVacuumHealth@{GetVacuumHealth}}
+\index{GetVacuumHealth@{GetVacuumHealth}!RocketState@{RocketState}}
+\doxysubsubsection{\texorpdfstring{GetVacuumHealth()}{GetVacuumHealth()}}
+{\footnotesize\ttfamily int Rocket\+State\+::\+Get\+Vacuum\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the vacuum merlin health. \begin{DoxyReturn}{Returns}
+Health of the vacuum merlin 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Memento/Rocket\+State.\+h\item 
+Memento/Rocket\+State.\+cpp\end{DoxyCompactItemize}

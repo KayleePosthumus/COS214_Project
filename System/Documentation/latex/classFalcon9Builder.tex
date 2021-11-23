@@ -1,0 +1,131 @@
+\hypertarget{classFalcon9Builder}{}\doxysection{Falcon9\+Builder Class Reference}
+\label{classFalcon9Builder}\index{Falcon9Builder@{Falcon9Builder}}
+
+
+A class that builds \mbox{\hyperlink{classFalcon9}{Falcon9}} Objects.  
+
+
+
+
+{\ttfamily \#include $<$Falcon9\+Builder.\+h$>$}
+
+
+
+Inheritance diagram for Falcon9\+Builder\+:
+% FIG 0
+
+
+Collaboration diagram for Falcon9\+Builder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFalcon9Builder_abeb1467622f37cb152a198c61b08b339}{Falcon9\+Builder}} ()
+\item 
+virtual \mbox{\hyperlink{classFalcon9Builder_a0ae84992e08d2d76abfcf36bccf6e715}{$\sim$\+Falcon9\+Builder}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalcon9Builder_a6b2593d9a40105bd346dbc53137a413a}{Construct\+Rocket}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalcon9Builder_adedaf2c3b44f1380fe89a7600e59857b}{Add\+Cores\+And\+Merlin\+Engines}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalcon9Builder_a3ac57bd7be4f5fda648039b039c3b868}{Add\+Vacuum\+Merlin\+Engines}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalcon9Builder_a8beb896bb0806d1c40078adabfa4043d}{Add\+Payload}} (Rocket\+Payload\+Type Payload\+Type, int number\+Of\+Payload\+Items=1)
+\item 
+\mbox{\hyperlink{classRocket}{Rocket}} $\ast$ \mbox{\hyperlink{classFalcon9Builder_a258909ca99c934b1919608a4b98ace4b}{Get\+Rocket}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that builds \mbox{\hyperlink{classFalcon9}{Falcon9}} Objects. 
+
+A class which inherits from \mbox{\hyperlink{classRocketBuilder}{Rocket\+Builder}} that uses the builder design pattern to build \mbox{\hyperlink{classFalcon9}{Falcon9}} Objects. \begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFalcon9Builder_abeb1467622f37cb152a198c61b08b339}\label{classFalcon9Builder_abeb1467622f37cb152a198c61b08b339}} 
+\index{Falcon9Builder@{Falcon9Builder}!Falcon9Builder@{Falcon9Builder}}
+\index{Falcon9Builder@{Falcon9Builder}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{Falcon9Builder()}{Falcon9Builder()}}
+{\footnotesize\ttfamily Falcon9\+Builder\+::\+Falcon9\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Invokes Rocket\+Builders constructor. \mbox{\Hypertarget{classFalcon9Builder_a0ae84992e08d2d76abfcf36bccf6e715}\label{classFalcon9Builder_a0ae84992e08d2d76abfcf36bccf6e715}} 
+\index{Falcon9Builder@{Falcon9Builder}!````~Falcon9Builder@{$\sim$Falcon9Builder}}
+\index{````~Falcon9Builder@{$\sim$Falcon9Builder}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{$\sim$Falcon9Builder()}{~Falcon9Builder()}}
+{\footnotesize\ttfamily Falcon9\+Builder\+::$\sim$\+Falcon9\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFalcon9Builder_adedaf2c3b44f1380fe89a7600e59857b}\label{classFalcon9Builder_adedaf2c3b44f1380fe89a7600e59857b}} 
+\index{Falcon9Builder@{Falcon9Builder}!AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}}
+\index{AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{AddCoresAndMerlinEngines()}{AddCoresAndMerlinEngines()}}
+{\footnotesize\ttfamily void Falcon9\+Builder\+::\+Add\+Cores\+And\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds \mbox{\hyperlink{classFalcon9}{Falcon9}} Cores and Merlin Engines to the \mbox{\hyperlink{classFalcon9}{Falcon9}} \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implements \mbox{\hyperlink{classRocketBuilder_af5d4539d5d738a685e4c7c868e78cb4f}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalcon9Builder_a8beb896bb0806d1c40078adabfa4043d}\label{classFalcon9Builder_a8beb896bb0806d1c40078adabfa4043d}} 
+\index{Falcon9Builder@{Falcon9Builder}!AddPayload@{AddPayload}}
+\index{AddPayload@{AddPayload}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{AddPayload()}{AddPayload()}}
+{\footnotesize\ttfamily void Falcon9\+Builder\+::\+Add\+Payload (\begin{DoxyParamCaption}\item[{Rocket\+Payload\+Type}]{Payload\+Type,  }\item[{int}]{number\+Of\+Payload\+Items = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds \mbox{\hyperlink{classPayload}{Payload}} Objects to the \mbox{\hyperlink{classFalcon9}{Falcon9}} \mbox{\hyperlink{classRocket}{Rocket}} 
+\begin{DoxyParams}{Parameters}
+{\em Payload\+Type} & -\/ the type of payload object that needs to be added \\
+\hline
+{\em number\+Of\+Payload\+Items} & -\/ the amount of payload objects to add to the rocket \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classRocketBuilder_ab9f548a5d8cad1e2f36573849b171998}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalcon9Builder_a3ac57bd7be4f5fda648039b039c3b868}\label{classFalcon9Builder_a3ac57bd7be4f5fda648039b039c3b868}} 
+\index{Falcon9Builder@{Falcon9Builder}!AddVacuumMerlinEngines@{AddVacuumMerlinEngines}}
+\index{AddVacuumMerlinEngines@{AddVacuumMerlinEngines}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{AddVacuumMerlinEngines()}{AddVacuumMerlinEngines()}}
+{\footnotesize\ttfamily void Falcon9\+Builder\+::\+Add\+Vacuum\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds Vacuum Merlin Engines to the \mbox{\hyperlink{classFalcon9}{Falcon9}} \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implements \mbox{\hyperlink{classRocketBuilder_af84ad3358e427e98f4d7460634a9e459}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalcon9Builder_a6b2593d9a40105bd346dbc53137a413a}\label{classFalcon9Builder_a6b2593d9a40105bd346dbc53137a413a}} 
+\index{Falcon9Builder@{Falcon9Builder}!ConstructRocket@{ConstructRocket}}
+\index{ConstructRocket@{ConstructRocket}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{ConstructRocket()}{ConstructRocket()}}
+{\footnotesize\ttfamily void Falcon9\+Builder\+::\+Construct\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a new \mbox{\hyperlink{classFalcon9}{Falcon9}} \mbox{\hyperlink{classRocket}{Rocket}} Object 
+
+Implements \mbox{\hyperlink{classRocketBuilder_a1a1125a05d020df706678f8aff58267d}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalcon9Builder_a258909ca99c934b1919608a4b98ace4b}\label{classFalcon9Builder_a258909ca99c934b1919608a4b98ace4b}} 
+\index{Falcon9Builder@{Falcon9Builder}!GetRocket@{GetRocket}}
+\index{GetRocket@{GetRocket}!Falcon9Builder@{Falcon9Builder}}
+\doxysubsubsection{\texorpdfstring{GetRocket()}{GetRocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocket}{Rocket}} $\ast$ Falcon9\+Builder\+::\+Get\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessor that returns the rocket that is constructed \begin{DoxyReturn}{Returns}
+The rocket object that is constructed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRocketBuilder_a0d0a7e465b8c362056931729d836c7d7}{Rocket\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Builder/Falcon9\+Builder.\+h\item 
+Builder/Falcon9\+Builder.\+cpp\end{DoxyCompactItemize}

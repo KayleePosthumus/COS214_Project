@@ -1,0 +1,174 @@
+\hypertarget{classPayload}{}\doxysection{Payload Class Reference}
+\label{classPayload}\index{Payload@{Payload}}
+
+
+Inheritance diagram for Payload\+:
+% FIG 0
+
+
+Collaboration diagram for Payload\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPayload_ac0db51fbfd4abaf56c630bdf7c06a615}{Payload}} (string)
+\item 
+virtual \mbox{\hyperlink{classPayload_ae391ae4ea0e160ee9dd58c559bbf74f7}{$\sim$\+Payload}} ()
+\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classPayload_a81159e4e4d4256de80b1203fbc86ee12}{Get\+Next}} ()
+\item 
+void \mbox{\hyperlink{classPayload_a53c7595b8071a3cd2a5c28fe71caff6f}{Set\+Next}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$next)
+\item 
+string \mbox{\hyperlink{classPayload_a3fc424d3d82987f303473ff562d1c0c8}{Get\+Name}} ()
+\item 
+virtual \mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classPayload_a4407625078f0a90a0dc5d8d047aaa2ad}{Clone}} ()=0
+\item 
+virtual string \mbox{\hyperlink{classPayload_a68e80aaf708d6f622fe759c6913166fe}{Get\+Cargo}} ()=0
+\item 
+virtual string \mbox{\hyperlink{classPayload_ab50134f5e3aabc8aad2fabf46b9754ea}{Get\+Passengers}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classPayload_afb4b2db9afa99824444c97df77266bce}{Communicate\+Satellite}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classPayload_a289479aa58688b50c57f480b43eeb083}{Communicate\+Ground}} ()=0
+\item 
+virtual \mbox{\hyperlink{classIterator}{Iterator}} $\ast$ \mbox{\hyperlink{classPayload_aa17a5995f8afa9a167f2576845f7a71a}{Create\+Iterator}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPayload}{Payload}} $\ast$ \mbox{\hyperlink{classPayload_a72e00d9f385bce0f91b85b32ce2e9083}{\+\_\+next}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPayload_ac0db51fbfd4abaf56c630bdf7c06a615}\label{classPayload_ac0db51fbfd4abaf56c630bdf7c06a615}} 
+\index{Payload@{Payload}!Payload@{Payload}}
+\index{Payload@{Payload}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{Payload()}{Payload()}}
+{\footnotesize\ttfamily Payload\+::\+Payload (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the payload. \mbox{\Hypertarget{classPayload_ae391ae4ea0e160ee9dd58c559bbf74f7}\label{classPayload_ae391ae4ea0e160ee9dd58c559bbf74f7}} 
+\index{Payload@{Payload}!````~Payload@{$\sim$Payload}}
+\index{````~Payload@{$\sim$Payload}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{$\sim$Payload()}{~Payload()}}
+{\footnotesize\ttfamily Payload\+::$\sim$\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPayload_a4407625078f0a90a0dc5d8d047aaa2ad}\label{classPayload_a4407625078f0a90a0dc5d8d047aaa2ad}} 
+\index{Payload@{Payload}!Clone@{Clone}}
+\index{Clone@{Clone}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classPayload}{Payload}}$\ast$ Payload\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Clones the current payload. \begin{DoxyReturn}{Returns}
+A copy of this payload 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDragon_ae1a5e21c49b0ff2323b5f45041b43ebd}{Dragon}}, \mbox{\hyperlink{classStarlinkSatellite_a4af2b7aed6dc8c58d7a7d0795d674cdc}{Starlink\+Satellite}}, \mbox{\hyperlink{classCrewDragon_aa4a1618c7d97db4fce6b233f91e00dc6}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a07e03a63c7b319a52e868234f80eb64e}{Dragon\+Spacecraft}}.
+
+\mbox{\Hypertarget{classPayload_a289479aa58688b50c57f480b43eeb083}\label{classPayload_a289479aa58688b50c57f480b43eeb083}} 
+\index{Payload@{Payload}!CommunicateGround@{CommunicateGround}}
+\index{CommunicateGround@{CommunicateGround}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{CommunicateGround()}{CommunicateGround()}}
+{\footnotesize\ttfamily virtual void Payload\+::\+Communicate\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Allows satellites to communicate with the ground. 
+
+Implemented in \mbox{\hyperlink{classDragon_a65166b2401ec1362fdb9f78e2227b56c}{Dragon}}, and \mbox{\hyperlink{classStarlinkSatellite_ad60dc70a56fc71903e01ae791e3e87ca}{Starlink\+Satellite}}.
+
+\mbox{\Hypertarget{classPayload_afb4b2db9afa99824444c97df77266bce}\label{classPayload_afb4b2db9afa99824444c97df77266bce}} 
+\index{Payload@{Payload}!CommunicateSatellite@{CommunicateSatellite}}
+\index{CommunicateSatellite@{CommunicateSatellite}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{CommunicateSatellite()}{CommunicateSatellite()}}
+{\footnotesize\ttfamily virtual void Payload\+::\+Communicate\+Satellite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Allows satellites to communicate to each as part of the Mediator pattern. 
+
+Implemented in \mbox{\hyperlink{classDragon_a240eb122c8b60b50ac5328c4af68e512}{Dragon}}, and \mbox{\hyperlink{classStarlinkSatellite_afa3b85e1c8424e89e87255e9095a871d}{Starlink\+Satellite}}.
+
+\mbox{\Hypertarget{classPayload_aa17a5995f8afa9a167f2576845f7a71a}\label{classPayload_aa17a5995f8afa9a167f2576845f7a71a}} 
+\index{Payload@{Payload}!CreateIterator@{CreateIterator}}
+\index{CreateIterator@{CreateIterator}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{CreateIterator()}{CreateIterator()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classIterator}{Iterator}}$\ast$ Payload\+::\+Create\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Creates an iterator for the linked list of payloads. \begin{DoxyReturn}{Returns}
+New iterator 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDragon_a9e45511e7cd0204c49fcbcf64ce84c2f}{Dragon}}, and \mbox{\hyperlink{classStarlinkSatellite_aa645b8d73135a8fcfe83f60592902a56}{Starlink\+Satellite}}.
+
+\mbox{\Hypertarget{classPayload_a68e80aaf708d6f622fe759c6913166fe}\label{classPayload_a68e80aaf708d6f622fe759c6913166fe}} 
+\index{Payload@{Payload}!GetCargo@{GetCargo}}
+\index{GetCargo@{GetCargo}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{GetCargo()}{GetCargo()}}
+{\footnotesize\ttfamily virtual string Payload\+::\+Get\+Cargo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Accessor for the cargo on board. \begin{DoxyReturn}{Returns}
+Formatted list of cargo 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classStarlinkSatellite_a37c9d8d02dfe4588921ccc895a2a1cb6}{Starlink\+Satellite}}, and \mbox{\hyperlink{classDragon_a0c9ef99c8b10014e029b9fd8d76388d6}{Dragon}}.
+
+\mbox{\Hypertarget{classPayload_a3fc424d3d82987f303473ff562d1c0c8}\label{classPayload_a3fc424d3d82987f303473ff562d1c0c8}} 
+\index{Payload@{Payload}!GetName@{GetName}}
+\index{GetName@{GetName}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Payload\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the name of the payload. \begin{DoxyReturn}{Returns}
+The name of the payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPayload_a81159e4e4d4256de80b1203fbc86ee12}\label{classPayload_a81159e4e4d4256de80b1203fbc86ee12}} 
+\index{Payload@{Payload}!GetNext@{GetNext}}
+\index{GetNext@{GetNext}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{GetNext()}{GetNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}} $\ast$ Payload\+::\+Get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor for the next payload. \begin{DoxyReturn}{Returns}
+Pointer to the next payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPayload_ab50134f5e3aabc8aad2fabf46b9754ea}\label{classPayload_ab50134f5e3aabc8aad2fabf46b9754ea}} 
+\index{Payload@{Payload}!GetPassengers@{GetPassengers}}
+\index{GetPassengers@{GetPassengers}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{GetPassengers()}{GetPassengers()}}
+{\footnotesize\ttfamily virtual string Payload\+::\+Get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Accessor for the crew on board. \begin{DoxyReturn}{Returns}
+Formatted list of crew 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDragon_a65a9a68b740bd53b6e9371129cc7734d}{Dragon}}, \mbox{\hyperlink{classStarlinkSatellite_a867c184be1b079ec55d87248899c133d}{Starlink\+Satellite}}, \mbox{\hyperlink{classCrewDragon_a40263a5319a940b2953a9bf4646a41b1}{Crew\+Dragon}}, and \mbox{\hyperlink{classDragonSpacecraft_a2a20bde8f92b0659621e94f0a06553f2}{Dragon\+Spacecraft}}.
+
+\mbox{\Hypertarget{classPayload_a53c7595b8071a3cd2a5c28fe71caff6f}\label{classPayload_a53c7595b8071a3cd2a5c28fe71caff6f}} 
+\index{Payload@{Payload}!SetNext@{SetNext}}
+\index{SetNext@{SetNext}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{SetNext()}{SetNext()}}
+{\footnotesize\ttfamily void Payload\+::\+Set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{next }\end{DoxyParamCaption})}
+
+Setter for the next payload. 
+\begin{DoxyParams}{Parameters}
+{\em next} & -\/ The next payload \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPayload_a72e00d9f385bce0f91b85b32ce2e9083}\label{classPayload_a72e00d9f385bce0f91b85b32ce2e9083}} 
+\index{Payload@{Payload}!\_next@{\_next}}
+\index{\_next@{\_next}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{\_next}{\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPayload}{Payload}}$\ast$ Payload\+::\+\_\+next = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+The next payload in the linked list 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Space\+Craft/Payload.\+h\item 
+Space\+Craft/Payload.\+cpp\end{DoxyCompactItemize}

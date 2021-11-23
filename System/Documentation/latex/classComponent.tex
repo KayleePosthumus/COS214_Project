@@ -1,0 +1,164 @@
+\hypertarget{classComponent}{}\doxysection{Component Class Reference}
+\label{classComponent}\index{Component@{Component}}
+
+
+Inheritance diagram for Component\+:
+% FIG 0
+
+
+Collaboration diagram for Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classComponent_ada1ac6d0392f9f373f02d0048b6fe656}{Component}} (string name)
+\item 
+\mbox{\hyperlink{classComponent_ab90b7d9f32569676a6032c03a1956248}{Component}} (string name, \mbox{\hyperlink{classComponent}{Component}} $\ast$\mbox{\hyperlink{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}{successor}})
+\item 
+virtual \mbox{\hyperlink{classComponent_ab8378fa275af98e568a7e91d33d867af}{$\sim$\+Component}} ()
+\item 
+virtual bool \mbox{\hyperlink{classComponent_ac138ff003ac0f3f572f519d17524715c}{Take\+Damage}} (int damage\+Amount)
+\item 
+virtual void \mbox{\hyperlink{classComponent_acbb6d9c310a546864ab426fe895e5445}{Take\+Lift\+Off\+Damage}} (int damage\+Amount)
+\item 
+virtual void \mbox{\hyperlink{classComponent_a4e847c48a4cef153803233754694a3e2}{Destroy}} ()=0
+\item 
+int \mbox{\hyperlink{classComponent_a189857efea84a5e855b19b0362064692}{Get\+Health}} ()
+\item 
+void \mbox{\hyperlink{classComponent_af49871ccde574cbbbcd140eb088d0f37}{Set\+Health}} (int health)
+\item 
+string \mbox{\hyperlink{classComponent_a1a9d620ac8795ddec325b7e05707b9ef}{Get\+Name}} ()
+\item 
+void \mbox{\hyperlink{classComponent_ace458ac9ce7b206ba837ec0a9942febf}{Set\+Name}} (string name)
+\item 
+virtual \mbox{\hyperlink{classComponent}{Component}} $\ast$ \mbox{\hyperlink{classComponent_a27ca956173eff17001ad4690464c430a}{Clone}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classComponent}{Component}} $\ast$ \mbox{\hyperlink{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}{successor}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponent_ada1ac6d0392f9f373f02d0048b6fe656}\label{classComponent_ada1ac6d0392f9f373f02d0048b6fe656}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Initializes the name of the component. \mbox{\Hypertarget{classComponent_ab90b7d9f32569676a6032c03a1956248}\label{classComponent_ab90b7d9f32569676a6032c03a1956248}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{successor }\end{DoxyParamCaption})}
+
+Initializes the name of the component and the successor of the component. \mbox{\Hypertarget{classComponent_ab8378fa275af98e568a7e91d33d867af}\label{classComponent_ab8378fa275af98e568a7e91d33d867af}} 
+\index{Component@{Component}!````~Component@{$\sim$Component}}
+\index{````~Component@{$\sim$Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{$\sim$Component()}{~Component()}}
+{\footnotesize\ttfamily Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponent_a27ca956173eff17001ad4690464c430a}\label{classComponent_a27ca956173eff17001ad4690464c430a}} 
+\index{Component@{Component}!Clone@{Clone}}
+\index{Clone@{Clone}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classComponent}{Component}}$\ast$ Component\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Clones the current component as implemented by a Prototype design pattern. \begin{DoxyReturn}{Returns}
+A copy of this component. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEngine_adaed2338db63b5562c3c2510a3cb9c95}{Engine}}, \mbox{\hyperlink{classFalcon9Core_a17d727912f8089ccd83a5cd5ed2ecacb}{Falcon9\+Core}}, \mbox{\hyperlink{classMerlinEngine_a8cfdaf05be0f24a0f241feced40cdc50}{Merlin\+Engine}}, and \mbox{\hyperlink{classVacuumMerlinEngine_aadc7a67a084933be0d725fc7babf4671}{Vacuum\+Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classComponent_a4e847c48a4cef153803233754694a3e2}\label{classComponent_a4e847c48a4cef153803233754694a3e2}} 
+\index{Component@{Component}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Destroys the \mbox{\hyperlink{classComponent}{Component}} but does not destruct it. 
+
+Implemented in \mbox{\hyperlink{classFalcon9Core_a99ee00106872fa0930ec0d6a8f215a15}{Falcon9\+Core}}, and \mbox{\hyperlink{classEngine_aaa92f059235842e9dfa81e89dc717d0a}{Engine}}.
+
+\mbox{\Hypertarget{classComponent_a189857efea84a5e855b19b0362064692}\label{classComponent_a189857efea84a5e855b19b0362064692}} 
+\index{Component@{Component}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily int Component\+::\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor that returns the health of the component. \begin{DoxyReturn}{Returns}
+The health of the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classComponent_a1a9d620ac8795ddec325b7e05707b9ef}\label{classComponent_a1a9d620ac8795ddec325b7e05707b9ef}} 
+\index{Component@{Component}!GetName@{GetName}}
+\index{GetName@{GetName}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Component\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor that returns the name of the component. \begin{DoxyReturn}{Returns}
+The name of the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classComponent_af49871ccde574cbbbcd140eb088d0f37}\label{classComponent_af49871ccde574cbbbcd140eb088d0f37}} 
+\index{Component@{Component}!SetHealth@{SetHealth}}
+\index{SetHealth@{SetHealth}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetHealth()}{SetHealth()}}
+{\footnotesize\ttfamily void Component\+::\+Set\+Health (\begin{DoxyParamCaption}\item[{int}]{health }\end{DoxyParamCaption})}
+
+Sets the health of the component 
+\begin{DoxyParams}{Parameters}
+{\em health} & -\/ The new health the component should have \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classComponent_ace458ac9ce7b206ba837ec0a9942febf}\label{classComponent_ace458ac9ce7b206ba837ec0a9942febf}} 
+\index{Component@{Component}!SetName@{SetName}}
+\index{SetName@{SetName}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Component\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Sets the name of the component 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ The new name the component should have \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classComponent_ac138ff003ac0f3f572f519d17524715c}\label{classComponent_ac138ff003ac0f3f572f519d17524715c}} 
+\index{Component@{Component}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily bool Component\+::\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decreases the health of the component 
+\begin{DoxyParams}{Parameters}
+{\em damage\+Amount} & -\/ The amount of damage that needs to be dealt to the component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classComponent_acbb6d9c310a546864ab426fe895e5445}\label{classComponent_acbb6d9c310a546864ab426fe895e5445}} 
+\index{Component@{Component}!TakeLiftOffDamage@{TakeLiftOffDamage}}
+\index{TakeLiftOffDamage@{TakeLiftOffDamage}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{TakeLiftOffDamage()}{TakeLiftOffDamage()}}
+{\footnotesize\ttfamily void Component\+::\+Take\+Lift\+Off\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decreases the health of the component by taking lift off damage. 
+\begin{DoxyParams}{Parameters}
+{\em damage\+Amount} & -\/ The amount of damage that needs to be dealt to the component by liftoff damage \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}\label{classComponent_a4f486abeec0a0fbe0eb8a06f7bd169c9}} 
+\index{Component@{Component}!successor@{successor}}
+\index{successor@{successor}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{successor}{successor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classComponent}{Component}}$\ast$ Component\+::successor = nullptr}
+
+The successor to this component for the Chain of \mbox{\hyperlink{classCommand}{Command}} Design Pattern 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Component/Component.\+h\item 
+Component/Component.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classRocketBuilder}{}\doxysection{Rocket\+Builder Class Reference}
+\label{classRocketBuilder}\index{RocketBuilder@{RocketBuilder}}
+
+
+Inheritance diagram for Rocket\+Builder\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}{Rocket\+Builder}} ()
+\item 
+virtual \mbox{\hyperlink{classRocketBuilder_a290b31846efd917a5e7056cfcbe3c2cd}{$\sim$\+Rocket\+Builder}} ()
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_a1a1125a05d020df706678f8aff58267d}{Construct\+Rocket}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_af5d4539d5d738a685e4c7c868e78cb4f}{Add\+Cores\+And\+Merlin\+Engines}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_af84ad3358e427e98f4d7460634a9e459}{Add\+Vacuum\+Merlin\+Engines}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_ab9f548a5d8cad1e2f36573849b171998}{Add\+Payload}} (Rocket\+Payload\+Type Payload\+Type, int number\+Of\+Payload\+Items=1)=0
+\item 
+virtual \mbox{\hyperlink{classRocket}{Rocket}} $\ast$ \mbox{\hyperlink{classRocketBuilder_a0d0a7e465b8c362056931729d836c7d7}{Get\+Rocket}} ()=0
+\item 
+\mbox{\hyperlink{classHuman}{Human}} $\ast$ \mbox{\hyperlink{classRocketBuilder_acd2a94b06be75d4eb9af783e5bed3522}{Add\+People}} ()
+\item 
+\mbox{\Hypertarget{classRocketBuilder_a9e8a7f71ce44baa12a152ff8450bfcd4}\label{classRocketBuilder_a9e8a7f71ce44baa12a152ff8450bfcd4}} 
+\mbox{\hyperlink{classCargo}{Cargo}} $\ast$ {\bfseries Add\+Cargo} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}\label{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}} 
+\index{RocketBuilder@{RocketBuilder}!RocketBuilder@{RocketBuilder}}
+\index{RocketBuilder@{RocketBuilder}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{RocketBuilder()}{RocketBuilder()}}
+{\footnotesize\ttfamily Rocket\+Builder\+::\+Rocket\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{classRocketBuilder_a290b31846efd917a5e7056cfcbe3c2cd}\label{classRocketBuilder_a290b31846efd917a5e7056cfcbe3c2cd}} 
+\index{RocketBuilder@{RocketBuilder}!````~RocketBuilder@{$\sim$RocketBuilder}}
+\index{````~RocketBuilder@{$\sim$RocketBuilder}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$RocketBuilder()}{~RocketBuilder()}}
+{\footnotesize\ttfamily Rocket\+Builder\+::$\sim$\+Rocket\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRocketBuilder_af5d4539d5d738a685e4c7c868e78cb4f}\label{classRocketBuilder_af5d4539d5d738a685e4c7c868e78cb4f}} 
+\index{RocketBuilder@{RocketBuilder}!AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}}
+\index{AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{AddCoresAndMerlinEngines()}{AddCoresAndMerlinEngines()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Add\+Cores\+And\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Adds \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} Cores and Merlin Engines to the \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implemented in \mbox{\hyperlink{classFalcon9Builder_adedaf2c3b44f1380fe89a7600e59857b}{Falcon9\+Builder}}, and \mbox{\hyperlink{classFalconHeavyBuilder_a6b536cfe3857b9eee5be66370bf861d8}{Falcon\+Heavy\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_ab9f548a5d8cad1e2f36573849b171998}\label{classRocketBuilder_ab9f548a5d8cad1e2f36573849b171998}} 
+\index{RocketBuilder@{RocketBuilder}!AddPayload@{AddPayload}}
+\index{AddPayload@{AddPayload}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{AddPayload()}{AddPayload()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Add\+Payload (\begin{DoxyParamCaption}\item[{Rocket\+Payload\+Type}]{Payload\+Type,  }\item[{int}]{number\+Of\+Payload\+Items = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Adds \mbox{\hyperlink{classPayload}{Payload}} Objects to the \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} \mbox{\hyperlink{classRocket}{Rocket}} 
+\begin{DoxyParams}{Parameters}
+{\em Payload\+Type} & -\/ the type of payload object that needs to be added \\
+\hline
+{\em number\+Of\+Payload\+Items} & -\/ the amount of payload objects to add to the rocket \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classFalcon9Builder_a8beb896bb0806d1c40078adabfa4043d}{Falcon9\+Builder}}, and \mbox{\hyperlink{classFalconHeavyBuilder_a435c76a31b839d3e0c34374bff9efdb3}{Falcon\+Heavy\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_acd2a94b06be75d4eb9af783e5bed3522}\label{classRocketBuilder_acd2a94b06be75d4eb9af783e5bed3522}} 
+\index{RocketBuilder@{RocketBuilder}!AddPeople@{AddPeople}}
+\index{AddPeople@{AddPeople}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{AddPeople()}{AddPeople()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHuman}{Human}} $\ast$ Rocket\+Builder\+::\+Add\+People (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classHuman}{Human}} and adds it to the \mbox{\hyperlink{classRocket}{Rocket}}. \begin{DoxyReturn}{Returns}
+The human object that is added to the rocket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocketBuilder_af84ad3358e427e98f4d7460634a9e459}\label{classRocketBuilder_af84ad3358e427e98f4d7460634a9e459}} 
+\index{RocketBuilder@{RocketBuilder}!AddVacuumMerlinEngines@{AddVacuumMerlinEngines}}
+\index{AddVacuumMerlinEngines@{AddVacuumMerlinEngines}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{AddVacuumMerlinEngines()}{AddVacuumMerlinEngines()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Add\+Vacuum\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Adds Vacuum Merlin Engines to the \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implemented in \mbox{\hyperlink{classFalcon9Builder_a3ac57bd7be4f5fda648039b039c3b868}{Falcon9\+Builder}}, and \mbox{\hyperlink{classFalconHeavyBuilder_a26f7d82392eb0bebc0b2b04a6d0b90d5}{Falcon\+Heavy\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_a1a1125a05d020df706678f8aff58267d}\label{classRocketBuilder_a1a1125a05d020df706678f8aff58267d}} 
+\index{RocketBuilder@{RocketBuilder}!ConstructRocket@{ConstructRocket}}
+\index{ConstructRocket@{ConstructRocket}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{ConstructRocket()}{ConstructRocket()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Construct\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract. Creates a new \mbox{\hyperlink{classRocket}{Rocket}} Object 
+
+Implemented in \mbox{\hyperlink{classFalcon9Builder_a6b2593d9a40105bd346dbc53137a413a}{Falcon9\+Builder}}, and \mbox{\hyperlink{classFalconHeavyBuilder_a2c5cf0410b9f5c6db7ac7a9a961b54eb}{Falcon\+Heavy\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_a0d0a7e465b8c362056931729d836c7d7}\label{classRocketBuilder_a0d0a7e465b8c362056931729d836c7d7}} 
+\index{RocketBuilder@{RocketBuilder}!GetRocket@{GetRocket}}
+\index{GetRocket@{GetRocket}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{GetRocket()}{GetRocket()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classRocket}{Rocket}}$\ast$ Rocket\+Builder\+::\+Get\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Accessor that returns the rocket that is constructed 
+
+Implemented in \mbox{\hyperlink{classFalcon9Builder_a258909ca99c934b1919608a4b98ace4b}{Falcon9\+Builder}}, and \mbox{\hyperlink{classFalconHeavyBuilder_a2dc174e7285c061010f75f951405db90}{Falcon\+Heavy\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Builder/Rocket\+Builder.\+h\item 
+Builder/Rocket\+Builder.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classLaunchStation}{}\doxysection{Launch\+Station Class Reference}
+\label{classLaunchStation}\index{LaunchStation@{LaunchStation}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLaunchStation_a7f8ca34dd7768e16b8ef2737e25eb1aa}{set\+Satellite\+List}} (\mbox{\hyperlink{classStarlinkSatellite}{Starlink\+Satellite}} $\ast$satellite\+List)
+\item 
+void \mbox{\hyperlink{classLaunchStation_a2cf1072f272a24ac2cca136e0da94b43}{Add\+Simulation}} ()
+\item 
+void \mbox{\hyperlink{classLaunchStation_a7344e3ac4acf84e841dc30aed33f4f39}{Edit\+Simulation}} (int type)
+\item 
+void \mbox{\hyperlink{classLaunchStation_a0277e61db3af1f3b8f0130f3ec2b2ee6}{Dragon\+Stage2}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$d)
+\item 
+void \mbox{\hyperlink{classLaunchStation_ab8c85f3fdeeda46c294c2e9d12220be0}{Crew\+Dragon\+Stage2}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$d)
+\item 
+void \mbox{\hyperlink{classLaunchStation_a0083bd13883191260900168ed6ec8be9}{Satellites\+Stage2}} (\mbox{\hyperlink{classPayload}{Payload}} $\ast$d)
+\item 
+void \mbox{\hyperlink{classLaunchStation_ac16b0520f56d772f6a6bd82fd7781f5e}{Test\+Simulation}} ()
+\item 
+void \mbox{\hyperlink{classLaunchStation_ab04f2bd8d74f87773993dad59d0b55ba}{Run\+Simulations}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classLaunchStation}{Launch\+Station}} $\ast$ \mbox{\hyperlink{classLaunchStation_aacd73b16c1e2b93e089c621fda577d12}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLaunchStation_af199f7e1d358052028aa12039c1047fd}{Launch\+Station}} ()
+\item 
+\mbox{\hyperlink{classLaunchStation_a2806ef83d634815e9751ea1362d2e502}{$\sim$\+Launch\+Station}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLaunchStation_af199f7e1d358052028aa12039c1047fd}\label{classLaunchStation_af199f7e1d358052028aa12039c1047fd}} 
+\index{LaunchStation@{LaunchStation}!LaunchStation@{LaunchStation}}
+\index{LaunchStation@{LaunchStation}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{LaunchStation()}{LaunchStation()}}
+{\footnotesize\ttfamily Launch\+Station\+::\+Launch\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Protected constrcutor to ensure only on instance. \mbox{\Hypertarget{classLaunchStation_a2806ef83d634815e9751ea1362d2e502}\label{classLaunchStation_a2806ef83d634815e9751ea1362d2e502}} 
+\index{LaunchStation@{LaunchStation}!````~LaunchStation@{$\sim$LaunchStation}}
+\index{````~LaunchStation@{$\sim$LaunchStation}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{$\sim$LaunchStation()}{~LaunchStation()}}
+{\footnotesize\ttfamily Launch\+Station\+::$\sim$\+Launch\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLaunchStation_a2cf1072f272a24ac2cca136e0da94b43}\label{classLaunchStation_a2cf1072f272a24ac2cca136e0da94b43}} 
+\index{LaunchStation@{LaunchStation}!AddSimulation@{AddSimulation}}
+\index{AddSimulation@{AddSimulation}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{AddSimulation()}{AddSimulation()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Add\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prompts input to the user for creating a rocket simulation and adds it to the simulation vector. \mbox{\Hypertarget{classLaunchStation_ab8c85f3fdeeda46c294c2e9d12220be0}\label{classLaunchStation_ab8c85f3fdeeda46c294c2e9d12220be0}} 
+\index{LaunchStation@{LaunchStation}!CrewDragonStage2@{CrewDragonStage2}}
+\index{CrewDragonStage2@{CrewDragonStage2}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{CrewDragonStage2()}{CrewDragonStage2()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Crew\+Dragon\+Stage2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Handles the output for the second stage of the Crew \mbox{\hyperlink{classDragon}{Dragon}}. 
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ The dragon spacecraft attempting to dock. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaunchStation_a0277e61db3af1f3b8f0130f3ec2b2ee6}\label{classLaunchStation_a0277e61db3af1f3b8f0130f3ec2b2ee6}} 
+\index{LaunchStation@{LaunchStation}!DragonStage2@{DragonStage2}}
+\index{DragonStage2@{DragonStage2}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{DragonStage2()}{DragonStage2()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Dragon\+Stage2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Handles the output for the second stage of the \mbox{\hyperlink{classDragon}{Dragon}} Spacecraft. 
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ The dragon spacecraft attempting to dock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaunchStation_a7344e3ac4acf84e841dc30aed33f4f39}\label{classLaunchStation_a7344e3ac4acf84e841dc30aed33f4f39}} 
+\index{LaunchStation@{LaunchStation}!EditSimulation@{EditSimulation}}
+\index{EditSimulation@{EditSimulation}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{EditSimulation()}{EditSimulation()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Edit\+Simulation (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+Prompts input to the user for editing a rocket simulation in the simulation vector. 
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ The type of rocket initially created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaunchStation_aacd73b16c1e2b93e089c621fda577d12}\label{classLaunchStation_aacd73b16c1e2b93e089c621fda577d12}} 
+\index{LaunchStation@{LaunchStation}!instance@{instance}}
+\index{instance@{instance}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLaunchStation}{Launch\+Station}} $\ast$ Launch\+Station\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates and returns the one instance of the launch station. \begin{DoxyReturn}{Returns}
+Single static instance of the launch station 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLaunchStation_ab04f2bd8d74f87773993dad59d0b55ba}\label{classLaunchStation_ab04f2bd8d74f87773993dad59d0b55ba}} 
+\index{LaunchStation@{LaunchStation}!RunSimulations@{RunSimulations}}
+\index{RunSimulations@{RunSimulations}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{RunSimulations()}{RunSimulations()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Run\+Simulations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Created and run the current simulations. \mbox{\Hypertarget{classLaunchStation_a0083bd13883191260900168ed6ec8be9}\label{classLaunchStation_a0083bd13883191260900168ed6ec8be9}} 
+\index{LaunchStation@{LaunchStation}!SatellitesStage2@{SatellitesStage2}}
+\index{SatellitesStage2@{SatellitesStage2}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{SatellitesStage2()}{SatellitesStage2()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Satellites\+Stage2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPayload}{Payload}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Handles the output for the second stage of the Starlink Satellites. 
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ The satellites reaching low earth orbit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaunchStation_a7f8ca34dd7768e16b8ef2737e25eb1aa}\label{classLaunchStation_a7f8ca34dd7768e16b8ef2737e25eb1aa}} 
+\index{LaunchStation@{LaunchStation}!setSatelliteList@{setSatelliteList}}
+\index{setSatelliteList@{setSatelliteList}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{setSatelliteList()}{setSatelliteList()}}
+{\footnotesize\ttfamily void Launch\+Station\+::set\+Satellite\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStarlinkSatellite}{Starlink\+Satellite}} $\ast$}]{satellite\+List }\end{DoxyParamCaption})}
+
+Creates the satellite list 
+\begin{DoxyParams}{Parameters}
+{\em satellite\+List} & -\/ The head of the satellite linked list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLaunchStation_ac16b0520f56d772f6a6bd82fd7781f5e}\label{classLaunchStation_ac16b0520f56d772f6a6bd82fd7781f5e}} 
+\index{LaunchStation@{LaunchStation}!TestSimulation@{TestSimulation}}
+\index{TestSimulation@{TestSimulation}!LaunchStation@{LaunchStation}}
+\doxysubsubsection{\texorpdfstring{TestSimulation()}{TestSimulation()}}
+{\footnotesize\ttfamily void Launch\+Station\+::\+Test\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Allows the user to create and edit simulations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Launch\+Station/Launch\+Station.\+h\item 
+Launch\+Station/Launch\+Station.\+cpp\end{DoxyCompactItemize}

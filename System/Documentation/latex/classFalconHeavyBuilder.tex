@@ -1,0 +1,131 @@
+\hypertarget{classFalconHeavyBuilder}{}\doxysection{Falcon\+Heavy\+Builder Class Reference}
+\label{classFalconHeavyBuilder}\index{FalconHeavyBuilder@{FalconHeavyBuilder}}
+
+
+A class that builds \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} Objects.  
+
+
+
+
+{\ttfamily \#include $<$Falcon\+Heavy\+Builder.\+h$>$}
+
+
+
+Inheritance diagram for Falcon\+Heavy\+Builder\+:
+% FIG 0
+
+
+Collaboration diagram for Falcon\+Heavy\+Builder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFalconHeavyBuilder_a0e2e4794df56272a209bfab9a4a0b051}{Falcon\+Heavy\+Builder}} ()
+\item 
+virtual \mbox{\hyperlink{classFalconHeavyBuilder_a256eb0bd1bb8a72adae6d0f20e74230e}{$\sim$\+Falcon\+Heavy\+Builder}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalconHeavyBuilder_a2c5cf0410b9f5c6db7ac7a9a961b54eb}{Construct\+Rocket}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalconHeavyBuilder_a6b536cfe3857b9eee5be66370bf861d8}{Add\+Cores\+And\+Merlin\+Engines}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalconHeavyBuilder_a26f7d82392eb0bebc0b2b04a6d0b90d5}{Add\+Vacuum\+Merlin\+Engines}} ()
+\item 
+virtual void \mbox{\hyperlink{classFalconHeavyBuilder_a435c76a31b839d3e0c34374bff9efdb3}{Add\+Payload}} (Rocket\+Payload\+Type Payload\+Type, int number\+Of\+Payload\+Items=1)
+\item 
+\mbox{\hyperlink{classRocket}{Rocket}} $\ast$ \mbox{\hyperlink{classFalconHeavyBuilder_a2dc174e7285c061010f75f951405db90}{Get\+Rocket}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that builds \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} Objects. 
+
+A class which inherits from \mbox{\hyperlink{classRocketBuilder}{Rocket\+Builder}} that uses the builder design pattern to build \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} Objects. \begin{DoxyAuthor}{Author}
+Ctrl Alt Defeat 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFalconHeavyBuilder_a0e2e4794df56272a209bfab9a4a0b051}\label{classFalconHeavyBuilder_a0e2e4794df56272a209bfab9a4a0b051}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{FalconHeavyBuilder()}{FalconHeavyBuilder()}}
+{\footnotesize\ttfamily Falcon\+Heavy\+Builder\+::\+Falcon\+Heavy\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Invokes Rocket\+Builders constructor. \mbox{\Hypertarget{classFalconHeavyBuilder_a256eb0bd1bb8a72adae6d0f20e74230e}\label{classFalconHeavyBuilder_a256eb0bd1bb8a72adae6d0f20e74230e}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!````~FalconHeavyBuilder@{$\sim$FalconHeavyBuilder}}
+\index{````~FalconHeavyBuilder@{$\sim$FalconHeavyBuilder}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$FalconHeavyBuilder()}{~FalconHeavyBuilder()}}
+{\footnotesize\ttfamily Falcon\+Heavy\+Builder\+::$\sim$\+Falcon\+Heavy\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFalconHeavyBuilder_a6b536cfe3857b9eee5be66370bf861d8}\label{classFalconHeavyBuilder_a6b536cfe3857b9eee5be66370bf861d8}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}}
+\index{AddCoresAndMerlinEngines@{AddCoresAndMerlinEngines}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{AddCoresAndMerlinEngines()}{AddCoresAndMerlinEngines()}}
+{\footnotesize\ttfamily void Falcon\+Heavy\+Builder\+::\+Add\+Cores\+And\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} Cores and Merlin Engines to the \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implements \mbox{\hyperlink{classRocketBuilder_af5d4539d5d738a685e4c7c868e78cb4f}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalconHeavyBuilder_a435c76a31b839d3e0c34374bff9efdb3}\label{classFalconHeavyBuilder_a435c76a31b839d3e0c34374bff9efdb3}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!AddPayload@{AddPayload}}
+\index{AddPayload@{AddPayload}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{AddPayload()}{AddPayload()}}
+{\footnotesize\ttfamily void Falcon\+Heavy\+Builder\+::\+Add\+Payload (\begin{DoxyParamCaption}\item[{Rocket\+Payload\+Type}]{Payload\+Type,  }\item[{int}]{number\+Of\+Payload\+Items = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds \mbox{\hyperlink{classPayload}{Payload}} Objects to the \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} \mbox{\hyperlink{classRocket}{Rocket}} 
+\begin{DoxyParams}{Parameters}
+{\em Payload\+Type} & -\/ the type of payload object that needs to be added \\
+\hline
+{\em number\+Of\+Payload\+Items} & -\/ the amount of payload objects to add to the rocket \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classRocketBuilder_ab9f548a5d8cad1e2f36573849b171998}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalconHeavyBuilder_a26f7d82392eb0bebc0b2b04a6d0b90d5}\label{classFalconHeavyBuilder_a26f7d82392eb0bebc0b2b04a6d0b90d5}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!AddVacuumMerlinEngines@{AddVacuumMerlinEngines}}
+\index{AddVacuumMerlinEngines@{AddVacuumMerlinEngines}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{AddVacuumMerlinEngines()}{AddVacuumMerlinEngines()}}
+{\footnotesize\ttfamily void Falcon\+Heavy\+Builder\+::\+Add\+Vacuum\+Merlin\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds Vacuum Merlin Engines to the \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} \mbox{\hyperlink{classRocket}{Rocket}} 
+
+Implements \mbox{\hyperlink{classRocketBuilder_af84ad3358e427e98f4d7460634a9e459}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalconHeavyBuilder_a2c5cf0410b9f5c6db7ac7a9a961b54eb}\label{classFalconHeavyBuilder_a2c5cf0410b9f5c6db7ac7a9a961b54eb}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!ConstructRocket@{ConstructRocket}}
+\index{ConstructRocket@{ConstructRocket}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{ConstructRocket()}{ConstructRocket()}}
+{\footnotesize\ttfamily void Falcon\+Heavy\+Builder\+::\+Construct\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a new \mbox{\hyperlink{classFalconHeavy}{Falcon\+Heavy}} \mbox{\hyperlink{classRocket}{Rocket}} Object 
+
+Implements \mbox{\hyperlink{classRocketBuilder_a1a1125a05d020df706678f8aff58267d}{Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classFalconHeavyBuilder_a2dc174e7285c061010f75f951405db90}\label{classFalconHeavyBuilder_a2dc174e7285c061010f75f951405db90}} 
+\index{FalconHeavyBuilder@{FalconHeavyBuilder}!GetRocket@{GetRocket}}
+\index{GetRocket@{GetRocket}!FalconHeavyBuilder@{FalconHeavyBuilder}}
+\doxysubsubsection{\texorpdfstring{GetRocket()}{GetRocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocket}{Rocket}} $\ast$ Falcon\+Heavy\+Builder\+::\+Get\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessor that returns the rocket that is constructed \begin{DoxyReturn}{Returns}
+The rocket object that is constructed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRocketBuilder_a0d0a7e465b8c362056931729d836c7d7}{Rocket\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Builder/Falcon\+Heavy\+Builder.\+h\item 
+Builder/Falcon\+Heavy\+Builder.\+cpp\end{DoxyCompactItemize}
