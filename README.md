@@ -7,7 +7,7 @@ COS214 team project.
 - Thashil Naidoo, u20491141
 - Kaylee Posthumus, u19061359
 - Estian Nel, u20427736
-- Ruaan , u20443260
+- Ruaan Lombaard, u20443260
 - Ryan Healy, u20662302
 
 # Report
