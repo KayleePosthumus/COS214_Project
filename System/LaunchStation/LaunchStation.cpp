@@ -2,11 +2,11 @@
 
 LaunchStation *LaunchStation::_launchStation = 0;
 
-LaunchStation::LaunchStation()
+LaunchStation::LaunchStation()//this is the contructor for the LaunchStation
 {
 }
 
-LaunchStation::~LaunchStation()
+LaunchStation::~LaunchStation()//this is the destrucotr for LaunchStation. Is clears the memory
 {
 	while (!_simulations.empty()) {
 		if (_simulations.back())
@@ -14,26 +14,26 @@ LaunchStation::~LaunchStation()
 			delete _simulations.back();
 		}
 
-		_simulations.pop_back();
+		_simulations.pop_back();//this pops the back
 	}
 
-	delete _launchStation;
+	delete _launchStation;//this deletes
 }
 
-LaunchStation* LaunchStation::instance()
+LaunchStation* LaunchStation::instance()//this a fuction that creates an instance
 {
 	if (!_launchStation)
-		_launchStation = new LaunchStation();
+		_launchStation = new LaunchStation();//this creates object
 
-	return _launchStation;
+	return _launchStation;//this returns
 }
 
-void LaunchStation::setSatelliteList(StarlinkSatellite* satelliteList)
+void LaunchStation::setSatelliteList(StarlinkSatellite* satelliteList)//this is a fuction that sets the satelliteList
 {
 	_satelliteList = satelliteList;
 }
 
-void LaunchStation::AddSimulation()
+void LaunchStation::AddSimulation()//this fuction adds a simulation
 {
 	cout << "\nPlease select the type of rocket:\n1.Falcon 9\n2.Falcon Heavy" << endl;
 
